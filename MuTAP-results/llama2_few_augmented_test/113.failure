@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert odd_count([]) == []
+    
+    
+>       assert odd_count([1]) == ["The number of odd elements 1 in the list."]
+
+tmp4faevvva/test.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+lst = [1]
+
+    def odd_count(lst):
+    
+        res = []
+        for arr in lst:
+>           n = sum(int(d)%2==1 for d in arr)
+E           TypeError: 'int' object is not iterable
+
+tmp4faevvva/m.py:5: TypeError
+=========================== short test summary info ============================
+FAILED tmp4faevvva/test.py::test - TypeError: 'int' object is not iterable
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

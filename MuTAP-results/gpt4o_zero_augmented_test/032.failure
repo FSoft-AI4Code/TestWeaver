@@ -1,0 +1,24 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert round(find_zero([1, 2]), 2) == -0.5
+        assert round(find_zero([-6, 11, -6, 1]), 2) == 1.0
+        assert round(find_zero([2, -3, 1]), 2) == 1.0  # (x-1)(x-2) = 2 - 3x + x^2
+        assert round(find_zero([-1, 0, 1]), 2) == -1.0
+        assert round(find_zero([4, -6, 4, -1]), 2) == 2.0
+        assert round(find_zero([1, 2]), 2) == -0.5
+        assert round(find_zero([-6, 11, -6, 1]), 2) == 1.0
+        assert round(find_zero([2, -3, 1]), 2) == 1.0  # (x-1)(x-2) = 2 - 3x + x^2
+        assert round(find_zero([-1, 0, 1]), 2) == -1.0
+        assert round(find_zero([4, -6, 4, -1]), 2) == 2.0
+>       assert find_zero([1, 0]) == 0.0  # This tests for when the polynomial is a constant (1).
+E       assert -inf == 0.0
+E        +  where -inf = find_zero([1, 0])
+
+tmp2n9av792/test.py:14: AssertionError
+=========================== short test summary info ============================
+FAILED tmp2n9av792/test.py::test - assert -inf == 0.0
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

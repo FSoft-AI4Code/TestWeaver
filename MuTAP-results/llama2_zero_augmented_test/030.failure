@@ -1,0 +1,28 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test with a list of integers
+        assert get_positive([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
+        # Test with a list of floats
+        assert get_positive([1.5, 2.2, 3.3, 4.4, 5.5]) == [1.5, 2.2, 3.3, 4.4, 5.5]
+        # Test with a list of strings
+>       assert get_positive(['hello', 'world', 'foo', 'bar']) == ['world', 'bar']    # Test with a list of lists
+
+tmp1xiq7zu6/test.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmp1xiq7zu6/m.py:3: in get_positive
+    return [e for e in l if e > 0]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f271ac19bd0>
+
+>   return [e for e in l if e > 0]
+E   TypeError: '>' not supported between instances of 'str' and 'int'
+
+tmp1xiq7zu6/m.py:3: TypeError
+=========================== short test summary info ============================
+FAILED tmp1xiq7zu6/test.py::test - TypeError: '>' not supported between insta...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

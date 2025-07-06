@@ -1,0 +1,18 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        separate_paren_groups('(())') == ['(())']
+>       assert separate_paren_groups('((()))') == ['(())', '(())']
+E       AssertionError: assert ['((()))'] == ['(())', '(())']
+E         
+E         At index 0 diff: '((()))' != '(())'
+E         Right contains one more item: '(())'
+E         Use -v to get more diff
+
+tmpzj3boqxy/test.py:5: AssertionError
+=========================== short test summary info ============================
+FAILED tmpzj3boqxy/test.py::test - AssertionError: assert ['((()))'] == ['(()...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

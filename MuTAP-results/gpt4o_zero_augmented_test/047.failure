@@ -1,0 +1,22 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert median([3, 1, 2, 4, 5]) == 3
+        assert median([-10, 4, 6, 1000, 10, 20]) == 8.0
+        assert median([1, 2, 3]) == 2
+        assert median([1, 2, 3, 4]) == 2.5
+        assert median([7]) == 7
+        assert median([-5, -1, -10, -3]) == -4.0
+        assert median([10, 10, 10]) == 10
+        assert median([3, 1, 2, 4, 5]) == 3
+>       assert median([-10, 4, 6, 1000, 10, 20]) == 15.0
+E       assert 8.0 == 15.0
+E        +  where 8.0 = median([-10, 4, 6, 1000, 10, 20])
+
+tmp3e5ztvl0/test.py:12: AssertionError
+=========================== short test summary info ============================
+FAILED tmp3e5ztvl0/test.py::test - assert 8.0 == 15.0
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

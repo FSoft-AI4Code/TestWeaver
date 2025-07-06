@@ -1,0 +1,36 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test 1: An empty string
+        assert histogram(" ") == {}
+    
+        # Test 2: A single character string
+        assert histogram("a") == {"a": 1}
+    
+        # Test 3: A multi-character string with no duplicates
+        assert histogram("hello world") == {'hello': 1, 'world': 1}
+    
+        # Test 4: A multi-character string with duplicates
+        assert histogram("hello world hello") == {'hello': 2}
+    
+        # Test 5: An empty list
+>       assert histogram([]) == {}
+
+tmpnmcykioo/test.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+test = []
+
+    def histogram(test):
+    
+        dict1={}
+>       list1=test.split(" ")
+E       AttributeError: 'list' object has no attribute 'split'
+
+tmpnmcykioo/m.py:4: AttributeError
+=========================== short test summary info ============================
+FAILED tmpnmcykioo/test.py::test - AttributeError: 'list' object has no attri...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

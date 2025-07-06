@@ -1,0 +1,59 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert reverse_delete("abcde", "ae") == ('bcd', False)
+        assert reverse_delete("abcdef", "b") == ('acdef', False)
+        assert reverse_delete("abcdedcba", "ab") == ('cdedc', True)
+        assert reverse_delete("racecar", "a") == ('rcecr', True)
+        assert reverse_delete("racecar", "r") == ('aceca', True)
+        assert reverse_delete("racecar", "e") == ('raccar', True)
+        assert reverse_delete("hello", "ol") == ('he', False)
+        assert reverse_delete("noon", "n") == ('oo', True)
+        assert reverse_delete("aabbcc", "abc") == ('', True)
+        assert reverse_delete("", "abc") == ('', True)
+        assert reverse_delete("abcde", "ae") == ('bcd', False)
+        assert reverse_delete("abcdef", "b") == ('acdef', False)
+        assert reverse_delete("abcdedcba", "ab") == ('cdedc', True)
+        assert reverse_delete("racecar", "a") == ('rcecr', True)
+        assert reverse_delete("racecar", "r") == ('aceca', True)
+        assert reverse_delete("racecar", "e") == ('raccar', True)
+        assert reverse_delete("hello", "ol") == ('he', False)
+        assert reverse_delete("noon", "n") == ('oo', True)
+        assert reverse_delete("aabbcc", "abc") == ('', True)
+        assert reverse_delete("", "abc") == ('', True)
+        assert reverse_delete("madam", "x") == ('madam', True)  # New test case to check for palindromes with no deletions
+    
+        assert reverse_delete("abcde", "ae") == ('bcd', False)
+        assert reverse_delete("abcdef", "b") == ('acdef', False)
+        assert reverse_delete("abcdedcba", "ab") == ('cdedc', True)
+        assert reverse_delete("racecar", "a") == ('rcecr', True)
+        assert reverse_delete("racecar", "r") == ('aceca', True)
+        assert reverse_delete("racecar", "e") == ('raccar', True)
+        assert reverse_delete("hello", "ol") == ('he', False)
+        assert reverse_delete("noon", "n") == ('oo', True)
+        assert reverse_delete("aabbcc", "abc") == ('', True)
+        assert reverse_delete("", "abc") == ('', True)
+        assert reverse_delete("aaa", "a") == ('', True) # This test case should fail with the faulty code
+    
+        assert reverse_delete("abcde", "ae") == ('bcd', False)
+        assert reverse_delete("abcdef", "b") == ('acdef', False)
+        assert reverse_delete("abcdedcba", "ab") == ('cdedc', True)
+        assert reverse_delete("racecar", "a") == ('rcecr', True)
+        assert reverse_delete("racecar", "r") == ('aceca', True)
+        assert reverse_delete("racecar", "e") == ('raccar', True)
+        assert reverse_delete("hello", "ol") == ('he', False)
+        assert reverse_delete("noon", "n") == ('oo', True)
+        assert reverse_delete("aabbcc", "abc") == ('', True)
+        assert reverse_delete("", "abc") == ('', True)
+>       assert reverse_delete("palindrome", "aei") == ('plndrm', False)
+E       AssertionError: assert ('plndrom', False) == ('plndrm', False)
+E         At index 0 diff: 'plndrom' != 'plndrm'
+E         Use -v to get more diff
+
+tmpbivvaz9z/test.py:48: AssertionError
+=========================== short test summary info ============================
+FAILED tmpbivvaz9z/test.py::test - AssertionError: assert ('plndrom', False) ...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,32 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert prod_signs([1, 2, 2, -4]) == -9
+        assert prod_signs([0, 1]) == 0
+        assert prod_signs([]) == None
+        assert prod_signs([1, -1, 1, -1]) == 4
+        assert prod_signs([1, 2, 3, 4]) == 10
+        assert prod_signs([-1, -2, -3, -4]) == 10
+        assert prod_signs([0, -1, 2, 3]) == 0
+        assert prod_signs([1]) == 1
+        assert prod_signs([-1]) == -1
+        assert prod_signs([1, 2, 2, -4]) == -9
+        assert prod_signs([0, 1]) == 0
+        assert prod_signs([]) == None
+        assert prod_signs([1, -1, 1, -1]) == 4
+        assert prod_signs([1, 2, 3, 4]) == 10
+        assert prod_signs([-1, -2, -3, -4]) == 10
+        assert prod_signs([0, -1, 2, 3]) == 0
+        assert prod_signs([1]) == 1
+        assert prod_signs([-1]) == -1
+>       assert prod_signs([1, -2, -3, 4]) == -10  # Expected correct behavior
+E       assert 10 == -10
+E        +  where 10 = prod_signs([1, -2, -3, 4])
+
+tmpmn8nf9cj/test.py:22: AssertionError
+=========================== short test summary info ============================
+FAILED tmpmn8nf9cj/test.py::test - assert 10 == -10
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,38 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert fizz_buzz(50) == 0
+        assert fizz_buzz(78) == 2
+        assert fizz_buzz(79) == 3
+        assert fizz_buzz(100) == 3
+        assert fizz_buzz(150) == 4
+        assert fizz_buzz(50) == 0
+        assert fizz_buzz(78) == 2
+        assert fizz_buzz(79) == 3
+        assert fizz_buzz(100) == 3
+        assert fizz_buzz(150) == 4
+        assert fizz_buzz(0) == 0  # New test case to check behavior for n=0
+    
+        assert fizz_buzz(50) == 0
+        assert fizz_buzz(78) == 2
+        assert fizz_buzz(79) == 3
+        assert fizz_buzz(100) == 3
+        assert fizz_buzz(150) == 4
+        assert fizz_buzz(144) == 4  # This test case specifically checks for the issue with conjunction of conditions.
+    
+        assert fizz_buzz(50) == 0
+        assert fizz_buzz(78) == 2
+        assert fizz_buzz(79) == 3
+        assert fizz_buzz(100) == 3
+        assert fizz_buzz(150) == 4
+>       assert fizz_buzz(143) == 3  # Because 143 is divisible by 11 and contains a 7
+E       assert 4 == 3
+E        +  where 4 = fizz_buzz(143)
+
+tmpbney5fs2/test.py:28: AssertionError
+=========================== short test summary info ============================
+FAILED tmpbney5fs2/test.py::test - assert 4 == 3
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

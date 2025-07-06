@@ -1,0 +1,22 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert Strongest_Extension("", []) == ""
+
+tmp56f1h562/test.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_name = '', extensions = []
+
+    def Strongest_Extension(class_name, extensions):
+    
+>       strong = extensions[0]
+E       IndexError: list index out of range
+
+tmp56f1h562/m.py:3: IndexError
+=========================== short test summary info ============================
+FAILED tmp56f1h562/test.py::test - IndexError: list index out of range
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

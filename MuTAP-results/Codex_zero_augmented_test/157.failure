@@ -1,0 +1,23 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert right_angle_triangle(3,4,5) == True
+        assert right_angle_triangle(1,2,3) == False
+        assert right_angle_triangle(3,4,5) == True
+        assert right_angle_triangle(1,2,3) == False
+    
+        assert right_angle_triangle(3,4,5) == True
+    
+        assert right_angle_triangle(3, 4, 5) == True
+        assert right_angle_triangle(1, 2, 3) == False
+>       assert right_angle_triangle(6, 8, 10) == False
+E       assert True == False
+E        +  where True = right_angle_triangle(6, 8, 10)
+
+tmpnv_phb6h/test.py:13: AssertionError
+=========================== short test summary info ============================
+FAILED tmpnv_phb6h/test.py::test - assert True == False
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

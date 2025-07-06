@@ -1,0 +1,36 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert longest([]) is None
+        assert longest(['a', 'b', 'c']) == 'a'
+        assert longest(['a', 'bb', 'ccc']) == 'ccc'
+        assert longest(['abcd', 'efg', 'hi', 'j']) == 'abcd'
+        assert longest(['same', 'length', 'here']) == 'length'
+        assert longest(['short', 'longer', 'longest']) == 'longest'
+        assert longest([]) is None
+        assert longest(['a', 'b', 'c']) == 'a'
+        assert longest(['a', 'bb', 'ccc']) == 'ccc'
+        assert longest(['abcd', 'efg', 'hi', 'j']) == 'abcd'
+        assert longest(['same', 'length', 'here']) == 'length'
+        assert longest(['short', 'longer', 'longest']) == 'longest'
+        assert longest(['equal', 'equal']) == 'equal'  # This test case checks for handling of multiple strings with same length
+        assert longest(['one', 'two', 'three', 'four']) == 'three'  # This test case ensures it detects the longest string correctly
+    
+        assert longest([]) is None
+        assert longest(['a', 'b', 'c']) == 'a'
+        assert longest(['a', 'bb', 'ccc']) == 'ccc'
+        assert longest(['abcd', 'efg', 'hi', 'j']) == 'abcd'
+        assert longest(['same', 'length', 'here']) == 'length'
+        assert longest(['short', 'longer', 'longest']) == 'longest'
+>       assert longest(['equal', 'equal', 'lengths']) == 'equal'
+E       AssertionError: assert 'lengths' == 'equal'
+E         - equal
+E         + lengths
+
+tmpx7yf7_bb/test.py:25: AssertionError
+=========================== short test summary info ============================
+FAILED tmpx7yf7_bb/test.py::test - AssertionError: assert 'lengths' == 'equal'
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

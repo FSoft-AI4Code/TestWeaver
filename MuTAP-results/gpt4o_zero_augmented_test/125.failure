@@ -1,0 +1,32 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert split_words("Hello world!") == ["Hello", "world!"]
+        assert split_words("Hello,world!") == ["Hello", "world!"]
+        assert split_words("abcdef") == 3
+        assert split_words("abc def ghi") == ["abc", "def", "ghi"]
+        assert split_words("abc,def,ghi") == ["abc", "def", "ghi"]
+        assert split_words("xyz") == 2
+        assert split_words("a,b,c") == ["a", "b", "c"]
+        assert split_words("") == 0
+        assert split_words("hijkl") == 3
+        assert split_words("Hello world!") == ["Hello", "world!"]
+        assert split_words("Hello,world!") == ["Hello", "world!"]
+        assert split_words("abcdef") == 3
+        assert split_words("abc def ghi") == ["abc", "def", "ghi"]
+        assert split_words("abc,def,ghi") == ["abc", "def", "ghi"]
+        assert split_words("xyz") == 2
+        assert split_words("a,b,c") == ["a", "b", "c"]
+        assert split_words("") == 0
+        assert split_words("hijkl") == 3
+>       assert split_words("bbdf") == 1  # new test case to detect the fault
+E       AssertionError: assert 4 == 1
+E        +  where 4 = split_words('bbdf')
+
+tmpxtk01m2w/test.py:22: AssertionError
+=========================== short test summary info ============================
+FAILED tmpxtk01m2w/test.py::test - AssertionError: assert 4 == 1
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

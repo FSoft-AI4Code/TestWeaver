@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test with integers
+        assert compare_one(1, 2) == 2
+        assert compare_one(1, 0) == 1
+        assert compare_one(-1, 0) == 0
+    
+        # Test with floats
+        assert compare_one(1.5, 2.5) == 2.5
+        assert compare_one(1.5, 1.0) == 1.5
+        assert compare_one(-1.5, -2.5) == -1.5
+    
+        # Test with strings
+        assert compare_one("1", "2") == "2"
+        assert compare_one("1", "1.0") == None
+>       assert compare_one("-1", "-2") == -1
+E       AssertionError: assert '-1' == -1
+E        +  where '-1' = compare_one('-1', '-2')
+
+tmpbnl03k30/test.py:17: AssertionError
+=========================== short test summary info ============================
+FAILED tmpbnl03k30/test.py::test - AssertionError: assert '-1' == -1
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

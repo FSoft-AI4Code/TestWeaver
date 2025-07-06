@@ -1,0 +1,32 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert change_base(8, 3) == '22'
+        assert change_base(8, 2) == '1000'
+        assert change_base(7, 2) == '111'
+        assert change_base(10, 2) == '1010'
+        assert change_base(15, 2) == '1111'
+        assert change_base(9, 3) == '100'
+        assert change_base(5, 5) == '10'
+        assert change_base(0, 3) == ''
+        assert change_base(1, 2) == '1'
+        assert change_base(8, 3) == '22'
+        assert change_base(8, 2) == '1000'
+        assert change_base(7, 2) == '111'
+        assert change_base(10, 2) == '1010'
+        assert change_base(15, 2) == '1111'
+        assert change_base(9, 3) == '100'
+        assert change_base(5, 5) == '10'
+        assert change_base(0, 3) == ''
+        assert change_base(1, 2) == '1'
+        assert True
+>       assert False
+E       assert False
+
+tmp_9zim9k1/test.py:23: AssertionError
+=========================== short test summary info ============================
+FAILED tmp_9zim9k1/test.py::test - assert False
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

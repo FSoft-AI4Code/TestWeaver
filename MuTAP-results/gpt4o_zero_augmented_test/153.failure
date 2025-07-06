@@ -1,0 +1,41 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert Strongest_Extension('my_class', ['AA', 'Be', 'CC']) == 'my_class.AA'
+        assert Strongest_Extension('Slices', ['SErviNGSliCes', 'Cheese', 'StuFfed']) == 'Slices.SErviNGSliCes'
+        assert Strongest_Extension('Test', ['abc', 'DEF', 'GhI']) == 'Test.DEF'
+        assert Strongest_Extension('Example', ['Xyz', 'QWE', 'rty']) == 'Example.QWE'
+        assert Strongest_Extension('Alpha', ['BeTa', 'GAMMA', 'delta']) == 'Alpha.GAMMA'
+        assert Strongest_Extension('my_class', ['AA', 'Be', 'CC']) == 'my_class.AA'
+        assert Strongest_Extension('Slices', ['SErviNGSliCes', 'Cheese', 'StuFfed']) == 'Slices.SErviNGSliCes'
+        assert Strongest_Extension('Test', ['abc', 'DEF', 'GhI']) == 'Test.DEF'
+        assert Strongest_Extension('Example', ['Xyz', 'QWE', 'rty']) == 'Example.QWE'
+        assert Strongest_Extension('Alpha', ['BeTa', 'GAMMA', 'delta']) == 'Alpha.GAMMA'
+        assert Strongest_Extension('NewClass', ['abc', 'aBc', 'ABc']) == 'NewClass.ABc'
+    
+        assert Strongest_Extension('my_class', ['AA', 'Be', 'CC']) == 'my_class.AA'
+        assert Strongest_Extension('Slices', ['SErviNGSliCes', 'Cheese', 'StuFfed']) == 'Slices.SErviNGSliCes'
+        assert Strongest_Extension('Test', ['abc', 'DEF', 'GhI']) == 'Test.DEF'
+        assert Strongest_Extension('Example', ['Xyz', 'QWE', 'rty']) == 'Example.QWE'
+        assert Strongest_Extension('Alpha', ['BeTa', 'GAMMA', 'delta']) == 'Alpha.GAMMA'
+        assert Strongest_Extension('FaultTest', ['ABC', 'aBc', 'AbC']) == 'FaultTest.ABC'
+    
+        assert Strongest_Extension('my_class', ['AA', 'Be', 'CC']) == 'my_class.AA'
+        assert Strongest_Extension('Slices', ['SErviNGSliCes', 'Cheese', 'StuFfed']) == 'Slices.SErviNGSliCes'
+        assert Strongest_Extension('Test', ['abc', 'DEF', 'GhI']) == 'Test.DEF'
+        assert Strongest_Extension('Example', ['Xyz', 'QWE', 'rty']) == 'Example.QWE'
+        assert Strongest_Extension('Alpha', ['BeTa', 'GAMMA', 'delta']) == 'Alpha.GAMMA'
+>       assert Strongest_Extension('BetaTest', ['a', 'b', 'C', 'D']) == 'BetaTest.D'
+E       AssertionError: assert 'BetaTest.C' == 'BetaTest.D'
+E         - BetaTest.D
+E         ?          ^
+E         + BetaTest.C
+E         ?          ^
+
+tmppi8xupun/test.py:28: AssertionError
+=========================== short test summary info ============================
+FAILED tmppi8xupun/test.py::test - AssertionError: assert 'BetaTest.C' == 'Be...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

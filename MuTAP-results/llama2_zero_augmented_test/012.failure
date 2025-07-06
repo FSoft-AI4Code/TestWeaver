@@ -1,0 +1,30 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test 1: Ensure the function returns the longest string in the list
+        assert longest(["hello", "world", "python"]) == "python"
+    
+        # Test 2: Ensure the function returns None when the list is empty
+        assert longest([]) is None
+    
+        # Test 3: Ensure the function works correctly for lists of different strings
+>       assert longest(["hello", 1, "world", ]) == "world"
+
+tmpmfxiokpq/test.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpmfxiokpq/m.py:9: in longest
+    maxlen = max(len(x) for x in strings)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f7606a9a800>
+
+>   maxlen = max(len(x) for x in strings)
+E   TypeError: object of type 'int' has no len()
+
+tmpmfxiokpq/m.py:9: TypeError
+=========================== short test summary info ============================
+FAILED tmpmfxiokpq/test.py::test - TypeError: object of type 'int' has no len()
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test 1: Valid input
+    
+        assert select_words("Hello World!", 2) == []
+    
+        # Test 2: Valid input with multiple words
+        assert select_words("The quick brown fox jumps over the lazy dog.", 3) == ['quick', 'lazy', 'dog.']
+    
+        # Test 3: Invalid input
+        assert select_words("This is not a valid sentence.", 4) == []
+    
+        # Test 4: Valid input with too many consonants
+>       assert select_words("The quick brown fox jumps over the lazy dog.",5) == [ "brown"]
+E       AssertionError: assert [] == ['brown']
+E         
+E         Right contains one more item: 'brown'
+E         Use -v to get more diff
+
+tmpxgvlrwt5/test.py:15: AssertionError
+=========================== short test summary info ============================
+FAILED tmpxgvlrwt5/test.py::test - AssertionError: assert [] == ['brown']
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

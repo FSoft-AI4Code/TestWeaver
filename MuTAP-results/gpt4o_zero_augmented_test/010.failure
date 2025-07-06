@@ -1,0 +1,22 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert make_palindrome('') == ''
+        assert make_palindrome('a') == 'a'
+        assert make_palindrome('aa') == 'aa'
+        assert make_palindrome('ab') == 'aba'
+        assert make_palindrome('abc') == 'abcba'
+        assert make_palindrome('abcd') == 'abcdcba'
+        assert make_palindrome('cat') == 'catac'
+        assert make_palindrome('cata') == 'catac'
+        assert make_palindrome('race') == 'racecar'
+>       assert make_palindrome('google') == googlelgoog
+E       NameError: name 'googlelgoog' is not defined
+
+tmp5wxlat8h/test.py:13: NameError
+=========================== short test summary info ============================
+FAILED tmp5wxlat8h/test.py::test - NameError: name 'googlelgoog' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

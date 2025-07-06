@@ -1,0 +1,25 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert numerical_letter_grade([4.0, 3.0, 1.7, 2.0, 3.5]) == ['A+', 'B', 'C-', 'C', 'A-']
+        assert numerical_letter_grade([3.8, 3.4, 2.8, 2.4, 1.9]) == ['A', 'A-', 'B', 'B-', 'C']
+        assert numerical_letter_grade([1.2, 0.8, 0.1, 0.0]) == ['D+', 'D', 'D-', 'E']
+        assert numerical_letter_grade([4.0, 4.0, 4.0]) == ['A+', 'A+', 'A+']
+        assert numerical_letter_grade([2.5, 3.2, 1.5]) == ['B-', 'B+', 'C-']
+        assert numerical_letter_grade([4.0, 3.0, 1.7, 2.0, 3.5]) == ['A+', 'B', 'C-', 'C', 'A-']
+        assert numerical_letter_grade([3.8, 3.4, 2.8, 2.4, 1.9]) == ['A', 'A-', 'B', 'B-', 'C']
+        assert numerical_letter_grade([1.2, 0.8, 0.1, 0.0]) == ['D+', 'D', 'D-', 'E']
+        assert numerical_letter_grade([4.0, 4.0, 4.0]) == ['A+', 'A+', 'A+']
+        assert numerical_letter_grade([2.5, 3.2, 1.5]) == ['B-', 'B+', 'C-']
+>       assert numerical_letter_grade([3.7, 3.3, 3.0]) == ['A', 'B+', 'B+']  # This test case will detect the change
+E       AssertionError: assert ['A-', 'B+', 'B'] == ['A', 'B+', 'B+']
+E         At index 0 diff: 'A-' != 'A'
+E         Use -v to get more diff
+
+tmpqhih7x_d/test.py:14: AssertionError
+=========================== short test summary info ============================
+FAILED tmpqhih7x_d/test.py::test - AssertionError: assert ['A-', 'B+', 'B'] =...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

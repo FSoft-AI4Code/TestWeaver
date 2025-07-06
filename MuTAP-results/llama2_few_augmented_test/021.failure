@@ -1,0 +1,22 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert rescale_to_unit([]) == []
+
+tmphqkpqk6p/test.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+numbers = []
+
+    def rescale_to_unit(numbers: List[float]) -> List[float]:
+    
+>       min_number = min(numbers)
+E       ValueError: min() arg is an empty sequence
+
+tmphqkpqk6p/m.py:6: ValueError
+=========================== short test summary info ============================
+FAILED tmphqkpqk6p/test.py::test - ValueError: min() arg is an empty sequence
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

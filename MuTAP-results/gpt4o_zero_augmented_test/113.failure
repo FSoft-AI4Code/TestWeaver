@@ -1,0 +1,65 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert odd_count(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+        assert odd_count(['3',"11111111"]) == ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+        assert odd_count(['2468', '13579', '02468']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 5n the str5ng 5 of the 5nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['', '1', '22', '333', '4444']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+        assert odd_count(['3',"11111111"]) == ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+        assert odd_count(['2468', '13579', '02468']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 5n the str5ng 5 of the 5nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['', '1', '22', '333', '4444']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['56789']) == ["the number of odd elements 3n the str3ng 3 of the 3nput."]
+    
+        assert odd_count(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+        assert odd_count(['3',"11111111"]) == ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+        assert odd_count(['2468', '13579', '02468']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 5n the str5ng 5 of the 5nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['', '1', '22', '333', '4444']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['123', '456', '789']) != ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 2n the str2ng 2 of the 2nput.", "the number of odd elements 3n the str3ng 3 of the 3nput."]
+    
+        assert odd_count(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+        assert odd_count(['3',"11111111"]) == ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+        assert odd_count(['2468', '13579', '02468']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 5n the str5ng 5 of the 5nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['', '1', '22', '333', '4444']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['111', '222', '333', '444']) == ["the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+    
+        assert odd_count(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+        assert odd_count(['3',"11111111"]) == ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+        assert odd_count(['2468', '13579', '02468']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 5n the str5ng 5 of the 5nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['', '1', '22', '333', '4444']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['1357', '246']) == ["the number of odd elements 4n the str4ng 4 of the 4nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+    
+        assert odd_count(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+        assert odd_count(['3',"11111111"]) == ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+        assert odd_count(['2468', '13579', '02468']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 5n the str5ng 5 of the 5nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['', '1', '22', '333', '4444']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['1234567890']) == ["the number of odd elements 5n the str5ng 5 of the 5nput."]  # New test case to catch the fault
+    
+        assert odd_count(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+        assert odd_count(['3',"11111111"]) == ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+        assert odd_count(['2468', '13579', '02468']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 5n the str5ng 5 of the 5nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['', '1', '22', '333', '4444']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['555', '7777', '99999']) == ["the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 4n the str4ng 4 of the 4nput.", "the number of odd elements 5n the str5ng 5 of the 5nput."]
+    
+        assert odd_count(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+        assert odd_count(['3',"11111111"]) == ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+        assert odd_count(['2468', '13579', '02468']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 5n the str5ng 5 of the 5nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['', '1', '22', '333', '4444']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['579', '135', '97531']) == ["the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 5n the str5ng 5 of the 5nput."]
+    
+        assert odd_count(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+        assert odd_count(['3',"11111111"]) == ["the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 8n the str8ng 8 of the 8nput."]
+        assert odd_count(['2468', '13579', '02468']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 5n the str5ng 5 of the 5nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+        assert odd_count(['', '1', '22', '333', '4444']) == ["the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 1n the str1ng 1 of the 1nput.", "the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 0n the str0ng 0 of the 0nput."]
+>       assert odd_count(['579', '123', '444', '56789']) == ["the number of odd elements 3n the str3ng 3 of the 3nput.", "the number of odd elements 2n the str2ng 2 of the 2nput.", "the number of odd elements 0n the str0ng 0 of the 0nput.", "the number of odd elements 4n the str4ng 4 of the 4nput."]
+E       AssertionError: assert ['the number ...f the 3nput.'] == ['the number ...f the 4nput.']
+E         At index 3 diff: 'the number of odd elements 3n the str3ng 3 of the 3nput.' != 'the number of odd elements 4n the str4ng 4 of the 4nput.'
+E         Use -v to get more diff
+
+tmpnfg8jz0t/test.py:54: AssertionError
+=========================== short test summary info ============================
+FAILED tmpnfg8jz0t/test.py::test - AssertionError: assert ['the number ...f t...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

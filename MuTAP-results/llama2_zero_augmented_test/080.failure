@@ -1,0 +1,21 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test with correct input
+        assert is_happy("happy") == False
+        assert is_happy("hello") == False
+        # Test with incorrect input
+        assert is_happy("haha") == False
+        assert is_happy("") == False
+    
+    # Test with different lengths
+>       assert is_happy("hello", 4) == False
+E       TypeError: is_happy() takes 1 positional argument but 2 were given
+
+tmpyww0k72v/test.py:12: TypeError
+=========================== short test summary info ============================
+FAILED tmpyww0k72v/test.py::test - TypeError: is_happy() takes 1 positional a...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

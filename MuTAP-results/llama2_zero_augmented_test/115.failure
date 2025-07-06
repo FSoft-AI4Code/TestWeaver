@@ -1,0 +1,25 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test 1: Valid grid, valid capacity
+    
+>       assert max_fill([1, 2, 3, 4, 5], 2) == 7
+
+tmprwcc6rjh/test.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmprwcc6rjh/m.py:4: in max_fill
+    return sum([math.ceil(sum(arr)/capacity) for arr in grid])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f64f55150f0>
+
+>   return sum([math.ceil(sum(arr)/capacity) for arr in grid])
+E   TypeError: 'int' object is not iterable
+
+tmprwcc6rjh/m.py:4: TypeError
+=========================== short test summary info ============================
+FAILED tmprwcc6rjh/test.py::test - TypeError: 'int' object is not iterable
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

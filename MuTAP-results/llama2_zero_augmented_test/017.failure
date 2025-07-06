@@ -1,0 +1,30 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        #test_empty_music
+        assert parse_music("   ") == []
+    
+        #test_single_note
+        assert parse_music("o") == [4]
+    
+        #test_double_notes
+>       assert parse_music("o|.|") == [2, 1]
+
+tmp12qc70fx/test.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmp12qc70fx/m.py:7: in parse_music
+    return [note_map[x] for x in music_string.split(' ') if x]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f1a8ce94ee0>
+
+>   return [note_map[x] for x in music_string.split(' ') if x]
+E   KeyError: 'o|.|'
+
+tmp12qc70fx/m.py:7: KeyError
+=========================== short test summary info ============================
+FAILED tmp12qc70fx/test.py::test - KeyError: 'o|.|'
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

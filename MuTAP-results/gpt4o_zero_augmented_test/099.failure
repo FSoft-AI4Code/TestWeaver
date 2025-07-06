@@ -1,0 +1,55 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert closest_integer("10") == 10
+        assert closest_integer("15.3") == 15
+        assert closest_integer("14.5") == 15
+        assert closest_integer("-14.5") == -15
+        assert closest_integer("0.5") == 1
+        assert closest_integer("-0.5") == -1
+        assert closest_integer("2.7") == 3
+        assert closest_integer("3.2") == 3
+        assert closest_integer("0") == 0
+        assert closest_integer("100.0000") == 100
+        assert closest_integer("-100.0000") == -100
+        assert closest_integer("0.00001") == 0
+        assert closest_integer("-0.00001") == 0
+        assert closest_integer("10") == 10
+        assert closest_integer("15.3") == 15
+        assert closest_integer("14.5") == 15
+        assert closest_integer("-14.5") == -15
+        assert closest_integer("0.5") == 1
+        assert closest_integer("-0.5") == -1
+        assert closest_integer("2.7") == 3
+        assert closest_integer("3.2") == 3
+        assert closest_integer("0") == 0
+        assert closest_integer("100.0000") == 100
+        assert closest_integer("-100.0000") == -100
+        assert closest_integer("0.00001") == 0
+        assert closest_integer("-0.00001") == 0
+>       assert closest_integer("") == 0  # Additional test case to detect the change
+
+tmp4kjcxfvw/test.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = ''
+
+    def closest_integer(value):
+    
+        from math import floor, ceil
+    
+        if value.count('.') == 1:
+            # remove trailing zeros
+            while (value[-1] == '0'):
+                value = value[:-1]
+    
+>       num = float(value)
+E       ValueError: could not convert string to float: ''
+
+tmp4kjcxfvw/m.py:10: ValueError
+=========================== short test summary info ============================
+FAILED tmp4kjcxfvw/test.py::test - ValueError: could not convert string to fl...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

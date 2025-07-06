@@ -1,0 +1,36 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert compare_one(1, 2.5) == 2.5
+        assert compare_one(1, "2,3") == "2,3"
+        assert compare_one("5,1", "6") == "6"
+        assert compare_one("1", 1) == None
+        assert compare_one(1, 1.0) == None
+        assert compare_one("3.5", "3,5") == None
+        assert compare_one("7,2", 7.1) == "7,2"
+        assert compare_one(-1, "-2.5") == -1
+        assert compare_one("-3,2", "3.2") == "3.2"
+        assert compare_one("0", 0) == None
+        assert compare_one(1, 2.5) == 2.5
+        assert compare_one(1, "2,3") == "2,3"
+        assert compare_one("5,1", "6") == "6"
+        assert compare_one("1", 1) == None
+        assert compare_one(1, 1.0) == None
+        assert compare_one("3.5", "3,5") == None
+        assert compare_one("7,2", 7.1) == "7,2"
+        assert compare_one(-1, "-2.5") == -1
+        assert compare_one("-3,2", "3.2") == "3.2"
+        assert compare_one("0", 0) == None
+>       assert compare_one(float('nan'), float('nan')) == None  # New test case to check for NaN comparison
+E       AssertionError: assert nan == None
+E        +  where nan = compare_one(nan, nan)
+E        +    where nan = float('nan')
+E        +    and   nan = float('nan')
+
+tmpnab_b3d_/test.py:24: AssertionError
+=========================== short test summary info ============================
+FAILED tmpnab_b3d_/test.py::test - AssertionError: assert nan == None
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

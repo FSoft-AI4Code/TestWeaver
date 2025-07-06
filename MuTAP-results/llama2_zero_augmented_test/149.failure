@@ -1,0 +1,26 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test case 1: Valid list
+>       assert sorted_list_sum([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
+
+tmp0ctkn3e9/test.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+lst = [1, 2, 3, 4, 5]
+
+    def sorted_list_sum(lst):
+    
+        lst.sort()
+        new_lst = []
+        for i in lst:
+>           if len(i)%2 == 0:
+E           TypeError: object of type 'int' has no len()
+
+tmp0ctkn3e9/m.py:6: TypeError
+=========================== short test summary info ============================
+FAILED tmp0ctkn3e9/test.py::test - TypeError: object of type 'int' has no len()
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

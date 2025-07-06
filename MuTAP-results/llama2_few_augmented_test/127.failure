@@ -1,0 +1,14 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert intersection([1, 2, 3], [2, 3, 4]) == "NO"
+>       assert intersection([1, 2, 3], [2, 3, 4], 2) == "YES"
+E       TypeError: intersection() takes 2 positional arguments but 3 were given
+
+tmpv4z4adix/test.py:5: TypeError
+=========================== short test summary info ============================
+FAILED tmpv4z4adix/test.py::test - TypeError: intersection() takes 2 position...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

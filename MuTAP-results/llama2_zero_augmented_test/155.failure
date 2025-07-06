@@ -1,0 +1,37 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test even count
+    
+        assert even_odd_count(12) == (1, 1)
+    
+        # Test odd count
+        assert even_odd_count(13) == (0, 2)
+    
+        # Test edge cases
+    
+        assert even_odd_count(-1) == (0, 1)
+    
+        # Test invalid input
+    
+>       assert even_odd_count(" Hello, world!") == (0, 0)
+
+tmpshyskb2q/test.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = ' Hello, world!'
+
+    def even_odd_count(num):
+    
+        even_count = 0
+        odd_count = 0
+>       for i in str(abs(num)):
+E       TypeError: bad operand type for abs(): 'str'
+
+tmpshyskb2q/m.py:5: TypeError
+=========================== short test summary info ============================
+FAILED tmpshyskb2q/test.py::test - TypeError: bad operand type for abs(): 'str'
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

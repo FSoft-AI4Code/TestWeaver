@@ -1,0 +1,29 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert cycpattern_check("AACCEE", "AACC") == True
+        assert cycpattern_check("AACCEE", "C") == True
+        assert cycpattern_check("ABCB", "ABC") == True
+        assert cycpattern_check("AACCEE", "AACC") == True
+        assert cycpattern_check("AACCEE", "AACC") == True
+        assert cycpattern_check("", "AACCEE") == False
+        assert cycpattern_check("AACCEE", "") == True
+>       assert cycpattern_check("AACCEE", None) == False
+
+tmp7jgd736f/test.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = 'AACCEE', b = None
+
+    def cycpattern_check(a , b):
+    
+>       l = len(b)
+E       TypeError: object of type 'NoneType' has no len()
+
+tmp7jgd736f/m.py:3: TypeError
+=========================== short test summary info ============================
+FAILED tmp7jgd736f/test.py::test - TypeError: object of type 'NoneType' has n...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

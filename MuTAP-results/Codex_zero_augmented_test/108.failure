@@ -1,0 +1,29 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert count_nums(-12) == 3
+
+tmph8qmwfzf/test.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+arr = -12
+
+    def count_nums(arr):
+    
+        def digits_sum(n):
+            neg = 1
+            if n < 0:
+                n, neg = -1 * n, -1
+            n = [int(i) for i in str(n)]
+            n[0] = n[0] * neg
+            return sum(n)
+>       return len(list(filter(lambda x: x > 0, [digits_sum(i) for i in arr])))
+E       TypeError: 'int' object is not iterable
+
+tmph8qmwfzf/m.py:10: TypeError
+=========================== short test summary info ============================
+FAILED tmph8qmwfzf/test.py::test - TypeError: 'int' object is not iterable
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

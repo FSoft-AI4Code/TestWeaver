@@ -1,0 +1,21 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert exchange([1, 2, 3, 4, 5, 6], [7, 1, 3, 5, 9, 11]) == "NO"
+        assert exchange([1, 2, 3, 4, 5, 6], [7, 0, 3, 5, 9, 11]) == "NO"
+        assert exchange([1, 2, 3, 4, 5, 6], [7, 0, 3, 5, 9, 11]) == "NO"
+        assert exchange([1, 2, 3, 4, 5, 6], [7, 1, 3, 5, 9, 11]) == "NO"
+        assert exchange([1, 2, 3, 4, 5, 6], [7, 0, 3, 5, 9, 11]) == "NO"
+        assert exchange([1, 2, 3, 4, 5, 6], [7, 1, 3, 5, 9, 11]) == "NO"
+        assert exchange([1, 2, 3, 4, 5, 6], [7, 0, 3, 5, 9, 11]) == "NO"
+        assert exchange([1, 2, 3], [4, 5, 6]) == "YES"
+>       assert exchange([1, 2, 3], [4, 7, 6]) == YES
+E       NameError: name 'YES' is not defined
+
+tmpa7c09jep/test.py:12: NameError
+=========================== short test summary info ============================
+FAILED tmpa7c09jep/test.py::test - NameError: name 'YES' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

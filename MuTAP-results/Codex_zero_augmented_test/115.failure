@@ -1,0 +1,24 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert max_fill([[4,4,4,4,4,4,4], [5,5,5,5,5,5,5], [1,1,1,1,1,1,1]], 4) == 18
+>       assert max_fill([[1,2,3,4], [1,2,3,4], [1,2,3,4], [1,2,3,4]], 0) == 0
+
+tmpykjh81gl/test.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpykjh81gl/m.py:4: in max_fill
+    return sum([math.ceil(sum(arr)/capacity) for arr in grid])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f2f4d9171c0>
+
+>   return sum([math.ceil(sum(arr)/capacity) for arr in grid])
+E   ZeroDivisionError: division by zero
+
+tmpykjh81gl/m.py:4: ZeroDivisionError
+=========================== short test summary info ============================
+FAILED tmpykjh81gl/test.py::test - ZeroDivisionError: division by zero
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

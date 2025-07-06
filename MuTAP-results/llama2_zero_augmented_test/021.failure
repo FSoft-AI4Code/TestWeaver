@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        #test_range_of_values():
+        assert rescale_to_unit([1, 2, 3, 4, 5, 6]) == [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+    
+        #test_single_number
+>       assert rescale_to_unit([1.5]) == [0.5]
+
+tmpt43ifif6/test.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpt43ifif6/m.py:8: in rescale_to_unit
+    return [(x - min_number) / (max_number - min_number) for x in numbers]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f7798b95090>
+
+>   return [(x - min_number) / (max_number - min_number) for x in numbers]
+E   ZeroDivisionError: float division by zero
+
+tmpt43ifif6/m.py:8: ZeroDivisionError
+=========================== short test summary info ============================
+FAILED tmpt43ifif6/test.py::test - ZeroDivisionError: float division by zero
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

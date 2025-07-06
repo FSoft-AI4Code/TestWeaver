@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert largest_divisor(3) == 1
+        assert largest_divisor(4) == 2
+        assert largest_divisor(6) == 3
+        assert largest_divisor(7) == 1
+        assert largest_divisor(8) == 4
+>       assert largest_divisor(3.5) == None
+
+tmpj_i3xt6w/test.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+n = 3.5
+
+    def largest_divisor(n: int) -> int:
+    
+>       for i in reversed(range(n)):
+E       TypeError: 'float' object cannot be interpreted as an integer
+
+tmpj_i3xt6w/m.py:3: TypeError
+=========================== short test summary info ============================
+FAILED tmpj_i3xt6w/test.py::test - TypeError: 'float' object cannot be interp...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

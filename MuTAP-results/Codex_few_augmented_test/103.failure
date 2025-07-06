@@ -1,0 +1,14 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert rounded_avg(1, 10) == 0b110
+E       AssertionError: assert '0b110' == 6
+E        +  where '0b110' = rounded_avg(1, 10)
+
+tmpqxsku6go/test.py:4: AssertionError
+=========================== short test summary info ============================
+FAILED tmpqxsku6go/test.py::test - AssertionError: assert '0b110' == 6
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

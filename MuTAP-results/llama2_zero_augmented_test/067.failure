@@ -1,0 +1,33 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test with valid input
+        assert fruit_distribution("apple banana orange", 5) == 5
+        assert fruit_distribution("apple banana orange", 6) == 6
+        # Test with invalid input
+        assert fruit_distribution("apple banana orange", 5) == 5
+        assert fruit_distribution("apple banana orange", 6) == 6
+        # Test with empty string
+        assert fruit_distribution("", 5) == 5
+        assert fruit_distribution("", 6) == 6
+        # Test with null input
+>       assert fruit_distribution( None, 5) == 0
+
+tmpo6lkf4gq/test.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+s = None, n = 5
+
+    def fruit_distribution(s,n):
+    
+        lis = list()
+>       for i in s.split(' '):
+E       AttributeError: 'NoneType' object has no attribute 'split'
+
+tmpo6lkf4gq/m.py:4: AttributeError
+=========================== short test summary info ============================
+FAILED tmpo6lkf4gq/test.py::test - AttributeError: 'NoneType' object has no a...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

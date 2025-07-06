@@ -1,0 +1,32 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert below_zero([1, 2, 3]) == False
+        assert below_zero([1, 2, -4, 5]) == True
+        assert below_zero([10, -10, 5, -4, -6]) == True
+        assert below_zero([5, -5, 5, -5]) == False
+        assert below_zero([-1]) == True
+        assert below_zero([1, -1, 1, -1]) == False
+        assert below_zero([1, 2, -3, -1]) == True  # This should test the scenario of going below zero exactly
+        assert below_zero([5, -6, 1]) == True  # This should test the scenario of going below zero in the middle
+        assert below_zero([0, -1, 1]) == True  # This should test the scenario of starting at zero balance and going below
+        assert below_zero([10, -10, -1, 1]) == True  # This should test the scenario of going below zero after multiple operations
+        assert below_zero([1, 2, 3, -6]) == False  # This tests that it does not go below zero even with negative operations
+    
+        assert below_zero([1, 2, 3]) == False
+        assert below_zero([1, 2, -4, 5]) == True
+        assert below_zero([10, -10, 5, -4, -6]) == True
+        assert below_zero([5, -5, 5, -5]) == False
+        assert below_zero([-1]) == True
+        assert below_zero([1, -1, 1, -1]) == False
+>       assert below_zero([1, 2, 3, -6, 1]) == True
+E       assert False == True
+E        +  where False = below_zero([1, 2, 3, -6, 1])
+
+tmpkq66irx1/test.py:22: AssertionError
+=========================== short test summary info ============================
+FAILED tmpkq66irx1/test.py::test - assert False == True
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

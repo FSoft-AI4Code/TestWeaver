@@ -1,0 +1,20 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert file_name_check("example.txt") == 'Yes'
+        assert file_name_check("example.exe") == 'Yes'
+        assert file_name_check("example.dll") == 'Yes'
+        assert file_name_check("exa.mp.le.txt") == 'No'
+        assert file_name_check("example.txtexe") == 'No'
+        assert file_name_check("example.") == 'No'
+        assert file_name_check(".txt") == 'No'
+>       assert file_name_check("1example.txt") == No
+E       NameError: name 'No' is not defined
+
+tmpahapic0d/test.py:11: NameError
+=========================== short test summary info ============================
+FAILED tmpahapic0d/test.py::test - NameError: name 'No' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

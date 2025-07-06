@@ -1,0 +1,91 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert right_angle_triangle(3, 4, 5) == True
+        assert right_angle_triangle(5, 12, 13) == True
+        assert right_angle_triangle(1, 2, 3) == False
+        assert right_angle_triangle(6, 8, 10) == True
+        assert right_angle_triangle(7, 24, 25) == True
+        assert right_angle_triangle(10, 20, 30) == False
+        assert right_angle_triangle(9, 40, 41) == True
+        assert right_angle_triangle(3, 4, 5) == True
+        assert right_angle_triangle(5, 12, 13) == True
+        assert right_angle_triangle(1, 2, 3) == False
+        assert right_angle_triangle(6, 8, 10) == True
+        assert right_angle_triangle(7, 24, 25) == True
+        assert right_angle_triangle(10, 20, 30) == False
+        assert right_angle_triangle(9, 40, 41) == True
+        assert right_angle_triangle(3, 4, 6) == False
+    
+        assert right_angle_triangle(3, 4, 5) == True
+        assert right_angle_triangle(5, 12, 13) == True
+        assert right_angle_triangle(1, 2, 3) == False
+        assert right_angle_triangle(6, 8, 10) == True
+        assert right_angle_triangle(7, 24, 25) == True
+        assert right_angle_triangle(10, 20, 30) == False
+        assert right_angle_triangle(9, 40, 41) == True
+        assert right_angle_triangle(2, 3, 5) == False
+    
+        assert right_angle_triangle(3, 4, 5) == True
+        assert right_angle_triangle(5, 12, 13) == True
+        assert right_angle_triangle(1, 2, 3) == False
+        assert right_angle_triangle(6, 8, 10) == True
+        assert right_angle_triangle(7, 24, 25) == True
+        assert right_angle_triangle(10, 20, 30) == False
+        assert right_angle_triangle(9, 40, 41) == True
+        assert right_angle_triangle(2, 3, 4) == False
+    
+        assert right_angle_triangle(3, 4, 5) == True
+        assert right_angle_triangle(5, 12, 13) == True
+        assert right_angle_triangle(1, 2, 3) == False
+        assert right_angle_triangle(6, 8, 10) == True
+        assert right_angle_triangle(7, 24, 25) == True
+        assert right_angle_triangle(10, 20, 30) == False
+        assert right_angle_triangle(9, 40, 41) == True
+        assert right_angle_triangle(3, 4, 6) == False
+    
+        assert right_angle_triangle(3, 4, 5) == True
+        assert right_angle_triangle(5, 12, 13) == True
+        assert right_angle_triangle(1, 2, 3) == False
+        assert right_angle_triangle(6, 8, 10) == True
+        assert right_angle_triangle(7, 24, 25) == True
+        assert right_angle_triangle(10, 20, 30) == False
+        assert right_angle_triangle(9, 40, 41) == True
+        assert right_angle_triangle(8, 15, 17) == True  # New test case to detect the fault
+    
+        assert right_angle_triangle(3, 4, 5) == True
+        assert right_angle_triangle(5, 12, 13) == True
+        assert right_angle_triangle(1, 2, 3) == False
+        assert right_angle_triangle(6, 8, 10) == True
+        assert right_angle_triangle(7, 24, 25) == True
+        assert right_angle_triangle(10, 20, 30) == False
+        assert right_angle_triangle(9, 40, 41) == True
+        assert right_angle_triangle(2, 2, 2) == False  # Equilateral triangle, should return False
+    
+        assert right_angle_triangle(3, 4, 5) == True
+        assert right_angle_triangle(5, 12, 13) == True
+        assert right_angle_triangle(1, 2, 3) == False
+        assert right_angle_triangle(6, 8, 10) == True
+        assert right_angle_triangle(7, 24, 25) == True
+        assert right_angle_triangle(10, 20, 30) == False
+        assert right_angle_triangle(9, 40, 41) == True
+        assert right_angle_triangle(2, 3, 4) == False
+    
+        assert right_angle_triangle(3, 4, 5) == True
+        assert right_angle_triangle(5, 12, 13) == True
+        assert right_angle_triangle(1, 2, 3) == False
+        assert right_angle_triangle(6, 8, 10) == True
+        assert right_angle_triangle(7, 24, 25) == True
+        assert right_angle_triangle(10, 20, 30) == False
+        assert right_angle_triangle(9, 40, 41) == True
+>       assert right_angle_triangle(0, 0, 0) == False
+E       assert True == False
+E        +  where True = right_angle_triangle(0, 0, 0)
+
+tmpjfwm07r7/test.py:81: AssertionError
+=========================== short test summary info ============================
+FAILED tmpjfwm07r7/test.py::test - assert True == False
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

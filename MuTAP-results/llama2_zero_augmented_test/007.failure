@@ -1,0 +1,20 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test that the function returns a list of strings that contain the substring 'abc'
+        assert filter_by_substring(['hello', 'world', 'abc'], 'abc') == ['abc']
+    
+        # Test that the function ignores case
+        assert filter_by_substring(['hello', 'World', 'abc'], 'Abc') == []
+    
+        # Test that the function works with multiple substrings
+>       assert filter_by_substring(['hello', 'world', 'abc', 'def'], 'abc', 'def') == ['abc', 'def']
+E       TypeError: filter_by_substring() takes 2 positional arguments but 3 were given
+
+tmpmede_a17/test.py:11: TypeError
+=========================== short test summary info ============================
+FAILED tmpmede_a17/test.py::test - TypeError: filter_by_substring() takes 2 p...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

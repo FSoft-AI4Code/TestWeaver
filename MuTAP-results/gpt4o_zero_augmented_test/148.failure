@@ -1,0 +1,30 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert bf("Jupiter", "Neptune") == ("Saturn", "Uranus")
+        assert bf("Earth", "Mercury") == ("Venus",)
+        assert bf("Mercury", "Uranus") == ("Venus", "Earth", "Mars", "Jupiter", "Saturn")
+        assert bf("Mercury", "Pluto") == ()
+        assert bf("Neptune", "Neptune") == ()
+        assert bf("Venus", "Earth") == ()
+        assert bf("Earth", "Mars") == ()
+        assert bf("Saturn", "Jupiter") == ()
+        assert bf("Mars", "Jupiter") == ()
+        assert bf("Mars", "Earth") == ()
+        assert bf("Jupiter", "Neptune") == ("Saturn", "Uranus")
+        assert bf("Earth", "Mercury") == ("Venus",)
+        assert bf("Mercury", "Uranus") == ("Venus", "Earth", "Mars", "Jupiter", "Saturn")
+        assert bf("Mercury", "Pluto") == ()
+        assert bf("Neptune", "Neptune") == ()
+>       assert bf("Venus", "Earth") == ("Mercury",)
+E       AssertionError: assert () == ('Mercury',)
+E         Right contains one more item: 'Mercury'
+E         Use -v to get more diff
+
+tmpkwnphzhr/test.py:19: AssertionError
+=========================== short test summary info ============================
+FAILED tmpkwnphzhr/test.py::test - AssertionError: assert () == ('Mercury',)
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

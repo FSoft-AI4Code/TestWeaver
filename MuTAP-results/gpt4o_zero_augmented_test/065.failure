@@ -1,0 +1,24 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert circular_shift(12, 1) == "21"
+        assert circular_shift(12, 2) == "12"
+        assert circular_shift(1234, 1) == "4123"
+        assert circular_shift(1234, 2) == "3412"
+        assert circular_shift(1234, 3) == "2341"
+        assert circular_shift(1234, 4) == "1234"
+        assert circular_shift(1234, 5) == "4321"
+        assert circular_shift(123456, 2) == "561234"
+        assert circular_shift(1234567890, 10) == "1234567890"
+        assert circular_shift(1234567890, 11) == "0987654321"
+>       assert circular_shift(987654321, 6) == 654321987
+E       AssertionError: assert '654321987' == 654321987
+E        +  where '654321987' = circular_shift(987654321, 6)
+
+tmpb11h9ig9/test.py:14: AssertionError
+=========================== short test summary info ============================
+FAILED tmpb11h9ig9/test.py::test - AssertionError: assert '654321987' == 6543...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

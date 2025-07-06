@@ -1,0 +1,55 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert is_simple_power(1, 4) == True
+        assert is_simple_power(2, 2) == True
+        assert is_simple_power(8, 2) == True
+        assert is_simple_power(3, 2) == False
+        assert is_simple_power(3, 1) == False
+        assert is_simple_power(5, 3) == False
+        assert is_simple_power(16, 2) == True
+        assert is_simple_power(27, 3) == True
+        assert is_simple_power(81, 9) == True
+        assert is_simple_power(10, 10) == True
+        assert is_simple_power(10, 1) == False
+        assert is_simple_power(100, 10) == True
+        assert is_simple_power(1, 4) == True
+        assert is_simple_power(2, 2) == True
+        assert is_simple_power(8, 2) == True
+        assert is_simple_power(3, 2) == False
+        assert is_simple_power(3, 1) == False
+        assert is_simple_power(5, 3) == False
+        assert is_simple_power(16, 2) == True
+        assert is_simple_power(27, 3) == True
+        assert is_simple_power(81, 9) == True
+        assert is_simple_power(10, 10) == True
+        assert is_simple_power(10, 1) == False
+        assert is_simple_power(100, 10) == True
+        assert is_simple_power(32, 2) == True  # new test case to detect fault
+    
+        assert is_simple_power(1, 4) == True
+        assert is_simple_power(2, 2) == True
+        assert is_simple_power(8, 2) == True
+        assert is_simple_power(3, 2) == False
+        assert is_simple_power(3, 1) == False
+        assert is_simple_power(5, 3) == False
+        assert is_simple_power(16, 2) == True
+        assert is_simple_power(27, 3) == True
+        assert is_simple_power(81, 9) == True
+        assert is_simple_power(10, 10) == True
+        assert is_simple_power(10, 1) == False
+        assert is_simple_power(100, 10) == True
+        assert is_simple_power(0, 2) == False  # 0 is not a power of any positive number
+        assert is_simple_power(1, 1) == True  # 1 is a power of 1 (1^0)
+        assert is_simple_power(0, 0) == False  # 0^0 is not a valid input for our function
+>       assert is_simple_power(1, 0) == False  # 1 is not a power of 0
+E       assert True == False
+E        +  where True = is_simple_power(1, 0)
+
+tmpsm_ap2kx/test.py:45: AssertionError
+=========================== short test summary info ============================
+FAILED tmpsm_ap2kx/test.py::test - assert True == False
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

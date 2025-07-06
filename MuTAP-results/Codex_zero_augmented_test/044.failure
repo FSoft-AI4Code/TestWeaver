@@ -1,0 +1,26 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert change_base(11, 2) == "1011"
+        assert change_base(15, 16) == "15"
+        assert change_base(16, 16) == "10"
+        assert change_base(17, 16) == "11"
+        assert change_base(255, 16) == "1515"
+        assert change_base(255, 2) == "11111111"
+        assert change_base(255, 16) == "1515"
+    
+    
+    
+    
+>       assert change_base(0, 16) == "0"
+E       AssertionError: assert '' == '0'
+E         
+E         - 0
+
+tmp8gaogsv7/test.py:15: AssertionError
+=========================== short test summary info ============================
+FAILED tmp8gaogsv7/test.py::test - AssertionError: assert '' == '0'
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

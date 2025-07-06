@@ -1,0 +1,14 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert intersection([1,5], [3,8]) == "YES"
+>       assert intersection([1,5], [0,2]) == NO
+E       NameError: name 'NO' is not defined
+
+tmpfkwcmhgq/test.py:5: NameError
+=========================== short test summary info ============================
+FAILED tmpfkwcmhgq/test.py::test - NameError: name 'NO' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

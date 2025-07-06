@@ -1,0 +1,66 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+        assert minSubArraySum([-1, -2, -3]) == -6
+        assert minSubArraySum([3, -4, 2, -3, -1, 7, -5]) == -6
+        assert minSubArraySum([1]) == 1
+        assert minSubArraySum([-5, -1, -3, -2]) == -11
+        assert minSubArraySum([0, -1, 2, -3, 4, -5, 6]) == -5
+        assert minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+        assert minSubArraySum([-1, -2, -3]) == -6
+        assert minSubArraySum([3, -4, 2, -3, -1, 7, -5]) == -6
+        assert minSubArraySum([1]) == 1
+        assert minSubArraySum([-5, -1, -3, -2]) == -11
+        assert minSubArraySum([0, -1, 2, -3, 4, -5, 6]) == -5
+        assert minSubArraySum([1, -2, 3, -4, 5, -6]) == -6
+    
+        assert minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+        assert minSubArraySum([-1, -2, -3]) == -6
+        assert minSubArraySum([3, -4, 2, -3, -1, 7, -5]) == -6
+        assert minSubArraySum([1]) == 1
+        assert minSubArraySum([-5, -1, -3, -2]) == -11
+        assert minSubArraySum([0, -1, 2, -3, 4, -5, 6]) == -5
+        assert minSubArraySum([-2, -1, -2, -3, -4, -5, -6]) == -23
+    
+        assert minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+        assert minSubArraySum([-1, -2, -3]) == -6
+        assert minSubArraySum([3, -4, 2, -3, -1, 7, -5]) == -6
+        assert minSubArraySum([1]) == 1
+        assert minSubArraySum([-5, -1, -3, -2]) == -11
+        assert minSubArraySum([0, -1, 2, -3, 4, -5, 6]) == -5
+        assert minSubArraySum([-1, 2, -1, 2]) == -1
+    
+        assert minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+        assert minSubArraySum([-1, -2, -3]) == -6
+        assert minSubArraySum([3, -4, 2, -3, -1, 7, -5]) == -6
+        assert minSubArraySum([1]) == 1
+        assert minSubArraySum([-5, -1, -3, -2]) == -11
+        assert minSubArraySum([0, -1, 2, -3, 4, -5, 6]) == -5
+        assert minSubArraySum([2, -1, 2, -1, 2, -1]) == -1
+    
+        assert minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+        assert minSubArraySum([-1, -2, -3]) == -6
+        assert minSubArraySum([3, -4, 2, -3, -1, 7, -5]) == -6
+        assert minSubArraySum([1]) == 1
+        assert minSubArraySum([-5, -1, -3, -2]) == -11
+        assert minSubArraySum([0, -1, 2, -3, 4, -5, 6]) == -5
+        assert minSubArraySum([-2, 1]) == -2  # This should return -2, but faulty code with `s += num` returns -1
+    
+        assert minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+        assert minSubArraySum([-1, -2, -3]) == -6
+        assert minSubArraySum([3, -4, 2, -3, -1, 7, -5]) == -6
+        assert minSubArraySum([1]) == 1
+        assert minSubArraySum([-5, -1, -3, -2]) == -11
+        assert minSubArraySum([0, -1, 2, -3, 4, -5, 6]) == -5
+>       assert minSubArraySum([1, -1, -3, 4, -1, 2, 1, -5, 4]) == -6
+E       assert -5 == -6
+E        +  where -5 = minSubArraySum([1, -1, -3, 4, -1, 2, ...])
+
+tmpk88ycngm/test.py:56: AssertionError
+=========================== short test summary info ============================
+FAILED tmpk88ycngm/test.py::test - assert -5 == -6
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

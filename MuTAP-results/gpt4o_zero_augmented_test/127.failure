@@ -1,0 +1,21 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert intersection((1, 2), (2, 3)) == "NO"
+        assert intersection((-1, 1), (0, 4)) == "NO"
+        assert intersection((-3, -1), (-5, 5)) == "YES"
+        assert intersection((1, 5), (5, 10)) == "NO"
+        assert intersection((2, 6), (3, 5)) == "YES"
+        assert intersection((0, 0), (0, 0)) == "NO"
+        assert intersection((1, 10), (11, 20)) == "NO"
+        assert intersection((-10, -5), (-8, -3)) == "YES"
+>       assert intersection((5, 10), (7, 15)) == YES
+E       NameError: name 'YES' is not defined
+
+tmplhneay75/test.py:12: NameError
+=========================== short test summary info ============================
+FAILED tmplhneay75/test.py::test - NameError: name 'YES' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

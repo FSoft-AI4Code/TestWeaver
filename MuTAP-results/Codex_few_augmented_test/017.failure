@@ -1,0 +1,25 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert parse_music("o o") == [4, 4]
+        assert parse_music("o o o") == [4, 4, 4]
+>       assert parse_music(". . .|") == [1, 1, 1]
+
+tmppqx69g7x/test.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmppqx69g7x/m.py:7: in parse_music
+    return [note_map[x] for x in music_string.split(' ') if x]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7efd3dc0d0f0>
+
+>   return [note_map[x] for x in music_string.split(' ') if x]
+E   KeyError: '.'
+
+tmppqx69g7x/m.py:7: KeyError
+=========================== short test summary info ============================
+FAILED tmppqx69g7x/test.py::test - KeyError: '.'
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

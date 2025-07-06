@@ -1,0 +1,23 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert split_words(['zauberer']) == ['zauberer']
+
+tmphnk7343w/test.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmphnk7343w/m.py:8: in split_words
+    return len([i for i in txt if i.islower() and ord(i)%2 == 0])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f6c9948e680>
+
+>   return len([i for i in txt if i.islower() and ord(i)%2 == 0])
+E   TypeError: ord() expected a character, but string of length 8 found
+
+tmphnk7343w/m.py:8: TypeError
+=========================== short test summary info ============================
+FAILED tmphnk7343w/test.py::test - TypeError: ord() expected a character, but...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

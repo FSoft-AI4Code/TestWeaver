@@ -1,0 +1,50 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert max_element([1, 2, 3]) == 3
+        assert max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]) == 123
+        assert max_element([-1, -2, -3, -4]) == -1
+        assert max_element([100]) == 100
+        assert max_element([0, 0, 0, 0, 0]) == 0
+        assert max_element([1, 3, 2, 5, 4, 8, 6, 7, 9]) == 9
+        assert max_element([1, 2, 3]) == 3
+        assert max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]) == 123
+        assert max_element([-1, -2, -3, -4]) == -1
+        assert max_element([100]) == 100
+        assert max_element([0, 0, 0, 0, 0]) == 0
+        assert max_element([1, 3, 2, 5, 4, 8, 6, 7, 9]) == 9
+        assert max_element([2, 3, 2, 3]) == 3  # List with duplicate maximum values
+    
+        assert max_element([1, 2, 3]) == 3
+        assert max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]) == 123
+        assert max_element([-1, -2, -3, -4]) == -1
+        assert max_element([100]) == 100
+        assert max_element([0, 0, 0, 0, 0]) == 0
+        assert max_element([1, 3, 2, 5, 4, 8, 6, 7, 9]) == 9
+        assert max_element([1, 1, 1, 1]) == 1
+    
+        assert max_element([1, 2, 3]) == 3
+        assert max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]) == 123
+        assert max_element([-1, -2, -3, -4]) == -1
+        assert max_element([100]) == 100
+        assert max_element([0, 0, 0, 0, 0]) == 0
+        assert max_element([1, 3, 2, 5, 4, 8, 6, 7, 9]) == 9
+>       assert max_element([]) == None
+
+tmpwh1xt_d4/test.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+l = []
+
+    def max_element(l: list):
+    
+>       m = l[0]
+E       IndexError: list index out of range
+
+tmpwh1xt_d4/m.py:3: IndexError
+=========================== short test summary info ============================
+FAILED tmpwh1xt_d4/test.py::test - IndexError: list index out of range
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

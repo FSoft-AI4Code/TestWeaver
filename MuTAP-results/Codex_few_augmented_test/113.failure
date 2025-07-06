@@ -1,0 +1,13 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert has_close_elements([1.0, 2.0, 5.9, 4.0, 5.0, 0.0], 0.95) == False
+E       NameError: name 'has_close_elements' is not defined
+
+tmp6sub7su9/test.py:4: NameError
+=========================== short test summary info ============================
+FAILED tmp6sub7su9/test.py::test - NameError: name 'has_close_elements' is no...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

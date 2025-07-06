@@ -1,0 +1,22 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert is_equal_to_sum_even(4) == False
+        assert is_equal_to_sum_even(1) == False
+        assert is_equal_to_sum_even(4) == False
+        assert is_equal_to_sum_even(1) == False
+        assert is_equal_to_sum_even(9) == False
+    
+        assert is_equal_to_sum_even(4) == False
+        assert is_equal_to_sum_even(1) == False
+>       assert is_equal_to_sum_even(8) == False
+E       assert True == False
+E        +  where True = is_equal_to_sum_even(8)
+
+tmpbn6txz9v/test.py:12: AssertionError
+=========================== short test summary info ============================
+FAILED tmpbn6txz9v/test.py::test - assert True == False
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,14 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert circular_shift(1929, 2) == 2919
+E       AssertionError: assert '2919' == 2919
+E        +  where '2919' = circular_shift(1929, 2)
+
+tmp_ev0ivml/test.py:4: AssertionError
+=========================== short test summary info ============================
+FAILED tmp_ev0ivml/test.py::test - AssertionError: assert '2919' == 2919
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

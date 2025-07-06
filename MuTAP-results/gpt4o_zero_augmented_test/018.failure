@@ -1,0 +1,37 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert how_many_times('', 'a') == 0
+        assert how_many_times('aaa', 'a') == 3
+        assert how_many_times('aaaa', 'aa') == 3
+        assert how_many_times('abcabcabc', 'abc') == 3
+        assert how_many_times('abababab', 'aba') == 3
+        assert how_many_times('mississippi', 'issi') == 2
+        assert how_many_times('banana', 'ana') == 2
+        assert how_many_times('', 'a') == 0
+        assert how_many_times('aaa', 'a') == 3
+        assert how_many_times('aaaa', 'aa') == 3
+        assert how_many_times('abcabcabc', 'abc') == 3
+        assert how_many_times('abababab', 'aba') == 3
+        assert how_many_times('mississippi', 'issi') == 2
+        assert how_many_times('banana', 'ana') == 2
+        assert how_many_times('aaaa', 'a') == 4  # This test case will detect the introduced fault
+    
+        assert how_many_times('', 'a') == 0
+        assert how_many_times('aaa', 'a') == 3
+        assert how_many_times('aaaa', 'aa') == 3
+        assert how_many_times('abcabcabc', 'abc') == 3
+        assert how_many_times('abababab', 'aba') == 3
+        assert how_many_times('mississippi', 'issi') == 2
+        assert how_many_times('banana', 'ana') == 2
+>       assert how_many_times('a', '') == 0  # New test case to detect the fault
+E       AssertionError: assert 2 == 0
+E        +  where 2 = how_many_times('a', '')
+
+tmpk8gnxbg1/test.py:27: AssertionError
+=========================== short test summary info ============================
+FAILED tmpk8gnxbg1/test.py::test - AssertionError: assert 2 == 0
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

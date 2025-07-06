@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test with positive numbers
+        assert rounded_avg(5, 10) == "0b1000"
+        assert rounded_avg(10, 15) == "0b1100"
+        assert rounded_avg(20, 25) == "0b10110"
+    
+        # Test with negative numbers
+        assert rounded_avg(-5, 10) == "0b10"
+        assert rounded_avg(-10, 15) == "0b10"
+        assert rounded_avg(-20, 25) == "0b10"
+    
+        # Test edge cases
+        assert rounded_avg(0, 1) == "0b0"
+        assert rounded_avg(0, 0) == "0b0"
+>       assert rounded_avg(1, 0) == "-1"
+E       AssertionError: assert -1 == '-1'
+E        +  where -1 = rounded_avg(1, 0)
+
+tmplp2xiuun/test.py:17: AssertionError
+=========================== short test summary info ============================
+FAILED tmplp2xiuun/test.py::test - AssertionError: assert -1 == '-1'
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

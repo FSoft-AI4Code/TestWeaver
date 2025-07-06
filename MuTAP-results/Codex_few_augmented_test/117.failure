@@ -1,0 +1,16 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert select_words("asdfasdf", 1) == ["asdf"]
+E       AssertionError: assert [] == ['asdf']
+E         
+E         Right contains one more item: 'asdf'
+E         Use -v to get more diff
+
+tmp4dhqpn5i/test.py:4: AssertionError
+=========================== short test summary info ============================
+FAILED tmp4dhqpn5i/test.py::test - AssertionError: assert [] == ['asdf']
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

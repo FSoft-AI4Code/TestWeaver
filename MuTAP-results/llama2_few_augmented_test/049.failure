@@ -1,0 +1,30 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert modp(10, 7) == 2
+        assert modp(10, 3) == 1
+        assert modp(5, 7) == 4
+        assert modp(10, 11) == 1
+        assert modp(10, -3) == -2
+        assert modp(5, -7) == -3
+>       assert modp(10, 0) == 0
+
+tmph5fophqu/test.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+n = 10, p = 0
+
+    def modp(n: int, p: int):
+    
+        ret = 1
+        for i in range(n):
+>           ret = (2 * ret) % p
+E           ZeroDivisionError: integer division or modulo by zero
+
+tmph5fophqu/m.py:5: ZeroDivisionError
+=========================== short test summary info ============================
+FAILED tmph5fophqu/test.py::test - ZeroDivisionError: integer division or mod...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

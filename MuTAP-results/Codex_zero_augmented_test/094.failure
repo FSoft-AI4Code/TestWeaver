@@ -1,0 +1,14 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert skjkasdkd([10,2,3,3]) == 0
+E       assert 3 == 0
+E        +  where 3 = skjkasdkd([10, 2, 3, 3])
+
+tmp1z2wgp4r/test.py:4: AssertionError
+=========================== short test summary info ============================
+FAILED tmp1z2wgp4r/test.py::test - assert 3 == 0
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

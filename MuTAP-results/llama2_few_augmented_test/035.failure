@@ -1,0 +1,26 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert max_element([1, 2, 3]) == 3
+        assert max_element([1, 2, 3, 4]) == 4
+        assert max_element([1, 2, 3, 4, 5]) == 5
+    
+>       assert max_element([]) is None
+
+tmp_zw4oaop/test.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+l = []
+
+    def max_element(l: list):
+    
+>       m = l[0]
+E       IndexError: list index out of range
+
+tmp_zw4oaop/m.py:3: IndexError
+=========================== short test summary info ============================
+FAILED tmp_zw4oaop/test.py::test - IndexError: list index out of range
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

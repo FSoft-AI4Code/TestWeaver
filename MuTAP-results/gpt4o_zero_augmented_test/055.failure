@@ -1,0 +1,2012 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert fib(0) == 0
+        assert fib(1) == 1
+        assert fib(2) == 1
+        assert fib(3) == 2
+        assert fib(4) == 3
+        assert fib(5) == 5
+        assert fib(6) == 8
+        assert fib(7) == 13
+        assert fib(8) == 21
+        assert fib(9) == 34
+        assert fib(10) == 55
+        assert fib(0) == 0
+        assert fib(1) == 1
+        assert fib(2) == 1
+        assert fib(3) == 2
+        assert fib(4) == 3
+        assert fib(5) == 5
+        assert fib(6) == 8
+        assert fib(7) == 13
+        assert fib(8) == 21
+        assert fib(9) == 34
+        assert fib(10) == 55
+        assert fib(11) == 89
+        assert fib(12) == 144
+        assert fib(13) == 233
+        assert fib(14) == 377
+        assert fib(15) == 610
+    
+        assert fib(0) == 0
+        assert fib(1) == 1
+        assert fib(2) == 1
+        assert fib(3) == 2
+        assert fib(4) == 3
+        assert fib(5) == 5
+        assert fib(6) == 8
+        assert fib(7) == 13
+        assert fib(8) == 21
+        assert fib(9) == 34
+        assert fib(10) == 55
+    
+        assert fib(0) == 0
+        assert fib(1) == 1
+        assert fib(2) == 1
+        assert fib(3) == 2
+        assert fib(4) == 3
+        assert fib(5) == 5
+        assert fib(6) == 8
+        assert fib(7) == 13
+        assert fib(8) == 21
+        assert fib(9) == 34
+        assert fib(10) == 55
+        assert fib(11) == 89
+        assert fib(12) == 144
+        assert fib(13) == 233
+        assert fib(14) == 377
+        assert fib(15) == 610
+    
+        assert fib(0) == 0
+        assert fib(1) == 1
+        assert fib(2) == 1
+        assert fib(3) == 2
+        assert fib(4) == 3
+        assert fib(5) == 5
+        assert fib(6) == 8
+        assert fib(7) == 13
+        assert fib(8) == 21
+        assert fib(9) == 34
+        assert fib(10) == 55
+        assert fib(11) == 89  # Adding an additional test case to check beyond 10
+    
+        assert fib(0) == 0
+        assert fib(1) == 1
+        assert fib(2) == 1
+        assert fib(3) == 2
+        assert fib(4) == 3
+        assert fib(5) == 5
+        assert fib(6) == 8
+        assert fib(7) == 13
+        assert fib(8) == 21
+        assert fib(9) == 34
+        assert fib(10) == 55
+        assert fib(15) == 610  # Additional test case to detect the fault
+    
+>       assert fib(-1) == 0  # This should fail as negative indices are not handled
+
+tmp9lpo48wg/test.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmp9lpo48wg/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+n = -954
+
+    def fib(n: int):
+    
+>       if n == 0:
+E       RecursionError: maximum recursion depth exceeded in comparison
+
+tmp9lpo48wg/m.py:3: RecursionError
+=========================== short test summary info ============================
+FAILED tmp9lpo48wg/test.py::test - RecursionError: maximum recursion depth ex...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

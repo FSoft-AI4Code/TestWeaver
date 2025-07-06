@@ -1,0 +1,12 @@
+Please help me break down the method under test into
+ multiple slices 
+Here are the basic details about the method under test
+ {{ focal method }}
+ {{ dependencies }}
+Please decompose the method under test following the
+ instructions
+ 1. Summarise the focal method
+ 2. List necessary env settings to run the focal method- Invoked paremeters and fields- Invoked methods
+ 3. Decompose the focal method into multiple problem sovling steps
+ 3.1 describe the subtask of the slice
+ 3.2 replicate the corresponding code statements

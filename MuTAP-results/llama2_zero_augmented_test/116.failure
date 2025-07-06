@@ -1,0 +1,18 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert sort_array([]) == []
+    
+>       assert sort_array([2, 6, 3, 1, 4]) == [1, 2, 3, 4, 6]
+E       assert [1, 2, 4, 3, 6] == [1, 2, 3, 4, 6]
+E         
+E         At index 2 diff: 4 != 3
+E         Use -v to get more diff
+
+tmpte6x3j4s/test.py:6: AssertionError
+=========================== short test summary info ============================
+FAILED tmpte6x3j4s/test.py::test - assert [1, 2, 4, 3, 6] == [1, 2, 3, 4, 6]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

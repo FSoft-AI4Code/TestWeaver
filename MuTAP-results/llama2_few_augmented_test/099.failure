@@ -1,0 +1,24 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert closest_integer(2.5) == 3
+
+tmpctborlb7/test.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = 2.5
+
+    def closest_integer(value):
+    
+        from math import floor, ceil
+    
+>       if value.count('.') == 1:
+E       AttributeError: 'float' object has no attribute 'count'
+
+tmpctborlb7/m.py:5: AttributeError
+=========================== short test summary info ============================
+FAILED tmpctborlb7/test.py::test - AttributeError: 'float' object has no attr...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

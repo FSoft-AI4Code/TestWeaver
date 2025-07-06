@@ -1,0 +1,21 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert is_multiply_prime(45)== True
+        assert is_multiply_prime(12)== True
+        assert is_multiply_prime(15)== False
+    
+        assert is_multiply_prime(1501)==False
+        assert is_multiply_prime(1501)== False
+        assert is_multiply_prime(1801)== False
+>       assert is_multiply_prime(1801)==True
+E       assert False == True
+E        +  where False = is_multiply_prime(1801)
+
+tmp48rimcvo/test.py:11: AssertionError
+=========================== short test summary info ============================
+FAILED tmp48rimcvo/test.py::test - assert False == True
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

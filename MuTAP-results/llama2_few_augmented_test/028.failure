@@ -1,0 +1,52 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        #<testCase>
+    
+        assert concatenate([]) == ""
+    
+    
+    #</testCase>
+    
+    
+    #<testCase>
+        assert concatenate(['hello']) == "hello"
+    
+    
+    
+        assert concatenate(["hello", "world"]) == "helloworld"
+    
+    
+    
+    #</testCase>
+    
+    
+    #<testCase>
+    
+        assert concatenate(["hello", "world", " again"]) == "helloworld again"
+    
+    
+    
+    #</testCase>
+    
+    
+    #<testCase>
+>       assert concatenate(["hello", 42, "world"]) == "42hellogworld"
+
+tmpg7sze_ka/test.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+strings = ['hello', 42, 'world']
+
+    def concatenate(strings: List[str]) -> str:
+    
+>       return ''.join(strings)
+E       TypeError: sequence item 1: expected str instance, int found
+
+tmpg7sze_ka/m.py:6: TypeError
+=========================== short test summary info ============================
+FAILED tmpg7sze_ka/test.py::test - TypeError: sequence item 1: expected str i...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

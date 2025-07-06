@@ -1,0 +1,29 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert numerical_letter_grade([2.0, 2.0, 2.0, 2.0]) == ['C', 'C', 'C', 'C']
+        assert numerical_letter_grade([2.0, 2.0, 2.0, 2.0, 2.0]) == ['C', 'C', 'C', 'C', 'C']
+        assert numerical_letter_grade([2.0, 2.0, 2.0, 3.0, 3.0]) == ['C', 'C', 'C', 'B', 'B']
+        assert numerical_letter_grade([1.0, 2.0, 3.0, 3.0, 3.0]) == ['D', 'C', 'B', 'B', 'B']
+>       assert numerical_letter_grade(None) == []
+
+tmpz5m8tkj_/test.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+grades = None
+
+    def numerical_letter_grade(grades):
+    
+    
+    
+        letter_grade = []
+>       for gpa in grades:
+E       TypeError: 'NoneType' object is not iterable
+
+tmpz5m8tkj_/m.py:6: TypeError
+=========================== short test summary info ============================
+FAILED tmpz5m8tkj_/test.py::test - TypeError: 'NoneType' object is not iterable
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

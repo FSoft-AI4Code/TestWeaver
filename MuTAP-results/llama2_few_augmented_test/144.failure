@@ -1,0 +1,22 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert simplify(2, 3) == False
+
+tmpk37rcgb_/test.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+x = 2, n = 3
+
+    def simplify(x, n):
+    
+>       a, b = x.split("/")
+E       AttributeError: 'int' object has no attribute 'split'
+
+tmpk37rcgb_/m.py:3: AttributeError
+=========================== short test summary info ============================
+FAILED tmpk37rcgb_/test.py::test - AttributeError: 'int' object has no attrib...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

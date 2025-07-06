@@ -1,0 +1,26 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert get_max_triples(5) == 1
+        assert get_max_triples(1) == 0
+        assert get_max_triples(2) == 0
+        assert get_max_triples(3) == 0
+        assert get_max_triples(6) == 4
+        assert get_max_triples(10) == 36
+        assert get_max_triples(5) == 1
+        assert get_max_triples(1) == 0
+        assert get_max_triples(2) == 0
+        assert get_max_triples(3) == 0
+        assert get_max_triples(6) == 4
+        assert get_max_triples(10) == 36
+>       assert get_max_triples(4) == 0  # New test case to detect the incorrect change
+E       assert 1 == 0
+E        +  where 1 = get_max_triples(4)
+
+tmpoxpblzim/test.py:16: AssertionError
+=========================== short test summary info ============================
+FAILED tmpoxpblzim/test.py::test - assert 1 == 0
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

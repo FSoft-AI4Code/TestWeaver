@@ -1,0 +1,28 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert concatenate(['hello', 'world']) == 'helloworld'
+        assert concatenate(['hello', 'world']) == 'helloworld'
+        assert concatenate(['a', 'b']) == 'ab'
+        assert concatenate(['a', '']) == 'a'
+        assert concatenate(['', 'a']) == 'a'
+        assert concatenate(['']) == ''
+>       assert concatenate(None) == ''
+
+tmp_nvamcr9/test.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+strings = None
+
+    def concatenate(strings: List[str]) -> str:
+    
+>       return ''.join(strings)
+E       TypeError: can only join an iterable
+
+tmp_nvamcr9/m.py:6: TypeError
+=========================== short test summary info ============================
+FAILED tmp_nvamcr9/test.py::test - TypeError: can only join an iterable
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

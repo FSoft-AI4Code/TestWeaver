@@ -1,0 +1,19 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert any_int(5, 2, 7) == True
+        assert any_int(3, 2, 2) == False
+        assert any_int(3, -2, 1) == True
+        assert any_int(3.6, -2.2, 2) == False
+        assert any_int(5, 2, 2) == False
+>       assert any_int(5, 2, 3) == False
+E       assert True == False
+E        +  where True = any_int(5, 2, 3)
+
+tmpmtk1t52r/test.py:9: AssertionError
+=========================== short test summary info ============================
+FAILED tmpmtk1t52r/test.py::test - assert True == False
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

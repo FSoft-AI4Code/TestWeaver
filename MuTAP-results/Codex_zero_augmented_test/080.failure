@@ -1,0 +1,53 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert is_happy('abc') == True
+        assert is_happy('abcabc') == True
+        assert is_happy('abcabcabc') == True
+        assert is_happy('abcabcdef') == True
+        assert is_happy('abcdefgabc') == True
+        assert is_happy('adfdfdfdf') == False
+        assert is_happy('happy') == False
+        assert is_happy('false') == True
+        assert is_happy('sing happy') == False
+        assert is_happy('Unhappy') == False
+        assert is_happy('12345678') == True
+        assert is_happy('11110111') == False
+        assert is_happy('01234567') == True
+        assert is_happy('98765430') == True
+        assert is_happy('987654300') == False
+        assert is_happy('abc') == True
+        assert is_happy('abcabc') == True
+        assert is_happy('abcabcabc') == True
+        assert is_happy('abcabcdef') == True
+        assert is_happy('abcdefgabc') == True
+        assert is_happy('adfdfdfdf') == False
+        assert is_happy('happy') == False
+        assert is_happy('false') == True
+        assert is_happy('sing happy') == False
+        assert is_happy('Unhappy') == False
+        assert is_happy('12345678') == True
+        assert is_happy('11110111') == False
+        assert is_happy('01234567') == True
+        assert is_happy('98765430') == True
+        assert is_happy('987654300') == False
+    
+        assert is_happy([]) == False
+        assert is_happy('abcabc') == True
+        assert is_happy('abcabcabc') == True
+        assert is_happy('abcabcdef') == True
+        assert is_happy('abcdefgabc') == True
+        assert is_happy('adfdfdfdf') == False
+        assert is_happy('happy') == False
+        assert is_happy('false') == True
+>       assert is_happy('sing') == False
+E       AssertionError: assert True == False
+E        +  where True = is_happy('sing')
+
+tmp2l6m3es7/test.py:43: AssertionError
+=========================== short test summary info ============================
+FAILED tmp2l6m3es7/test.py::test - AssertionError: assert True == False
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

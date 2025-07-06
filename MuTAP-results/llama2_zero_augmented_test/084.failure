@@ -1,0 +1,15 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test with small numbers
+>       assert solve(3) == 11
+E       AssertionError: assert '11' == 11
+E        +  where '11' = solve(3)
+
+tmpz_7j3w85/test.py:5: AssertionError
+=========================== short test summary info ============================
+FAILED tmpz_7j3w85/test.py::test - AssertionError: assert '11' == 11
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

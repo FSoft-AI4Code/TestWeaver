@@ -1,0 +1,10 @@
+[submodule "coverup"]
+	path = coverup
+	url = https://github.com/plasma-umass/coverup.git
+	branch = evaluation
+[submodule "codamosa"]
+	path = codamosa
+	url = https://github.com/plasma-umass/codamosa.git
+[submodule "MuTAP"]
+	path = MuTAP
+	url = https://github.com/plasma-umass/MuTAP.git

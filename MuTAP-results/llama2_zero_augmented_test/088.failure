@@ -1,0 +1,19 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test with empty array
+        assert sort_array([]) == []
+        # Test with valid array
+        assert sort_array([1, 2, 3, 4, 5]) == [5, 4, 3, 2, 1]
+        # Test with different number of elements
+        arr = [1, 2, 3, 4, 5, 6]
+>       assert sort_array( [1, 2, 3, 4, 5, 6], reverse=(arr[0] + arr[-1]) % 2 == 0) == [1, 2, 3, 4, 5, 6]    # Test with arrays of different types
+E       TypeError: sort_array() got an unexpected keyword argument 'reverse'
+
+tmpyz8aozjn/test.py:10: TypeError
+=========================== short test summary info ============================
+FAILED tmpyz8aozjn/test.py::test - TypeError: sort_array() got an unexpected ...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

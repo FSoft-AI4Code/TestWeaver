@@ -1,0 +1,29 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert words_string("Hi, my name is John") == ["Hi", "my", "name", "is", "John"]
+        assert words_string("One, two, three, four, five, six") == ["One", "two", "three", "four", "five", "six"]
+        assert words_string("") == []
+        assert words_string("Hello,world") == ["Hello", "world"]
+        assert words_string("Alice,Bob,Charlie") == ["Alice", "Bob", "Charlie"]
+        assert words_string("Space separated words") == ["Space", "separated", "words"]
+        assert words_string("Mixed, spaces and,commas") == ["Mixed", "spaces", "and", "commas"]
+        assert words_string("Hi, my name is John") == ["Hi", "my", "name", "is", "John"]
+        assert words_string("One, two, three, four, five, six") == ["One", "two", "three", "four", "five", "six"]
+        assert words_string("") == []
+        assert words_string("Hello,world") == ["Hello", "world"]
+        assert words_string("Alice,Bob,Charlie") == ["Alice", "Bob", "Charlie"]
+        assert words_string("Space separated words") == ["Space", "separated", "words"]
+        assert words_string("Mixed, spaces and,commas") == ["Mixed", "spaces", "and", "commas"]
+>       assert words_string(", , ,") == ["", "", "", ""]
+E       AssertionError: assert [] == ['', '', '', '']
+E         Right contains 4 more items, first extra item: ''
+E         Use -v to get more diff
+
+tmpd2_2vyn7/test.py:18: AssertionError
+=========================== short test summary info ============================
+FAILED tmpd2_2vyn7/test.py::test - AssertionError: assert [] == ['', '', '', '']
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

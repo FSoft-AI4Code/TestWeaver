@@ -1,0 +1,28 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert minPath([ [0, 0, 1], [0, 1, 1], [1, 1, 1] ], 1) == [1]
+    
+>       assert minPath([ [0, 0, 0], [0, 0, 1], [0, 1, 1], [0, 1, 0] ], 2) == [0, 0, 1]
+
+tmp6p569urh/test.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+grid = [[0, 0, 0], [0, 0, 1], [0, 1, 1], [0, 1, 0]], k = 2
+
+    def minPath(grid, k):
+    
+        n = len(grid)
+        val = n * n + 1
+        for i in range(n):
+            for j in range(n):
+>               if grid[i][j] == 1:
+E               IndexError: list index out of range
+
+tmp6p569urh/m.py:7: IndexError
+=========================== short test summary info ============================
+FAILED tmp6p569urh/test.py::test - IndexError: list index out of range
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

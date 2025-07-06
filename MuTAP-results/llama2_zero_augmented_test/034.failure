@@ -1,0 +1,36 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        #test_empty_list
+        assert unique([]) == [ ]
+    
+        #test_empty_set()
+        assert unique([]) == [ ]
+    
+        #test_list_with_unique_elements
+        assert unique([1, 2, 2, 3, 3, 4, 4, 5]) == [1, 2, 3, 4, 5]
+    
+        #test_list_with_duplicates
+        assert unique([1, 2, 2, 3, 3, 4, 4, 5, 5]) == [1, 2, 3, 4, 5]
+    
+        #test_list_with_irrelevant_elements():
+    
+>       assert unique([1, 2, 2, 3, 3, 4, 4, 5, 'apple', 'banana']) == [1, 2, 3, 4, 5]
+
+tmp77j549fr/test.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+l = [1, 2, 2, 3, 3, 4, ...]
+
+    def unique(l: list):
+    
+>       return sorted(list(set(l)))
+E       TypeError: '<' not supported between instances of 'str' and 'int'
+
+tmp77j549fr/m.py:3: TypeError
+=========================== short test summary info ============================
+FAILED tmp77j549fr/test.py::test - TypeError: '<' not supported between insta...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+#
+# Copies the CoverUp output directory for a package, removing the tests and other
+# outputs from runs 2 and 3, so that only the first run is left over.
+#
+
+if [ "$#" -lt 2 ]; then
+    echo "Use: $0 package config"
+    exit 1
+fi
+
+P="output/good.$2/$1"
+
+if [ -d $P ]; then
+    echo "$P already exists"
+    exit 1
+fi
+
+run() {
+    echo $1
+    eval $1 || exit 1
+}
+
+run "mkdir -p output/good.$2"
+run "cp -a output/good/$1 $P"
+
+saved=$(grep '^Saved as coverup-tests/test_coverup_' $P/coverup-log-2 | head -n 1)
+if [[ $saved =~ test_coverup_([0-9]+) ]]; then
+    first_test="${BASH_REMATCH[1]}"
+
+    for F in `find $P/coverup-tests -iname \*test_coverup_\*.py | sort`; do
+        number=${F#*test_coverup_}
+        number=${number%.py}
+        if [ "$number" -ge "$first_test" ]; then
+            run "rm -f $F"
+        fi
+    done
+fi
+
+rm $P/coverup-log-[23]
+rm $P/coverup-ckpt-[23].json
+rm $P/final.json

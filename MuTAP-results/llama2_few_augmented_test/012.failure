@@ -1,0 +1,31 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert longest([]) == None
+    
+        assert longest(["hello"]) == "hello"
+    
+        assert longest(["hello", "world", "abc"]) == "hello"
+    
+        assert longest(["hello", "hello", "hello"]) == "hello"
+    
+>       assert longest(["hello", None, "world"]) == "world"
+
+tmpspldf_nv/test.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpspldf_nv/m.py:9: in longest
+    maxlen = max(len(x) for x in strings)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f99ab8190c0>
+
+>   maxlen = max(len(x) for x in strings)
+E   TypeError: object of type 'NoneType' has no len()
+
+tmpspldf_nv/m.py:9: TypeError
+=========================== short test summary info ============================
+FAILED tmpspldf_nv/test.py::test - TypeError: object of type 'NoneType' has n...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

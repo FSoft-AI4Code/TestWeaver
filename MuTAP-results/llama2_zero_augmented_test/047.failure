@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test with an empty list
+>       assert median([]) == None
+
+tmpz4zn80ti/test.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+l = []
+
+    def median(l: list):
+    
+        l = sorted(l)
+        if len(l) % 2 == 1:
+            return l[len(l) // 2]
+        else:
+>           return (l[len(l) // 2 - 1] + l[len(l) // 2]) / 2.0
+E           IndexError: list index out of range
+
+tmpz4zn80ti/m.py:7: IndexError
+=========================== short test summary info ============================
+FAILED tmpz4zn80ti/test.py::test - IndexError: list index out of range
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

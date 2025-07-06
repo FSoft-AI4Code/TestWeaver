@@ -1,0 +1,17 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        prime_length("1") == False
+        assert prime_length("") == False
+        assert prime_length("111") == True
+>       assert prime_length("12") == False
+E       AssertionError: assert True == False
+E        +  where True = prime_length('12')
+
+tmp8yokgnia/test.py:7: AssertionError
+=========================== short test summary info ============================
+FAILED tmp8yokgnia/test.py::test - AssertionError: assert True == False
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

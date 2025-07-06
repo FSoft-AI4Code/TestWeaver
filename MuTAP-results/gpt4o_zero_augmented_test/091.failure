@@ -1,0 +1,34 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert is_bored("Hello world") == 0
+        assert is_bored("The sky is blue. The sun is shining. I love this weather") == 1
+        assert is_bored("I am here. Why are you there? I don't understand!") == 2
+        assert is_bored("I. I. I. I.") == 0
+        assert is_bored("I love programming! Do you love it too? I think it's great.") == 2
+        assert is_bored("This is a test. I hope it passes. Let's see.") == 1
+        assert is_bored("Hello world") == 0
+        assert is_bored("The sky is blue. The sun is shining. I love this weather") == 1
+        assert is_bored("I am here. Why are you there? I don't understand!") == 2
+        assert is_bored("I. I. I. I.") == 0
+        assert is_bored("I love programming! Do you love it too? I think it's great.") == 2
+        assert is_bored("This is a test. I hope it passes. Let's see.") == 1
+        assert is_bored("I am excited! What about you? I feel great.") == 2
+    
+        assert is_bored("Hello world") == 0
+        assert is_bored("The sky is blue. The sun is shining. I love this weather") == 1
+        assert is_bored("I am here. Why are you there? I don't understand!") == 2
+        assert is_bored("I. I. I. I.") == 0
+        assert is_bored("I love programming! Do you love it too? I think it's great.") == 2
+        assert is_bored("This is a test. I hope it passes. Let's see.") == 1
+>       assert is_bored("I am here. This is a test.I hope it passes.") == 1  # New test case to detect the fault
+E       AssertionError: assert 2 == 1
+E        +  where 2 = is_bored('I am here. This is a test.I hope it passes.')
+
+tmpcy5je70y/test.py:24: AssertionError
+=========================== short test summary info ============================
+FAILED tmpcy5je70y/test.py::test - AssertionError: assert 2 == 1
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

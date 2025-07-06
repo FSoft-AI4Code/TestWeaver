@@ -1,0 +1,23 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert get_row([1, 2, 3, 4], 0) == [(0, 0), (0, 1), (0, 2), (0, 3)]
+
+tmpwie7e8vt/test.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpwie7e8vt/m.py:3: in get_row
+    coords = [(i, j) for i in range(len(lst)) for j in range(len(lst[i])) if lst[i][j] == x]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <range_iterator object at 0x7f0e5338e340>
+
+>   coords = [(i, j) for i in range(len(lst)) for j in range(len(lst[i])) if lst[i][j] == x]
+E   TypeError: object of type 'int' has no len()
+
+tmpwie7e8vt/m.py:3: TypeError
+=========================== short test summary info ============================
+FAILED tmpwie7e8vt/test.py::test - TypeError: object of type 'int' has no len()
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

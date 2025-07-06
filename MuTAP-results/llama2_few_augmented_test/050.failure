@@ -1,0 +1,30 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert encode_shift("hello") == "mjqqt"
+        assert decode_shift("4h5e7l7o") == "ccdzfgfj"
+        assert encode_shift(" ABC") == "szab"
+        assert decode_shift("3a4b7c") == "bvcwfx"
+        assert encode_shift("123") == "jkl"
+        assert decode_shift("31243") == "bzacb"
+        # Test edge cases
+        assert encode_shift("") == ""
+>       assert encode_shift(None) == ""
+
+tmp7ed2x_j6/test.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+s = None
+
+    def encode_shift(s: str):
+    
+>       return "".join([chr(((ord(ch) + 5 - ord("a")) % 26) + ord("a")) for ch in s])
+E       TypeError: 'NoneType' object is not iterable
+
+tmp7ed2x_j6/m.py:3: TypeError
+=========================== short test summary info ============================
+FAILED tmp7ed2x_j6/test.py::test - TypeError: 'NoneType' object is not iterable
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

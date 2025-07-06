@@ -1,0 +1,32 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        #test_empty_input
+        concatenate([]) == ''
+    
+        #test_single_string
+        concatenate(['hello']) == 'hello'
+    
+        #test_ multiple_strings
+        concatenate(['hello', 'world', '!']) == 'hellogworld!'
+    
+        #test_list_with_none
+>       concatenate([None, 'hello', 'world']) == 'helloworld'
+
+tmpzngwfmaq/test.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+strings = [None, 'hello', 'world']
+
+    def concatenate(strings: List[str]) -> str:
+    
+>       return ''.join(strings)
+E       TypeError: sequence item 0: expected str instance, NoneType found
+
+tmpzngwfmaq/m.py:6: TypeError
+=========================== short test summary info ============================
+FAILED tmpzngwfmaq/test.py::test - TypeError: sequence item 0: expected str i...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

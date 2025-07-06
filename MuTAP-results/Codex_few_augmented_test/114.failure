@@ -1,0 +1,34 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert minSubArraySum([1, 2, 3, 4, 5]) == 1
+        assert minSubArraySum([1, 2, 3, 4, 5, -1]) == -1
+        assert minSubArraySum([1, 2, 3, 4, 5, -10]) == -10
+        assert minSubArraySum([1, 2, 3, 4, 5, -1]) == -1
+>       assert minSubArraySum([]) == 0
+
+tmpoqrautfc/test.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+nums = []
+
+    def minSubArraySum(nums):
+    
+        max_sum = 0
+        s = 0
+        for num in nums:
+            s += -num
+            if (s < 0):
+                s = 0
+            max_sum = max(s, max_sum)
+        if max_sum == 0:
+>           max_sum = max(-i for i in nums)
+E           ValueError: max() arg is an empty sequence
+
+tmpoqrautfc/m.py:11: ValueError
+=========================== short test summary info ============================
+FAILED tmpoqrautfc/test.py::test - ValueError: max() arg is an empty sequence
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

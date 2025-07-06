@@ -1,0 +1,21 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert prod_signs([]) == None
+    
+        assert prod_signs([1, 2, 2, -4]) == -9
+    
+        assert prod_signs([0, -1]) == 0
+    
+        assert prod_signs([1, -2, 2, -4]) == 9
+    
+>       assert prod_signs([], [0]) == None
+E       TypeError: prod_signs() takes 1 positional argument but 2 were given
+
+tmp6dwn12sr/test.py:12: TypeError
+=========================== short test summary info ============================
+FAILED tmp6dwn12sr/test.py::test - TypeError: prod_signs() takes 1 positional...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

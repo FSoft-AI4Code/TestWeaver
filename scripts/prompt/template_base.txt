@@ -1,0 +1,18 @@
+Please write a test method for the function '{func_name}' given the following program under test. Your answer should only contain one test input.
+
+Program under test:
+----
+{program}
+----
+
+<instructions>
+
+- Do NOT instantiate abstract classes directly. If you need to test them, create a subclass that implements all abstract methods.
+- When testing class methods like __subclasshook__, call them as PathLike.__subclasshook__(SomeClass) (do NOT pass the class itself as the first argument).
+- Always make sure to import or reference the function or class under test correctly.
+- Avoid using undefined variables or functions in your test code.
+</instructions>
+
+Your test method should begin with:
+def test_{func_name}():
+

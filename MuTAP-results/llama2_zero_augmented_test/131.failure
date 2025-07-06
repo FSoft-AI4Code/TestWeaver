@@ -1,0 +1,28 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test with positive integer input
+        assert digits(123) == 3
+        # Test with negative integer input
+>       assert digits(-123) == 0    # Test with non-integer input
+
+tmp53n2ols0/test.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+n = -123
+
+    def digits(n):
+    
+        product = 1
+        odd_count = 0
+        for digit in str(n):
+>           int_digit = int(digit)
+E           ValueError: invalid literal for int() with base 10: '-'
+
+tmp53n2ols0/m.py:6: ValueError
+=========================== short test summary info ============================
+FAILED tmp53n2ols0/test.py::test - ValueError: invalid literal for int() with...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,56 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert even_odd_count(-12) == (1, 1)
+        assert even_odd_count(123) == (1, 2)
+        assert even_odd_count(0) == (1, 0)
+        assert even_odd_count(2468) == (4, 0)
+        assert even_odd_count(13579) == (0, 5)
+        assert even_odd_count(2222222) == (7, 0)
+        assert even_odd_count(-111111) == (0, 6)
+        assert even_odd_count(101010) == (3, 3)
+        assert even_odd_count(909090) == (3, 3)
+        assert even_odd_count(-12) == (1, 1)
+        assert even_odd_count(123) == (1, 2)
+        assert even_odd_count(0) == (1, 0)
+        assert even_odd_count(2468) == (4, 0)
+        assert even_odd_count(13579) == (0, 5)
+        assert even_odd_count(2222222) == (7, 0)
+        assert even_odd_count(-111111) == (0, 6)
+        assert even_odd_count(101010) == (3, 3)
+        assert even_odd_count(909090) == (3, 3)
+        assert even_odd_count(4080) == (4, 0)  # New test case to detect fault
+    
+        assert even_odd_count(-12) == (1, 1)
+        assert even_odd_count(123) == (1, 2)
+        assert even_odd_count(0) == (1, 0)
+        assert even_odd_count(2468) == (4, 0)
+        assert even_odd_count(13579) == (0, 5)
+        assert even_odd_count(2222222) == (7, 0)
+        assert even_odd_count(-111111) == (0, 6)
+        assert even_odd_count(101010) == (3, 3)
+        assert even_odd_count(909090) == (3, 3)
+        assert even_odd_count(2) == (1, 0)
+        assert even_odd_count(1) == (0, 1)
+    
+        assert even_odd_count(-12) == (1, 1)
+        assert even_odd_count(123) == (1, 2)
+        assert even_odd_count(0) == (1, 0)
+        assert even_odd_count(2468) == (4, 0)
+        assert even_odd_count(13579) == (0, 5)
+        assert even_odd_count(2222222) == (7, 0)
+        assert even_odd_count(-111111) == (0, 6)
+        assert even_odd_count(101010) == (3, 3)
+        assert even_odd_count(909090) == (3, 3)
+>       assert even_odd_count(200) == (2, 1)
+E       assert (3, 0) == (2, 1)
+E         At index 0 diff: 3 != 2
+E         Use -v to get more diff
+
+tmpai_ymjti/test.py:45: AssertionError
+=========================== short test summary info ============================
+FAILED tmpai_ymjti/test.py::test - assert (3, 0) == (2, 1)
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

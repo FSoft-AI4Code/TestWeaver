@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]
+        assert order_by_points([]) == []
+        assert order_by_points([10, 20, 30, 40]) == [10, 20, 30, 40]
+        assert order_by_points([12, 21, 3, 111]) == [12, 21, 3, 111]
+        assert order_by_points([7, -14, 14, 0]) == [0, -14, 14, 7]
+        assert order_by_points([-9, -8, -7, -6, -5]) == [-9, -8, -7, -6, -5]
+        assert order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]
+        assert order_by_points([]) == []
+        assert order_by_points([10, 20, 30, 40]) == [10, 20, 30, 40]
+        assert order_by_points([12, 21, 3, 111]) == [12, 21, 3, 111]
+        assert order_by_points([7, -14, 14, 0]) == [0, -14, 14, 7]
+        assert order_by_points([-9, -8, -7, -6, -5]) == [-9, -8, -7, -6, -5]
+>       assert order_by_points([13, 4, 22, -13, -4]) == [-13, 4, -4, 13, 22]  # new test case
+E       assert [-4, -13, 13, 4, 22] == [-13, 4, -4, 13, 22]
+E         At index 0 diff: -4 != -13
+E         Use -v to get more diff
+
+tmp_6qf69_n/test.py:16: AssertionError
+=========================== short test summary info ============================
+FAILED tmp_6qf69_n/test.py::test - assert [-4, -13, 13, 4, 22] == [-13, 4, -4...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,14 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert fix_spaces("This text") == "This_text"
+>       assert fix_spaces("This is muy     long text") == This_is_muy-long_text
+E       NameError: name 'This_is_muy' is not defined
+
+tmp2ops2f2i/test.py:5: NameError
+=========================== short test summary info ============================
+FAILED tmp2ops2f2i/test.py::test - NameError: name 'This_is_muy' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

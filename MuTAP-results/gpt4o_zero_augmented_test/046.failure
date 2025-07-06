@@ -1,0 +1,37 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert fib4(0) == 0
+        assert fib4(1) == 0
+        assert fib4(2) == 2
+        assert fib4(3) == 0
+        assert fib4(4) == 2
+        assert fib4(5) == 4
+        assert fib4(6) == 8
+        assert fib4(7) == 14
+        assert fib4(8) == 28
+        assert fib4(9) == 54
+        assert fib4(10) == 104
+        assert fib4(0) == 0
+        assert fib4(1) == 0
+        assert fib4(2) == 2
+        assert fib4(3) == 0
+        assert fib4(4) == 2
+        assert fib4(5) == 4
+        assert fib4(6) == 8
+        assert fib4(7) == 14
+        assert fib4(8) == 28
+        assert fib4(9) == 54
+        assert fib4(10) == 104
+        assert fib4(11) == 200
+>       assert fib4(12) == 384
+E       assert 386 == 384
+E        +  where 386 = fib4(12)
+
+tmppuchr10a/test.py:27: AssertionError
+=========================== short test summary info ============================
+FAILED tmppuchr10a/test.py::test - assert 386 == 384
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

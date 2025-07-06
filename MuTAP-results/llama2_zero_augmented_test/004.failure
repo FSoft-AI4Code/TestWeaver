@@ -1,0 +1,23 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        #test_empty_list
+>       assert mean_absolute_deviation([]) == 0.0
+
+tmpbv0a2n7o/test.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+numbers = []
+
+    def mean_absolute_deviation(numbers: List[float]) -> float:
+    
+>       mean = sum(numbers) / len(numbers)
+E       ZeroDivisionError: division by zero
+
+tmpbv0a2n7o/m.py:6: ZeroDivisionError
+=========================== short test summary info ============================
+FAILED tmpbv0a2n7o/test.py::test - ZeroDivisionError: division by zero
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

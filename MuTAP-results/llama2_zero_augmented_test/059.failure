@@ -1,0 +1,41 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        #test_small_numbers():
+        assert largest_prime_factor(3) == 3
+        #test_composite_numbers():
+        assert largest_prime_factor(12) == 3
+        #test_even_numbers():
+        assert largest_prime_factor(10) == 5
+        #test_larger_numbers():
+        assert largest_prime_factor(100) == 5
+        #test_edge_cases():
+        assert largest_prime_factor(-5) == 1
+        #test_NaN():
+>       assert largest_prime_factor(None) == None    #test_inf():
+
+tmpfqulctei/test.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+n = None
+
+    def largest_prime_factor(n: int):
+    
+        def is_prime(k):
+            if k < 2:
+                return False
+            for i in range(2, k - 1):
+                if k % i == 0:
+                    return False
+            return True
+        largest = 1
+>       for j in range(2, n + 1):
+E       TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+
+tmpfqulctei/m.py:11: TypeError
+=========================== short test summary info ============================
+FAILED tmpfqulctei/test.py::test - TypeError: unsupported operand type(s) for...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

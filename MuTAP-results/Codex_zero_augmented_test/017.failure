@@ -1,0 +1,23 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert parse_music('o  oo|o') == [4, 2, 4]
+
+tmpcbfetm1z/test.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpcbfetm1z/m.py:7: in parse_music
+    return [note_map[x] for x in music_string.split(' ') if x]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7fd3ef01cd30>
+
+>   return [note_map[x] for x in music_string.split(' ') if x]
+E   KeyError: 'oo|o'
+
+tmpcbfetm1z/m.py:7: KeyError
+=========================== short test summary info ============================
+FAILED tmpcbfetm1z/test.py::test - KeyError: 'oo|o'
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

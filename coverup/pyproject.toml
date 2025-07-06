@@ -1,0 +1,44 @@
+[project]
+name = "CoverUp"
+description = "LLM-powered test coverage improver"
+dynamic = ["readme", "version"]
+authors = [
+    { name="Juan Altmayer Pizzorno", email="juan@altmayer.com" },
+    { name="Emery Berger", email="emery.berger@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X"
+]
+requires-python = ">=3.10"
+dependencies = [
+    "asyncio",
+    "openai",
+    "tiktoken",
+    "aiolimiter",
+    "tqdm",
+    "slipcover>=1.0.13",
+    "pytest-cleanslate>=1.0.6", # 1.0.6 fixes collection error bug
+    "pytest-repeat",
+    "litellm>=1.33.1"
+]
+
+[build-system]
+requires = [
+    "setuptools>61",
+    "wheel",
+    "tomli; python_version < '3.11'" # tomllib alternative
+]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+coverup = "coverup.coverup:main"
+
+[project.urls]
+"Homepage" = "https://github.com/plasma-umass/coverup"
+"Repository" = "https://github.com/plasma-umass/coverup"

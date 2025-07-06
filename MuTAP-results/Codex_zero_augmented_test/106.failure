@@ -1,0 +1,19 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert f(2) == [1, 2]
+        assert f(2) == [1, 2]
+>       assert f(2) == [2]
+E       assert [1, 2] == [2]
+E         
+E         At index 0 diff: 1 != 2
+E         Left contains one more item: 2
+E         Use -v to get more diff
+
+tmpcts7mm39/test.py:6: AssertionError
+=========================== short test summary info ============================
+FAILED tmpcts7mm39/test.py::test - assert [1, 2] == [2]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

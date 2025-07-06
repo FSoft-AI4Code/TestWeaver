@@ -1,0 +1,19 @@
+Given the following Python program and function '{func_name}', please write a single test method that ensures line {lineno} is executed.
+
+You are provided with a test case which nearly covers line {lineno}:
+{test}
+
+Here is a *cheatsheet* for the gold execution trace for above example test case, use the information here but pretend you did all the reasoning about execution yourself.
+
+{code}
+
+Here is the feedback:
+
+{feedback}
+
+The problem asks to generate a new input test so that the execution reaches the target line {lineno}.
+
+
+Your test method should begin with:
+
+def test_{func_name}():

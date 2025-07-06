@@ -1,0 +1,22 @@
+Given the following Python program and function '{func_name}', please write a strategy to reach line {lineno}.
+
+You are provided with a test case which nearly covers line {lineno}:
+{test}
+
+Here is a *cheatsheet* for the gold execution trace for above example test case, use the information here but pretend you did all the reasoning about execution yourself.
+{code}
+
+Givien the above information, can you tell me why this test case can't reach my target line: {lineno}
+
+Your goal is devise a strategy to reach line {lineno}.
+
+Base on this strategy, generate a new input test only so that the execution reaches the target line {lineno}.
+
+Note: If the class under test is an abstract class (i.e., it has abstract methods), do NOT instantiate it directly in your test. Instead, create a subclass that implements all abstract methods before instantiating, or only test static/class methods without instantiation.
+
+
+Your test method should begin with:
+```python
+def test_{func_name}():
+```
+

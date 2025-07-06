@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test with an empty input string
+        assert sort_numbers('') == '', "The result should be empty"
+    
+        # Test with a single digit string
+>       assert sort_numbers('5') == 'five', "The result should be 'five'"
+
+tmpgukx3gwn/test.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpgukx3gwn/m.py:18: in sort_numbers
+    return ' '.join(sorted([x for x in numbers.split(' ') if x], key=lambda x: value_map[x]))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+x = '5'
+
+>   return ' '.join(sorted([x for x in numbers.split(' ') if x], key=lambda x: value_map[x]))
+E   KeyError: '5'
+
+tmpgukx3gwn/m.py:18: KeyError
+=========================== short test summary info ============================
+FAILED tmpgukx3gwn/test.py::test - KeyError: '5'
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

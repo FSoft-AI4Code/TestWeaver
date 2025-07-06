@@ -1,0 +1,33 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        #test_factorize_basic(
+        assert factorize(3) == [3]
+        assert factorize(4) == [2, 2]
+        assert factorize(6) == [2, 3]
+        assert factorize(8) == [2, 2, 2]
+        #test_factorize_edge_cases
+        assert factorize(1) == []
+        assert factorize(0) == []
+>       assert factorize(-1) == []
+
+tmph5tq_4em/test.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+n = -1
+
+    def factorize(n: int) -> List[int]:
+    
+        import math
+        fact = []
+        i = 2
+>       while i <= int(math.sqrt(n) + 1):
+E       ValueError: math domain error
+
+tmph5tq_4em/m.py:9: ValueError
+=========================== short test summary info ============================
+FAILED tmph5tq_4em/test.py::test - ValueError: math domain error
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,16 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Single arguments case
+        assert string_sequence(1) == '0 1'
+        # Multiple arguments case
+>       assert string_sequence(1, 'a') == '0a1a2a3a4a5a6a7a8a9'    # Negative argument case
+E       TypeError: string_sequence() takes 1 positional argument but 2 were given
+
+tmpv30yd4st/test.py:7: TypeError
+=========================== short test summary info ============================
+FAILED tmpv30yd4st/test.py::test - TypeError: string_sequence() takes 1 posit...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

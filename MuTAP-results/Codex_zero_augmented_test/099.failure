@@ -1,0 +1,19 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # special cases go here
+        assert closest_integer("-14.5") == -15
+        assert closest_integer("15.1") == 15
+        assert closest_integer("0.0095") == 0
+        # some simple tests
+>       assert closest_integer("13.58") == 13
+E       AssertionError: assert 14 == 13
+E        +  where 14 = closest_integer('13.58')
+
+tmpcyo6jwhl/test.py:9: AssertionError
+=========================== short test summary info ============================
+FAILED tmpcyo6jwhl/test.py::test - AssertionError: assert 14 == 13
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

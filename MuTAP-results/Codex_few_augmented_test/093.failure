@@ -1,0 +1,13 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert encode("Hello") == hGLLQ
+E       NameError: name 'hGLLQ' is not defined
+
+tmp1e920xux/test.py:4: NameError
+=========================== short test summary info ============================
+FAILED tmp1e920xux/test.py::test - NameError: name 'hGLLQ' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

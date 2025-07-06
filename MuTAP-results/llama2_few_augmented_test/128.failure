@@ -1,0 +1,28 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert prod_signs([1, 2, 3, 4, 5]) == 15
+    
+    
+        assert prod_signs([1, 0, -1, 2, -2]) == 0
+    
+>       assert prod_signs([None, 1, 2, 3, 4, 5]) is None
+
+tmpo7f1izcr/test.py:9: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpo7f1izcr/m.py:5: in prod_signs
+    prod = 0 if 0 in arr else (-1) ** len(list(filter(lambda x: x < 0, arr)))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+x = None
+
+>   prod = 0 if 0 in arr else (-1) ** len(list(filter(lambda x: x < 0, arr)))
+E   TypeError: '<' not supported between instances of 'NoneType' and 'int'
+
+tmpo7f1izcr/m.py:5: TypeError
+=========================== short test summary info ============================
+FAILED tmpo7f1izcr/test.py::test - TypeError: '<' not supported between insta...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

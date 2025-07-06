@@ -1,0 +1,31 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert starts_one_ends(1) == 1
+        assert starts_one_ends(2) == 18
+        assert starts_one_ends(3) == 180
+        assert starts_one_ends(4) == 1800
+        assert starts_one_ends(5) == 18000
+        assert starts_one_ends(1) == 1
+        assert starts_one_ends(2) == 18
+        assert starts_one_ends(3) == 180
+        assert starts_one_ends(4) == 1800
+        assert starts_one_ends(5) == 18000
+        assert starts_one_ends(6) == 180000  # New test case to ensure the function works correctly for n > 5
+    
+        assert starts_one_ends(1) == 1
+        assert starts_one_ends(2) == 18
+        assert starts_one_ends(3) == 180
+        assert starts_one_ends(4) == 1800
+        assert starts_one_ends(5) == 18000
+>       assert starts_one_ends(0) == 0  # Edge case: n is 0
+E       assert 0.18 == 0
+E        +  where 0.18 = starts_one_ends(0)
+
+tmphivh7s_w/test.py:21: AssertionError
+=========================== short test summary info ============================
+FAILED tmphivh7s_w/test.py::test - assert 0.18 == 0
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

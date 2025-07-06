@@ -1,0 +1,114 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert get_closest_vowel('ab') == ""
+        assert get_closest_vowel('aa') == ""
+        assert get_closest_vowel('mb') == ""
+        assert get_closest_vowel('abk') == ""
+        assert get_closest_vowel('b') == ""
+        assert get_closest_vowel('a') == ""
+        assert get_closest_vowel('e') == ""
+        assert get_closest_vowel('eb') == ""
+        assert get_closest_vowel('ee') == ""
+        assert get_closest_vowel('o') == ""
+        assert get_closest_vowel('i') == ""
+        assert get_closest_vowel('abc') == ""
+        assert get_closest_vowel('def') == "e"
+        assert get_closest_vowel('ghi') == ""
+        assert get_closest_vowel('jkl') == ""
+        assert get_closest_vowel('mno') == ""
+        assert get_closest_vowel('pqr') == ""
+        assert get_closest_vowel('stu') == ""
+        assert get_closest_vowel('vwxyz') == ""
+        assert get_closest_vowel('ABC') == ""
+        assert get_closest_vowel('DEF') == "E"
+        assert get_closest_vowel('GHI') == ""
+    
+        assert get_closest_vowel('ab') == ""
+        assert get_closest_vowel('aa') == ""
+        assert get_closest_vowel('mb') == ""
+        assert get_closest_vowel('abk') == ""
+        assert get_closest_vowel('b') == ""
+        assert get_closest_vowel('a') == ""
+        assert get_closest_vowel('e') == ""
+        assert get_closest_vowel('eb') == ""
+        assert get_closest_vowel('ee') == ""
+        assert get_closest_vowel('o') == ""
+        assert get_closest_vowel('i') == ""
+    
+        assert get_closest_vowel('eb') == ""
+        assert get_closest_vowel('ee') == ""
+    
+        assert get_closest_vowel("ab") == ""
+        assert get_closest_vowel("aa") == ""
+        assert get_closest_vowel("mb") == ""
+        assert get_closest_vowel("abk") == ""
+        assert get_closest_vowel("b") == ""
+        assert get_closest_vowel("a") == ""
+        assert get_closest_vowel("e") == ""
+        assert get_closest_vowel("eb") == ""
+        assert get_closest_vowel("ee") == ""
+        assert get_closest_vowel("o") == ""
+        assert get_closest_vowel("i") == ""
+    
+        assert get_closest_vowel('ab') == ""
+        assert get_closest_vowel('aa') == ""
+        assert get_closest_vowel('mb') == ""
+        assert get_closest_vowel('abk') == ""
+        assert get_closest_vowel('b') == ""
+        assert get_closest_vowel('a') == ""
+        assert get_closest_vowel('e') == ""
+        assert get_closest_vowel('eb') == ""
+        assert get_closest_vowel('ee') == ""
+        assert get_closest_vowel('o') == ""
+        assert get_closest_vowel('i') == ""
+    
+        assert get_closest_vowel('ab') == ""
+        assert get_closest_vowel('aa') == ""
+        assert get_closest_vowel('mb') == ""
+        assert get_closest_vowel('abk') == ""
+        assert get_closest_vowel('b') == ""
+        assert get_closest_vowel('a') == ""
+        assert get_closest_vowel('e') == ""
+        assert get_closest_vowel('eb') == ""
+        assert get_closest_vowel('ee') == ""
+        assert get_closest_vowel('o') == ""
+        assert get_closest_vowel('i') == ""
+    
+        assert get_closest_vowel('ab') == ""
+        assert get_closest_vowel('aa') == ""
+        assert get_closest_vowel('mb') == ""
+        assert get_closest_vowel('abk') == ""
+        assert get_closest_vowel('b') == ""
+        assert get_closest_vowel('a') == ""
+        assert get_closest_vowel('e') == ""
+        assert get_closest_vowel('eb') == ""
+        assert get_closest_vowel('ee') == ""
+        assert get_closest_vowel('o') == ""
+        assert get_closest_vowel('i') == ""
+    
+        assert get_closest_vowel('u') == ""
+    
+        assert get_closest_vowel('ab') == ""
+        assert get_closest_vowel('aa') == ""
+        assert get_closest_vowel('mb') == ""
+        assert get_closest_vowel('abk') == ""
+        assert get_closest_vowel('a') == ""
+        assert get_closest_vowel('e') == ""
+        assert get_closest_vowel('eb') == ""
+        assert get_closest_vowel('ee') == ""
+        assert get_closest_vowel('i') == ""
+    
+        assert get_closest_vowel('bb') == ""
+>       assert get_closest_vowel('be') == "e"
+E       AssertionError: assert '' == 'e'
+E         
+E         - e
+
+tmpmdi3ytp5/test.py:103: AssertionError
+=========================== short test summary info ============================
+FAILED tmpmdi3ytp5/test.py::test - AssertionError: assert '' == 'e'
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

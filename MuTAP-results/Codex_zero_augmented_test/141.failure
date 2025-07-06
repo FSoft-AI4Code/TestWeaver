@@ -1,0 +1,29 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert "No" == file_name_check('1.exe')
+        assert "No" == file_name_check('1.aaaaa')
+        assert "Yes" == file_name_check('abc.txt')
+        assert "Yes" == "Yes"
+        assert file_name_check('abc')== "No"
+        assert file_name_check('')== "No"
+>       assert file_name_check(None) == "No"
+
+tmp_94qk7ku/test.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+file_name = None
+
+    def file_name_check(file_name):
+    
+        suf = ['txt', 'exe', 'dll']
+>       lst = file_name.split(sep='.')
+E       AttributeError: 'NoneType' object has no attribute 'split'
+
+tmp_94qk7ku/m.py:4: AttributeError
+=========================== short test summary info ============================
+FAILED tmp_94qk7ku/test.py::test - AttributeError: 'NoneType' object has no a...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,31 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert order_by_points([ ]) == []
+    
+        assert order_by_points([1]) == [1]
+    
+        assert order_by_points([-1]) == [-1]
+    
+>       assert order_by_points([0.1]) == [0.1]
+
+tmpaiilqmql/test.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpaiilqmql/m.py:9: in order_by_points
+    return sorted(nums, key=digits_sum)
+tmpaiilqmql/m.py:6: in digits_sum
+    n = [int(i) for i in str(n)]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <str_iterator object at 0x7f3dfd6990c0>
+
+>   n = [int(i) for i in str(n)]
+E   ValueError: invalid literal for int() with base 10: '.'
+
+tmpaiilqmql/m.py:6: ValueError
+=========================== short test summary info ============================
+FAILED tmpaiilqmql/test.py::test - ValueError: invalid literal for int() with...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

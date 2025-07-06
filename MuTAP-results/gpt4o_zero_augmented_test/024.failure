@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert largest_divisor(15) == 5
+        assert largest_divisor(13) == 1
+        assert largest_divisor(100) == 50
+        assert largest_divisor(49) == 7
+>       assert largest_divisor(1) == None
+
+tmp_clrqijw/test.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+n = 1
+
+    def largest_divisor(n: int) -> int:
+    
+        for i in reversed(range(n)):
+>           if n % i == 0:
+E           ZeroDivisionError: integer division or modulo by zero
+
+tmp_clrqijw/m.py:4: ZeroDivisionError
+=========================== short test summary info ============================
+FAILED tmp_clrqijw/test.py::test - ZeroDivisionError: integer division or mod...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

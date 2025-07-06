@@ -1,0 +1,37 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert find_max(["name", "of", "string"]) == "string"
+        assert find_max(["name", "enam", "game"]) == "enam"
+        assert find_max(["aaaaaaa", "bb", "cc"]) == "aaaaaaa"
+        assert find_max(["hello", "world", "python"]) == "python"
+        assert find_max(["abc", "xyz", "aaa", "bbb"]) == "abc"
+        assert find_max(["ab", "a", "b"]) == "ab"
+        assert find_max(["same", "same", "same"]) == "same"
+        assert find_max(["unique", "characters", "test"]) == "characters"
+        assert find_max([""]) == ""
+        assert find_max(["a", "aa", "aaa", "aaaa"]) == "a"
+        assert find_max(["name", "of", "string"]) == "string"
+        assert find_max(["name", "enam", "game"]) == "enam"
+        assert find_max(["aaaaaaa", "bb", "cc"]) == "aaaaaaa"
+        assert find_max(["hello", "world", "python"]) == "python"
+        assert find_max(["abc", "xyz", "aaa", "bbb"]) == "abc"
+        assert find_max(["ab", "a", "b"]) == "ab"
+        assert find_max(["same", "same", "same"]) == "same"
+        assert find_max(["unique", "characters", "test"]) == "characters"
+        assert find_max([""]) == ""
+        assert find_max(["a", "aa", "aaa", "aaaa"]) == "a"
+>       assert find_max(["aabb", "bbaa", "abab"]) == "abab"
+E       AssertionError: assert 'aabb' == 'abab'
+E         - abab
+E         ?   -
+E         + aabb
+E         ? +
+
+tmpbfebt5ng/test.py:24: AssertionError
+=========================== short test summary info ============================
+FAILED tmpbfebt5ng/test.py::test - AssertionError: assert 'aabb' == 'abab'
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

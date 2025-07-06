@@ -1,0 +1,46 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert count_upper('aBCdEf') == 1
+        assert count_upper('abcdefg') == 0
+        assert count_upper('dBBE') == 0
+        assert count_upper('AEIOUaeiou') == 3
+        assert count_upper('') == 0
+        assert count_upper('XYZ') == 0
+        assert count_upper('AaEeIiOoUu') == 5
+        assert count_upper('aBCdEf') == 1
+        assert count_upper('abcdefg') == 0
+        assert count_upper('dBBE') == 0
+        assert count_upper('AEIOUaeiou') == 3
+        assert count_upper('') == 0
+        assert count_upper('XYZ') == 0
+        assert count_upper('AaEeIiOoUu') == 5
+        assert count_upper('AEIOU') == 3 # New test case to detect the fault
+    
+        assert count_upper('aBCdEf') == 1
+        assert count_upper('abcdefg') == 0
+        assert count_upper('dBBE') == 0
+        assert count_upper('AEIOUaeiou') == 3
+        assert count_upper('') == 0
+        assert count_upper('XYZ') == 0
+        assert count_upper('AaEeIiOoUu') == 5
+        assert count_upper('A' * 1000) == 500  # New test case to detect the fault
+    
+        assert count_upper('aBCdEf') == 1
+        assert count_upper('abcdefg') == 0
+        assert count_upper('dBBE') == 0
+        assert count_upper('AEIOUaeiou') == 3
+        assert count_upper('') == 0
+        assert count_upper('XYZ') == 0
+        assert count_upper('AaEeIiOoUu') == 5
+>       assert count_upper('AeIOU') == 2 # New test case to detect the fault
+E       AssertionError: assert 3 == 2
+E        +  where 3 = count_upper('AeIOU')
+
+tmpprgu0nkw/test.py:36: AssertionError
+=========================== short test summary info ============================
+FAILED tmpprgu0nkw/test.py::test - AssertionError: assert 3 == 2
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

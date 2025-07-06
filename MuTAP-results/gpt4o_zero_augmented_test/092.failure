@@ -1,0 +1,46 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert any_int(5, 2, 7) == True
+        assert any_int(3, 2, 2) == False
+        assert any_int(3, -2, 1) == True
+        assert any_int(3.6, -2.2, 2) == False
+        assert any_int(0, 0, 0) == True
+        assert any_int(1, 1, 2) == True
+        assert any_int(-1, -1, -2) == True
+        assert any_int(10, 5, 5) == True
+        assert any_int(0, 3, 3) == True
+        assert any_int(1, 1, 1) == False
+        assert any_int(5, 2, 7) == True
+        assert any_int(3, 2, 2) == False
+        assert any_int(3, -2, 1) == True
+        assert any_int(3.6, -2.2, 2) == False
+        assert any_int(0, 0, 0) == True
+        assert any_int(1, 1, 2) == True
+        assert any_int(-1, -1, -2) == True
+        assert any_int(10, 5, 5) == True
+        assert any_int(0, 3, 3) == True
+        assert any_int(1, 1, 1) == False
+        assert any_int(5, 7, -2) == True  # New test case
+    
+        assert any_int(5, 2, 7) == True
+        assert any_int(3, 2, 2) == False
+        assert any_int(3, -2, 1) == True
+        assert any_int(3.6, -2.2, 2) == False
+        assert any_int(0, 0, 0) == True
+        assert any_int(1, 1, 2) == True
+        assert any_int(-1, -1, -2) == True
+        assert any_int(10, 5, 5) == True
+        assert any_int(0, 3, 3) == True
+        assert any_int(1, 1, 1) == False
+>       assert any_int(5, 3, 2) == False  # New test case to check for fault
+E       assert True == False
+E        +  where True = any_int(5, 3, 2)
+
+tmppx2mjynh/test.py:36: AssertionError
+=========================== short test summary info ============================
+FAILED tmppx2mjynh/test.py::test - assert True == False
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,18 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert file_name_check('ex.txt') == 'Yes'
+        assert file_name_check('exe.txt') == 'Yes'
+        assert file_name_check('something.doc') == 'No'
+        assert file_name_check('DOC.DOC') == 'No'
+        assert file_name_check('no.') == 'No'
+>       assert file_name_check('no.exe') == Yes
+E       NameError: name 'Yes' is not defined
+
+tmplwc38fgn/test.py:9: NameError
+=========================== short test summary info ============================
+FAILED tmplwc38fgn/test.py::test - NameError: name 'Yes' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

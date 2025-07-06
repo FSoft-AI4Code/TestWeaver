@@ -1,0 +1,20 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert encrypt('hi') == 'lm'
+        assert encrypt('asdfghjkl') == 'ewhjklnop'
+        assert encrypt('gf') == 'kj'
+        assert encrypt('et') == 'ix'
+        assert encrypt('') == ''
+        assert encrypt('z') == 'd'
+        assert encrypt('hello world') == 'lipps asvph'
+>       assert encrypt('python') == tcxlsr
+E       NameError: name 'tcxlsr' is not defined
+
+tmpm7rcym7s/test.py:11: NameError
+=========================== short test summary info ============================
+FAILED tmpm7rcym7s/test.py::test - NameError: name 'tcxlsr' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

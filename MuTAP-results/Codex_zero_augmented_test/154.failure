@@ -1,0 +1,25 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert cycpattern_check("abcd","cdab") == True
+        assert cycpattern_check("abcd","cdac") == False
+        assert cycpattern_check("abcd","cbad") == False
+        assert cycpattern_check("abcd","cdab") == True
+        assert cycpattern_check("abcd","cdac") == False
+        assert cycpattern_check("abcd","cbad") == False
+    
+        assert cycpattern_check("abcd","cdab") == True
+        assert cycpattern_check("abcd","cdac") == False
+        assert cycpattern_check("abcd","cbad") == False
+    
+>       assert cycpattern_check("abcd","cdbc") == True
+E       AssertionError: assert False == True
+E        +  where False = cycpattern_check('abcd', 'cdbc')
+
+tmpbhmmjpdy/test.py:15: AssertionError
+=========================== short test summary info ============================
+FAILED tmpbhmmjpdy/test.py::test - AssertionError: assert False == True
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

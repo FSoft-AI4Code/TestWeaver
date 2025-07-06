@@ -1,0 +1,26 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert rounded_avg(3, 12) == "0b1000"
+        assert rounded_avg(0, 0) == "0b0"
+        assert rounded_avg(1, 1) == "0b1"
+        assert rounded_avg(2, 2) == "0b10"
+        assert rounded_avg(3, 12) == "0b1000"
+        assert rounded_avg(7, 12) == "0b1010"
+        assert rounded_avg(3, 12) == "0b1000"
+        assert rounded_avg(0, 0) == "0b0"
+        assert rounded_avg(1, 1) == "0b1"
+        assert rounded_avg(2, 2) == "0b10"
+        assert rounded_avg(3, 12) == "0b1000"
+        assert rounded_avg(7, 12) == "0b1010"
+>       assert rounded_avg(7, 11) == 0b1001
+E       AssertionError: assert '0b1001' == 9
+E        +  where '0b1001' = rounded_avg(7, 11)
+
+tmplb5w9eky/test.py:16: AssertionError
+=========================== short test summary info ============================
+FAILED tmplb5w9eky/test.py::test - AssertionError: assert '0b1001' == 9
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

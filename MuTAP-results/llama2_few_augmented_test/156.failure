@@ -1,0 +1,36 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert int_to_mini_roman(1) == "i"
+        # Test 2: Small input
+        assert int_to_mini_roman(2) == "ii"
+        # Test 3: Large input
+        assert int_to_mini_roman(1000) == "m"
+        # Test 4: Negative input
+        # Test 5: Non-integer input
+>       assert int_to_mini_roman(2.5) == ""
+
+tmpi0aqa8kv/test.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+number = 0.5
+
+    def int_to_mini_roman(number):
+    
+        num = [1, 4, 5, 9, 10, 40, 50, 90,
+               100, 400, 500, 900, 1000]
+        sym = ["I", "IV", "V", "IX", "X", "XL",
+               "L", "XC", "C", "CD", "D", "CM", "M"]
+        i = 12
+        res = ''
+        while number:
+>           div = number // num[i]
+E           IndexError: list index out of range
+
+tmpi0aqa8kv/m.py:10: IndexError
+=========================== short test summary info ============================
+FAILED tmpi0aqa8kv/test.py::test - IndexError: list index out of range
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,27 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert parse_music("o") == [4]
+    
+        assert parse_music("o|") == [2]
+    
+>       assert parse_music("/.|..|.o.|.") == [1, 2, 4, 4, 1]
+
+tmp3lz_elgb/test.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmp3lz_elgb/m.py:7: in parse_music
+    return [note_map[x] for x in music_string.split(' ') if x]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7f8dbc129990>
+
+>   return [note_map[x] for x in music_string.split(' ') if x]
+E   KeyError: '/.|..|.o.|.'
+
+tmp3lz_elgb/m.py:7: KeyError
+=========================== short test summary info ============================
+FAILED tmp3lz_elgb/test.py::test - KeyError: '/.|..|.o.|.'
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

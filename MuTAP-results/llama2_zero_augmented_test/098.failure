@@ -1,0 +1,31 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test that the function works for a simple string
+        assert count_upper("Hello World!") == 0
+    
+        # Test that the function counts uppercase letters correctly
+    
+        assert count_upper("This is a TEST STRING") == 1
+    
+        # Test that the function raises a ValueError when passed a string that is not a string type
+>       assert count_upper(42) is not None
+
+tmp_g2mtum2/test.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+s = 42
+
+    def count_upper(s):
+    
+        count = 0
+>       for i in range(0,len(s),2):
+E       TypeError: object of type 'int' has no len()
+
+tmp_g2mtum2/m.py:4: TypeError
+=========================== short test summary info ============================
+FAILED tmp_g2mtum2/test.py::test - TypeError: object of type 'int' has no len()
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

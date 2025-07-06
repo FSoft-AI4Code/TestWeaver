@@ -1,0 +1,15 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert compare_one("3", "5.0") == "5.0"
+>       assert compare_one("-42.5", "100") == 100
+E       AssertionError: assert '100' == 100
+E        +  where '100' = compare_one('-42.5', '100')
+
+tmpwoidspaz/test.py:5: AssertionError
+=========================== short test summary info ============================
+FAILED tmpwoidspaz/test.py::test - AssertionError: assert '100' == 100
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

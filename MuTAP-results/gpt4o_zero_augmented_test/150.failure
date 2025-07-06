@@ -1,0 +1,30 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert x_or_y(7, 34, 12) == 34
+        assert x_or_y(15, 8, 5) == 5
+        assert x_or_y(2, 10, 20) == 10
+        assert x_or_y(1, 7, 3) == 3
+        assert x_or_y(13, 11, 14) == 11
+        assert x_or_y(4, 6, 9) == 9
+        assert x_or_y(17, 5, 25) == 5
+        assert x_or_y(9, 4, 8) == 8
+        assert x_or_y(7, 34, 12) == 34
+        assert x_or_y(15, 8, 5) == 5
+        assert x_or_y(2, 10, 20) == 10
+        assert x_or_y(1, 7, 3) == 3
+        assert x_or_y(13, 11, 14) == 11
+        assert x_or_y(4, 6, 9) == 9
+        assert x_or_y(17, 5, 25) == 5
+        assert x_or_y(9, 4, 8) == 8
+>       assert x_or_y(0, 2, 3) == 3  # 0 should be considered not prime
+E       assert 2 == 3
+E        +  where 2 = x_or_y(0, 2, 3)
+
+tmpuf22a7x4/test.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED tmpuf22a7x4/test.py::test - assert 2 == 3
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

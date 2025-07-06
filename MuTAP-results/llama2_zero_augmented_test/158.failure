@@ -1,0 +1,29 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test 1: Ensure the function returns the maximum length word
+        assert find_max(['hello', 'world', 'hello', 'universe', 'universe', 'hello']) == 'universe'
+    
+        # Test 2: Ensure the function sorts the words correctly
+        assert sorted(['universe', 'hello', 'world', 'hello', 'goodbye'], key=find_max) == ['goodbye', 'world', 'universe', 'hello', 'hello']
+    
+        # Test 3: Ensure the function works with empty inputs
+>       assert find_max([]) == ''
+
+tmpvvmw1374/test.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+words = []
+
+    def find_max(words):
+    
+>       return sorted(words, key = lambda x: (-len(set(x)), x))[0]
+E       IndexError: list index out of range
+
+tmpvvmw1374/m.py:3: IndexError
+=========================== short test summary info ============================
+FAILED tmpvvmw1374/test.py::test - IndexError: list index out of range
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

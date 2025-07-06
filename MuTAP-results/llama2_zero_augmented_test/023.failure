@@ -1,0 +1,44 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        #test_empty_string
+        assert strlen("") == 0
+    
+        #test_short_string
+        assert strlen("hello") == 5
+    
+        #test_long_string
+        assert strlen("a") == 1
+    
+        #test_string_with_spaces
+        assert strlen("   hello   ") == 11
+    
+        #test_string_with_non_ascii_characters
+        assert strlen("ñ") == 1
+    
+        #test_string_with_unicode_characters
+        assert strlen("😊") == 1
+    
+        #test_edge_cases
+        # assert strlen(b"") == 0
+    
+        #test_negative_number
+>       assert strlen(-1) == 0
+
+tmp_ypypup4/test.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+string = -1
+
+    def strlen(string: str) -> int:
+    
+>       return len(string)
+E       TypeError: object of type 'int' has no len()
+
+tmp_ypypup4/m.py:3: TypeError
+=========================== short test summary info ============================
+FAILED tmp_ypypup4/test.py::test - TypeError: object of type 'int' has no len()
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

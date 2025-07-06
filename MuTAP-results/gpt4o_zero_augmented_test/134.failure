@@ -1,0 +1,32 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert check_if_last_char_is_a_letter("apple pie") == False
+        assert check_if_last_char_is_a_letter("apple pi e") == True
+        assert check_if_last_char_is_a_letter("apple pi e ") == False
+        assert check_if_last_char_is_a_letter("") == False
+        assert check_if_last_char_is_a_letter("a") == True
+        assert check_if_last_char_is_a_letter("b ") == False
+        assert check_if_last_char_is_a_letter("apple b") == True
+        assert check_if_last_char_is_a_letter("apple pi e!") == False
+        assert check_if_last_char_is_a_letter("apple pi e  ") == False
+        assert check_if_last_char_is_a_letter("apple pie") == False
+        assert check_if_last_char_is_a_letter("apple pi e") == True
+        assert check_if_last_char_is_a_letter("apple pi e ") == False
+        assert check_if_last_char_is_a_letter("") == False
+        assert check_if_last_char_is_a_letter("a") == True
+        assert check_if_last_char_is_a_letter("b ") == False
+        assert check_if_last_char_is_a_letter("apple b") == True
+        assert check_if_last_char_is_a_letter("apple pi e!") == False
+        assert check_if_last_char_is_a_letter("apple pi e  ") == False
+>       assert check_if_last_char_is_a_letter("apple pi3 e") == False  # new test case to test the fault
+E       AssertionError: assert True == False
+E        +  where True = check_if_last_char_is_a_letter('apple pi3 e')
+
+tmp30uqb669/test.py:22: AssertionError
+=========================== short test summary info ============================
+FAILED tmp30uqb669/test.py::test - AssertionError: assert True == False
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

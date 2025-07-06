@@ -1,0 +1,33 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert anti_shuffle("Hello").lower() == "hello"
+        assert anti_shuffle("World").lower() == "wdlor"
+        assert anti_shuffle("Python").lower() == "phnoty"
+        assert anti_shuffle("List").lower() == "list"
+        assert anti_shuffle("Random").lower() == "radmno"
+        assert anti_shuffle("Shuffle").lower() == "seffhlu"
+        # Test edge cases
+        assert anti_shuffle("").lower() == ""
+        assert anti_shuffle("   ").lower() == "   "
+        assert anti_shuffle("  ").lower() == "  "
+        # Test input of different types
+>       assert anti_shuffle(1).lower() == "1"
+
+tmp1ed25s1s/test.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+s = 1
+
+    def anti_shuffle(s):
+    
+>       return ' '.join([''.join(sorted(list(i))) for i in s.split(' ')])
+E       AttributeError: 'int' object has no attribute 'split'
+
+tmp1ed25s1s/m.py:3: AttributeError
+=========================== short test summary info ============================
+FAILED tmp1ed25s1s/test.py::test - AttributeError: 'int' object has no attrib...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

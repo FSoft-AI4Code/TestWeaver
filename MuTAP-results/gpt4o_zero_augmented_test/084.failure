@@ -1,0 +1,18 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert solve(1000) == "1"
+        assert solve(150) == "110"
+        assert solve(147) == "1100"
+        assert solve(0) == "0"
+>       assert solve(9999) == 100100
+E       AssertionError: assert '100100' == 100100
+E        +  where '100100' = solve(9999)
+
+tmpizduj53o/test.py:8: AssertionError
+=========================== short test summary info ============================
+FAILED tmpizduj53o/test.py::test - AssertionError: assert '100100' == 100100
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

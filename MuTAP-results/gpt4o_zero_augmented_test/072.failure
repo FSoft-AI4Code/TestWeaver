@@ -1,0 +1,71 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert will_it_fly([1, 2], 5) == False
+        assert will_it_fly([3, 2, 3], 1) == False
+        assert will_it_fly([3, 2, 3], 9) == True
+        assert will_it_fly([3], 5) == True
+        assert will_it_fly([1, 2, 1], 4) == True
+        assert will_it_fly([1, 2, 2, 1], 6) == True
+        assert will_it_fly([1, 2, 2, 1], 5) == False
+        assert will_it_fly([], 0) == True
+        assert will_it_fly([1, 1, 1, 1, 1, 1, 1, 1, 1], 9) == True
+        assert will_it_fly([1, 1, 1, 1, 1, 1, 1, 1, 1], 8) == False
+        assert will_it_fly([1, 2], 5) == False
+        assert will_it_fly([3, 2, 3], 1) == False
+        assert will_it_fly([3, 2, 3], 9) == True
+        assert will_it_fly([3], 5) == True
+        assert will_it_fly([1, 2, 1], 4) == True
+        assert will_it_fly([1, 2, 2, 1], 6) == True
+        assert will_it_fly([1, 2, 2, 1], 5) == False
+        assert will_it_fly([], 0) == True
+        assert will_it_fly([1, 1, 1, 1, 1, 1, 1, 1, 1], 9) == True
+        assert will_it_fly([1, 1, 1, 1, 1, 1, 1, 1, 1], 8) == False
+        assert will_it_fly([1, 2, 3, 2, 1], 9) == True
+    
+        assert will_it_fly([1, 2], 5) == False
+        assert will_it_fly([3, 2, 3], 1) == False
+        assert will_it_fly([3, 2, 3], 9) == True
+        assert will_it_fly([3], 5) == True
+        assert will_it_fly([1, 2, 1], 4) == True
+        assert will_it_fly([1, 2, 2, 1], 6) == True
+        assert will_it_fly([1, 2, 2, 1], 5) == False
+        assert will_it_fly([], 0) == True
+        assert will_it_fly([1, 1, 1, 1, 1, 1, 1, 1, 1], 9) == True
+        assert will_it_fly([1, 1, 1, 1, 1, 1, 1, 1, 1], 8) == False
+        assert will_it_fly([1, 2, 3, 2, 1], 10) == True  # New test case to detect fault
+        assert will_it_fly([1, 2, 3, 4, 5], 15) == False  # New test case to detect fault
+    
+        assert will_it_fly([1, 2], 5) == False
+        assert will_it_fly([3, 2, 3], 1) == False
+        assert will_it_fly([3, 2, 3], 9) == True
+        assert will_it_fly([3], 5) == True
+        assert will_it_fly([1, 2, 1], 4) == True
+        assert will_it_fly([1, 2, 2, 1], 6) == True
+        assert will_it_fly([1, 2, 2, 1], 5) == False
+        assert will_it_fly([], 0) == True
+        assert will_it_fly([1, 1, 1, 1, 1, 1, 1, 1, 1], 9) == True
+        assert will_it_fly([1, 1, 1, 1, 1, 1, 1, 1, 1], 8) == False
+        assert will_it_fly([1, 2, 3, 2, 1], 10) == True  # The list is palindromic and the sum is within the limit
+    
+        assert will_it_fly([1, 2], 5) == False
+        assert will_it_fly([3, 2, 3], 1) == False
+        assert will_it_fly([3, 2, 3], 9) == True
+        assert will_it_fly([3], 5) == True
+        assert will_it_fly([1, 2, 1], 4) == True
+        assert will_it_fly([1, 2, 2, 1], 6) == True
+        assert will_it_fly([1, 2, 2, 1], 5) == False
+        assert will_it_fly([], 0) == True
+        assert will_it_fly([1, 1, 1, 1, 1, 1, 1, 1, 1], 9) == True
+        assert will_it_fly([1, 1, 1, 1, 1, 1, 1, 1, 1], 8) == False
+>       assert will_it_fly([1, 1, 1, 2, 1, 1, 1], 10) == False  # New test case to detect "while not (i < j)" error
+E       assert True == False
+E        +  where True = will_it_fly([1, 1, 1, 2, 1, 1, ...], 10)
+
+tmpgjuk1t5f/test.py:61: AssertionError
+=========================== short test summary info ============================
+FAILED tmpgjuk1t5f/test.py::test - assert True == False
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

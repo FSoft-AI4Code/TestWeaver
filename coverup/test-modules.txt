@@ -1,0 +1,9 @@
+# The modules below aren't required by CoverUp, but often by the generated tests.
+mock
+#unittest
+#pytest-asyncio
+pytest-datadir
+pytest-mock
+#monkeypatch
+hypothesis
+responses

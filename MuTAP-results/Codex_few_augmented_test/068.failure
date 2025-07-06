@@ -1,0 +1,23 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert pluck(['a','b','c','b','d']) == ['b','c','d','b','d','b']
+
+tmpxxhbot92/test.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpxxhbot92/m.py:4: in pluck
+    evens = list(filter(lambda x: x%2 == 0, arr))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+x = 'a'
+
+>   evens = list(filter(lambda x: x%2 == 0, arr))
+E   TypeError: not all arguments converted during string formatting
+
+tmpxxhbot92/m.py:4: TypeError
+=========================== short test summary info ============================
+FAILED tmpxxhbot92/test.py::test - TypeError: not all arguments converted dur...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

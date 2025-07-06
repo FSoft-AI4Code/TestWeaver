@@ -1,0 +1,33 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert get_closest_vowel("a") == ""
+        assert get_closest_vowel("aw") == ""
+        assert get_closest_vowel("a w") == ""
+        assert get_closest_vowel("a wl") == ""
+        assert get_closest_vowel("al") == ""
+        assert get_closest_vowel("a l") == ""
+        assert get_closest_vowel("wal") == "a"
+        assert get_closest_vowel("w a l") == "a"
+        assert get_closest_vowel("w a l ") == "a"
+        assert get_closest_vowel("awl") == ""
+        assert get_closest_vowel("awl") == ""
+        assert get_closest_vowel("aw") == ""
+        assert get_closest_vowel("a w") == ""
+        assert get_closest_vowel("awl") == ""
+        assert get_closest_vowel("a wl") == ""
+        assert get_closest_vowel("al") == ""
+        assert get_closest_vowel("a l") == ""
+        assert get_closest_vowel("wal") == "a"
+        assert get_closest_vowel("w a l") == "a"
+        assert get_closest_vowel("w a l ") == "a"
+>       assert get_closest_vowel("wa ") == a
+E       NameError: name 'a' is not defined
+
+tmp7y6m9lsg/test.py:24: NameError
+=========================== short test summary info ============================
+FAILED tmp7y6m9lsg/test.py::test - NameError: name 'a' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

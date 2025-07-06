@@ -1,0 +1,14 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert flip_case("Hello") == "hELLO"
+>       assert flip_case("camelCASE") == CAMELcase
+E       NameError: name 'CAMELcase' is not defined
+
+tmpoqfnvvzn/test.py:5: NameError
+=========================== short test summary info ============================
+FAILED tmpoqfnvvzn/test.py::test - NameError: name 'CAMELcase' is not defined
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

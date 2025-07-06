@@ -1,0 +1,30 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert hex_key('123') == 2
+    
+        assert hex_key('2B') == 2
+    
+        assert hex_key('2F') == 1
+    
+>       assert hex_key(-5) == 0
+
+tmpfq4xzdpo/test.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+num = -5
+
+    def hex_key(num):
+    
+        primes = ('2', '3', '5', '7', 'B', 'D')
+        total = 0
+>       for i in range(0, len(num)):
+E       TypeError: object of type 'int' has no len()
+
+tmpfq4xzdpo/m.py:5: TypeError
+=========================== short test summary info ============================
+FAILED tmpfq4xzdpo/test.py::test - TypeError: object of type 'int' has no len()
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

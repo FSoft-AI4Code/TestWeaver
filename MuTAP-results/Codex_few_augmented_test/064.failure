@@ -1,0 +1,32 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert vowels_count("abcdefghijklmnopqrstuvwxyz") == 5
+        assert vowels_count("code") == 2
+        assert vowels_count("Kata") == 2
+        assert vowels_count("abcdefghijklmnopqrstuvwxyz") == 5
+        assert vowels_count("code") == 2
+        assert vowels_count("Kata") == 2
+        assert vowels_count("ac") == 1
+        assert vowels_count("ac") == 1
+>       assert vowels_count("") == 0
+
+tmpnavrfxox/test.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+s = ''
+
+    def vowels_count(s):
+    
+        vowels = "aeiouAEIOU"
+        n_vowels = sum(c in vowels for c in s)
+>       if s[-1] == 'y' or s[-1] == 'Y':
+E       IndexError: string index out of range
+
+tmpnavrfxox/m.py:5: IndexError
+=========================== short test summary info ============================
+FAILED tmpnavrfxox/test.py::test - IndexError: string index out of range
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

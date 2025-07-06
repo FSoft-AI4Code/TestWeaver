@@ -1,0 +1,25 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test that the function returns all the prefixes of a string
+        assert all_prefixes("hello") == ['h', 'he', 'hel', 'hell', 'hello']
+    
+        # Test that the function works for different length strings
+        assert all_prefixes("") == []
+        assert all_prefixes("a") == ['a']
+        assert all_prefixes("ab") == ['a', 'ab']
+    
+        # Test that the function returns the correct prefixes
+        assert all_prefixes("hello") == ['h', 'he', 'hel', 'hell', 'hello']
+    
+        # Test that the function works for negative indices
+>       assert all_prefixes("hello", -1) == ['hello']
+E       TypeError: all_prefixes() takes 1 positional argument but 2 were given
+
+tmpphmd60yy/test.py:16: TypeError
+=========================== short test summary info ============================
+FAILED tmpphmd60yy/test.py::test - TypeError: all_prefixes() takes 1 position...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,45 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert prime_fib(1) == 2
+        assert prime_fib(2) == 3
+        assert prime_fib(3) == 5
+        assert prime_fib(4) == 13
+        assert prime_fib(5) == 89
+        assert prime_fib(1) == 2
+        assert prime_fib(2) == 3
+        assert prime_fib(3) == 5
+        assert prime_fib(4) == 13
+        assert prime_fib(5) == 89
+        assert prime_fib(6) == 233  # New test case
+    
+        assert prime_fib(1) == 2
+        assert prime_fib(2) == 3
+        assert prime_fib(3) == 5
+        assert prime_fib(4) == 13
+        assert prime_fib(5) == 89
+        assert prime_fib(6) == 233  # This will help catch the issue with the incorrect prime check logic
+    
+        assert prime_fib(1) == 2
+        assert prime_fib(2) == 3
+        assert prime_fib(3) == 5
+        assert prime_fib(4) == 13
+        assert prime_fib(5) == 89
+        assert prime_fib(6) == 233  # Adding an additional case to ensure the function continues correctly
+    
+        assert prime_fib(1) == 2
+        assert prime_fib(2) == 3
+        assert prime_fib(3) == 5
+        assert prime_fib(4) == 13
+        assert prime_fib(5) == 89
+>       assert False, "The function should not raise an exception for valid input"
+E       AssertionError: The function should not raise an exception for valid input
+E       assert False
+
+tmptthssq2f/test.py:35: AssertionError
+=========================== short test summary info ============================
+FAILED tmptthssq2f/test.py::test - AssertionError: The function should not ra...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

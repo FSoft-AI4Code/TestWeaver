@@ -1,0 +1,30 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert median([1, 2, 3]) == 2
+        assert median([1, 2, 3, 4]) == 2.5
+        assert median([1, 2, 3, 4, 5]) == 3
+    
+>       assert median([]) == None
+
+tmpih8w3dqa/test.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+l = []
+
+    def median(l: list):
+    
+        l = sorted(l)
+        if len(l) % 2 == 1:
+            return l[len(l) // 2]
+        else:
+>           return (l[len(l) // 2 - 1] + l[len(l) // 2]) / 2.0
+E           IndexError: list index out of range
+
+tmpih8w3dqa/m.py:7: IndexError
+=========================== short test summary info ============================
+FAILED tmpih8w3dqa/test.py::test - IndexError: list index out of range
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

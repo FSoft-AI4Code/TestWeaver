@@ -1,0 +1,17 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert (numerical_letter_grade([3.4, 3.7, 3.8, 3.4, 3.2, 3.7, 3.8, 3.7]) ==     ['C-', 'A', 'A', 'A-', 'D-', 'B', 'B', 'B']), "failed test case"
+E       AssertionError: failed test case
+E       assert ['A-', 'A-', ...+', 'A-', ...] == ['C-', 'A', '...D-', 'B', ...]
+E         
+E         At index 0 diff: 'A-' != 'C-'
+E         Use -v to get more diff
+
+tmphxgeebux/test.py:4: AssertionError
+=========================== short test summary info ============================
+FAILED tmphxgeebux/test.py::test - AssertionError: failed test case
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,38 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        # Test with a positive integer
+        assert sum_to_n(5) == 15
+    
+        # Test with zero
+        assert sum_to_n(0) == 0
+    
+        # Test with a negative integer
+        assert sum_to_n(-5) == 0
+    
+        # Test with an odd positive integer
+        assert sum_to_n(7) == 28
+    
+        # Test with an even positive integer
+        assert sum_to_n(10) == 55
+    
+        # Test with a float
+>       assert sum_to_n(3.14) == 15
+
+tmpqdx9h3hj/test.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+n = 3.14
+
+    def sum_to_n(n: int):
+    
+>       return sum(range(n + 1))
+E       TypeError: 'float' object cannot be interpreted as an integer
+
+tmpqdx9h3hj/m.py:3: TypeError
+=========================== short test summary info ============================
+FAILED tmpqdx9h3hj/test.py::test - TypeError: 'float' object cannot be interp...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

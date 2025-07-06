@@ -1,0 +1,32 @@
+
+==================================== ERRORS ====================================
+_____________________ ERROR collecting tmpg0dfnv8i/test.py _____________________
+../../../venv-benchmarks-3.9.12/lib/python3.9/site-packages/_pytest/python.py:608: in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+../../../venv-benchmarks-3.9.12/lib/python3.9/site-packages/_pytest/pathlib.py:533: in import_path
+    importlib.import_module(module_name)
+../../../python-3.9.12/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1030: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1007: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:986: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:680: in _load_unlocked
+    ???
+../../../venv-benchmarks-3.9.12/lib/python3.9/site-packages/_pytest/assertion/rewrite.py:159: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../../venv-benchmarks-3.9.12/lib/python3.9/site-packages/_pytest/assertion/rewrite.py:359: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+../../../python-3.9.12/lib/python3.9/ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File "/home/juan/project/coverup-eval/MuTAP/tmpg0dfnv8i/test.py", line 7
+E       assert words_in_sentence("Python is fun") == is fun
+E                                                    ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tmpg0dfnv8i/test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+Warning: unable to include /home/juan/project/coverup-eval/MuTAP/tmpg0dfnv8i/test.py: invalid syntax (<unknown>, line 7)

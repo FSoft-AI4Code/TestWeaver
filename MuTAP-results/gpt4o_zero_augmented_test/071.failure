@@ -1,0 +1,120 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert triangle_area(3, 4, 5) == 6.00
+        assert triangle_area(1, 2, 10) == -1
+        assert triangle_area(5, 5, 5) == 10.83
+        assert triangle_area(7, 24, 25) == 84.0
+        assert triangle_area(0, 0, 0) == -1
+        assert triangle_area(10, 10, 10) == 43.3
+        assert triangle_area(2, 2, 5) == -1
+        assert triangle_area(8, 15, 17) == 60.0
+        assert triangle_area(3, 4, 5) == 6.00
+        assert triangle_area(1, 2, 10) == -1
+        assert triangle_area(5, 5, 5) == 10.83
+        assert triangle_area(7, 24, 25) == 84.0
+        assert triangle_area(0, 0, 0) == -1
+        assert triangle_area(10, 10, 10) == 43.3
+        assert triangle_area(2, 2, 5) == -1
+        assert triangle_area(8, 15, 17) == 60.0
+        assert triangle_area(6, 8, 10) == 24.0
+    
+        assert triangle_area(3, 4, 5) == 6.00
+        assert triangle_area(1, 2, 10) == -1
+        assert triangle_area(5, 5, 5) == 10.83
+        assert triangle_area(7, 24, 25) == 84.0
+        assert triangle_area(0, 0, 0) == -1
+        assert triangle_area(10, 10, 10) == 43.3
+        assert triangle_area(2, 2, 5) == -1
+        assert triangle_area(8, 15, 17) == 60.0
+        assert triangle_area(2, 3, 4) == 2.9  # New test case to detect the fault
+    
+        assert triangle_area(3, 4, 5) == 6.00
+        assert triangle_area(1, 2, 10) == -1
+        assert triangle_area(5, 5, 5) == 10.83
+        assert triangle_area(7, 24, 25) == 84.0
+        assert triangle_area(0, 0, 0) == -1
+        assert triangle_area(10, 10, 10) == 43.3
+        assert triangle_area(2, 2, 5) == -1
+        assert triangle_area(8, 15, 17) == 60.0
+        assert triangle_area(7, 10, 5) == 16.25  # New test case to detect the issue
+    
+        assert triangle_area(3, 4, 5) == 6.00
+        assert triangle_area(1, 2, 10) == -1
+        assert triangle_area(5, 5, 5) == 10.83
+        assert triangle_area(7, 24, 25) == 84.0
+        assert triangle_area(0, 0, 0) == -1
+        assert triangle_area(10, 10, 10) == 43.3
+        assert triangle_area(2, 2, 5) == -1
+        assert triangle_area(8, 15, 17) == 60.0
+        assert triangle_area(6, 8, 10) == 24.00  # New test case to ensure correct area calculation
+    
+        assert triangle_area(3, 4, 5) == 6.00
+        assert triangle_area(1, 2, 10) == -1
+        assert triangle_area(5, 5, 5) == 10.83
+        assert triangle_area(7, 24, 25) == 84.0
+        assert triangle_area(0, 0, 0) == -1
+        assert triangle_area(10, 10, 10) == 43.3
+        assert triangle_area(2, 2, 5) == -1
+        assert triangle_area(8, 15, 17) == 60.0
+        assert triangle_area(6, 8, 10) == 24.0
+    
+        assert triangle_area(3, 4, 5) == 6.00
+        assert triangle_area(1, 2, 10) == -1
+        assert triangle_area(5, 5, 5) == 10.83
+        assert triangle_area(7, 24, 25) == 84.0
+        assert triangle_area(0, 0, 0) == -1
+        assert triangle_area(10, 10, 10) == 43.3
+        assert triangle_area(2, 2, 5) == -1
+        assert triangle_area(8, 15, 17) == 60.0
+        assert triangle_area(7, 7, 7) == 21.22
+    
+        assert triangle_area(3, 4, 5) == 6.00
+        assert triangle_area(1, 2, 10) == -1
+        assert triangle_area(5, 5, 5) == 10.83
+        assert triangle_area(7, 24, 25) == 84.0
+        assert triangle_area(0, 0, 0) == -1
+        assert triangle_area(10, 10, 10) == 43.3
+        assert triangle_area(2, 2, 5) == -1
+        assert triangle_area(8, 15, 17) == 60.0
+        assert triangle_area(1, 1, 1) == 0.43  # New test case to detect the change
+    
+        assert triangle_area(3, 4, 5) == 6.00
+        assert triangle_area(1, 2, 10) == -1
+        assert triangle_area(5, 5, 5) == 10.83
+        assert triangle_area(7, 24, 25) == 84.0
+        assert triangle_area(0, 0, 0) == -1
+        assert triangle_area(10, 10, 10) == 43.3
+        assert triangle_area(2, 2, 5) == -1
+        assert triangle_area(8, 15, 17) == 60.0
+        assert triangle_area(5, 12, 13) == 30.0  # New test case to detect the fault
+    
+        assert triangle_area(3, 4, 5) == 6.00
+        assert triangle_area(1, 2, 10) == -1
+        assert triangle_area(5, 5, 5) == 10.83
+        assert triangle_area(7, 24, 25) == 84.0
+        assert triangle_area(0, 0, 0) == -1
+        assert triangle_area(10, 10, 10) == 43.3
+        assert triangle_area(2, 2, 5) == -1
+        assert triangle_area(8, 15, 17) == 60.0
+        assert triangle_area(1, 1, 2) == -1
+    
+        assert triangle_area(3, 4, 5) == 6.00
+        assert triangle_area(1, 2, 10) == -1
+        assert triangle_area(5, 5, 5) == 10.83
+        assert triangle_area(7, 24, 25) == 84.0
+        assert triangle_area(0, 0, 0) == -1
+        assert triangle_area(10, 10, 10) == 43.3
+        assert triangle_area(2, 2, 5) == -1
+        assert triangle_area(8, 15, 17) == 60.0
+>       assert triangle_area(1, 1, 1.5) == 0.43
+E       assert 0.5 == 0.43
+E        +  where 0.5 = triangle_area(1, 1, 1.5)
+
+tmpf7aq8fq_/test.py:110: AssertionError
+=========================== short test summary info ============================
+FAILED tmpf7aq8fq_/test.py::test - assert 0.5 == 0.43
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,39 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert count_nums([]) == 0
+    
+    
+        assert count_nums([-1, 11, -11]) == 1
+    
+    
+        assert count_nums([1, 1, 2]) == 3
+    
+    
+        assert count_nums([-2, 3, -1, 1, 2]) == 3
+    
+    
+>       assert count_nums(["   ", "-1", " 11", "-11"]) == 1
+
+tmpk9w6dnpc/test.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpk9w6dnpc/m.py:10: in count_nums
+    return len(list(filter(lambda x: x > 0, [digits_sum(i) for i in arr])))
+tmpk9w6dnpc/m.py:10: in <listcomp>
+    return len(list(filter(lambda x: x > 0, [digits_sum(i) for i in arr])))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+n = '   '
+
+    def digits_sum(n):
+        neg = 1
+>       if n < 0:
+E       TypeError: '<' not supported between instances of 'str' and 'int'
+
+tmpk9w6dnpc/m.py:5: TypeError
+=========================== short test summary info ============================
+FAILED tmpk9w6dnpc/test.py::test - TypeError: '<' not supported between insta...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

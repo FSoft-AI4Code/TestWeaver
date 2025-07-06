@@ -1,0 +1,1937 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert fib(0) == 0
+    
+        assert fib(1) == 1
+    
+        assert fib(3) == fib(2) + fib(1)
+    
+>       assert fib(-3) == fib(-2) + fib(-1)
+
+tmpng213608/test.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+tmpng213608/m.py:7: in fib
+    return fib(n - 1) + fib(n - 2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+n = -957
+
+    def fib(n: int):
+    
+>       if n == 0:
+E       RecursionError: maximum recursion depth exceeded in comparison
+
+tmpng213608/m.py:3: RecursionError
+=========================== short test summary info ============================
+FAILED tmpng213608/test.py::test - RecursionError: maximum recursion depth ex...
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

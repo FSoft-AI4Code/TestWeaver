@@ -1,0 +1,32 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert derivative([3, 1, 2, 4, 5]) == [1, 4, 12, 20]
+        assert derivative([1, 2, 3]) == [2, 6]
+        assert derivative([0, 0, 0]) == [0, 0]
+        assert derivative([4]) == []
+        assert derivative([5, -3, 0, 2]) == [-3, 0, 6]
+        assert derivative([3, 1, 2, 4, 5]) == [1, 4, 12, 20]
+        assert derivative([1, 2, 3]) == [2, 6]
+        assert derivative([0, 0, 0]) == [0, 0]
+        assert derivative([4]) == []
+        assert derivative([5, -3, 0, 2]) == [-3, 0, 6]
+        assert derivative([5, 2, 1]) == [2, 2]  # additional test case to catch the fault
+    
+        assert derivative([3, 1, 2, 4, 5]) == [1, 4, 12, 20]
+        assert derivative([1, 2, 3]) == [2, 6]
+        assert derivative([0, 0, 0]) == [0, 0]
+        assert derivative([4]) == []
+        assert derivative([5, -3, 0, 2]) == [-3, 0, 6]
+>       assert derivative([0, 0, 1, 0]) == [0, 3, 0]  # New test case to catch the error
+E       assert [0, 2, 0] == [0, 3, 0]
+E         At index 1 diff: 2 != 3
+E         Use -v to get more diff
+
+tmphaswrahl/test.py:21: AssertionError
+=========================== short test summary info ============================
+FAILED tmphaswrahl/test.py::test - assert [0, 2, 0] == [0, 3, 0]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

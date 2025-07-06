@@ -1,0 +1,3 @@
+config/common.sh
+__pycache__/
+pip-cache/

@@ -1,0 +1,60 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert valid_date('') == False
+        assert valid_date('2020-02-30') == False
+        assert valid_date('2020-01-30') == False
+        assert valid_date('2019-02-30') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-28') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-28') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('') == False
+        assert valid_date('2020-02-30') == False
+        assert valid_date('2020-01-30') == False
+        assert valid_date('2019-02-30') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-28') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+    
+        assert valid_date('2020-02-30') == False
+        assert valid_date('2020-01-30') == False
+        assert valid_date('2019-02-30') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-28') == False
+        assert valid_date('2020-02-29') == False
+    
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-28') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+        assert valid_date('2020-02-29') == False
+    
+>       assert valid_date('2020-12-31') == True
+E       AssertionError: assert False == True
+E        +  where False = valid_date('2020-12-31')
+
+tmpqh3zbzvy/test.py:50: AssertionError
+=========================== short test summary info ============================
+FAILED tmpqh3zbzvy/test.py::test - AssertionError: assert False == True
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

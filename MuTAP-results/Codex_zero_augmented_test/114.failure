@@ -1,0 +1,19 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+        assert minSubArraySum([2, 3, 1, 2, 4, 3]) == 1
+        assert minSubArraySum([2, -1, 2, 3, 1, 2, 4, 3]) == -1
+        assert minSubArraySum([2, -1, 2, 3, 1, 2, 4, 3]) == -1
+        assert [1,2,3] == [1, 2, 3]
+    
+>       assert minSubArraySum([2, 3, 1, 2, 4, 3]) == 0
+E       assert 1 == 0
+E        +  where 1 = minSubArraySum([2, 3, 1, 2, 4, 3])
+
+tmpbn8ujmle/test.py:9: AssertionError
+=========================== short test summary info ============================
+FAILED tmpbn8ujmle/test.py::test - assert 1 == 0
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

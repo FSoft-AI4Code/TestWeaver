@@ -1,0 +1,14 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert solve(2) == 10
+E       AssertionError: assert '10' == 10
+E        +  where '10' = solve(2)
+
+tmpgi4synvi/test.py:4: AssertionError
+=========================== short test summary info ============================
+FAILED tmpgi4synvi/test.py::test - AssertionError: assert '10' == 10
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!

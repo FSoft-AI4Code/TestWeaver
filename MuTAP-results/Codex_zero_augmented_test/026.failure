@@ -1,0 +1,24 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____________________________________ test _____________________________________
+
+    def test():
+    
+>       assert remove_duplicates(None) == []
+
+tmp50xgt6ph/test.py:4: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+numbers = None
+
+    def remove_duplicates(numbers: List[int]) -> List[int]:
+    
+        import collections
+        c = collections.Counter(numbers)
+>       return [n for n in numbers if c[n] <= 1]
+E       TypeError: 'NoneType' object is not iterable
+
+tmp50xgt6ph/m.py:8: TypeError
+=========================== short test summary info ============================
+FAILED tmp50xgt6ph/test.py::test - TypeError: 'NoneType' object is not iterable
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
