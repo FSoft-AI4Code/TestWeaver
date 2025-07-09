@@ -2,11 +2,6 @@
 
 Please write a test method for the function '{func_name}' given the following program under test. Your answer should only contain one test input.
 
-Before writing the test, here is the list of available external tools (imports) you can use in your test code:
-
-{import_tool}
-
-
 Here is a program under test:
 ----
 {program}
@@ -18,8 +13,6 @@ Here is a program under test:
 - When testing class methods like __subclasshook__, call them as PathLike.__subclasshook__(SomeClass) (do NOT pass the class itself as the first argument).
 - Always make sure to import or reference the function or class under test correctly.
 - Avoid using undefined variables or functions in your test code.
-- Before generating tests, review the inference from the proving tool above to ensure the test parameters are formatted correctly to use correct data types in test inputs (strings for string parameters, integers for int parameters, dict,..).
-- Test with valid input types that match the function signature.
 </instructions>
 
 Your test method should begin with:

@@ -1,8 +1,5 @@
 Please write a test method in class: {class_name} given the following program under test. Your answer should only contain one test input.
 
-Before writing the test, here is the list of available external tools (imports) you can use in your test code:
-
-{import_tool}
 
 <instructions>
 You are providing program under test:
@@ -20,15 +17,7 @@ sure that the new test is correct and indeed improves coverage.
 
 5. Avoid using undefined variables or functions in your test code.
 
-6. Before generating tests, review the inference from the proving tool above to ensure the test parameters are formatted correctly.
-7. If your test involves file operations (dump, get_file_name, makedirs, open, os.makedirs), use mocks to avoid OSError:
-   - Mock os.makedirs, pathlib.Path.mkdir, tempfile.mkdtemp
-   - Mock open() for file operations
-   - Use @patch decorators for all file system calls
-8. Always wrap file operations in try-except or use mocks to prevent OSError.
-9. Use correct data types in test inputs (strings for string parameters, integers for int parameters, etc.).
-10. Test with valid input types that match the function signature.
-9. ***IMPORTANCE***  Your test method should begin with:
+6. ***IMPORTANCE***  Your test method should begin with:
 
 def test_{class_name}():
     solution = 

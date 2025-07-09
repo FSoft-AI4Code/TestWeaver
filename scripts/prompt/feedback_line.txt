@@ -17,7 +17,8 @@ Your generated test case should start with the following template:
 
 ```python
 def test_{class_name}():
-    solution = {class_name}.()
+    solution = 
+    assert solution.
 ```
 
 Please structure your response in two parts:

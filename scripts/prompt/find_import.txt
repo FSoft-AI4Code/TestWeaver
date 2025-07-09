@@ -1,0 +1,14 @@
+Given the following Python code:
+
+{code}
+
+And the following list of available external imports:
+
+{import_tool}
+...
+
+
+Please output a Python list of the external imports (from the list above) that are required to run or test the given code. Only include those that are actually used or referenced in the code. Your output must be strictly a Python list, each element is a string, e.g. ['import1', 'import2'].
+
+Output:
+
