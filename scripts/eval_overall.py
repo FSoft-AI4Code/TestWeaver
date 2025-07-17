@@ -143,11 +143,13 @@ def execute(test_code,timeout=5):
     
 
 """Compute syntactical and execution correctness (with coverage)."""
-def run_evolution123(result_execute, path, func_name, all_executed_lines, line_cover = 0,  package_root=None, package_name=None):
+def run_evolution123(result_execute, path, func_name, all_executed_lines, line_cover = 0,  package_root=None, package_name=None, check_error=False):
     generated_data = read_jsonl(path)
+    all_executed_lines = set(all_executed_lines)
     # print(f'generated_data: ---{path}\n\n\n---------{generated_data}------------')
     accuracy = []
     missing_line = []
+    error_feedback = {} if check_error else None
     
     for i, data in tqdm(enumerate(generated_data)):
         total_cases=0
@@ -156,9 +158,7 @@ def run_evolution123(result_execute, path, func_name, all_executed_lines, line_c
         exec_fails=[]
 
         task_num=data['task_num']
-        # func_name=data['func_name']
         code=data['code']
-        #code=ADDITIONAL_IMPORTS+code #add possibly missing imports
         test_cases=data['tests']
     
         tmp_dir = Path(f'tmp_{i}_cuong')
@@ -170,7 +170,18 @@ def run_evolution123(result_execute, path, func_name, all_executed_lines, line_c
             package_dst = tmp_dir / package_name
             if package_dst.exists():
                 shutil.rmtree(package_dst)
-            shutil.copytree(package_src, package_dst)
+            # Nếu package_src bên trong lại có thư mục pypara (bị lồng 2 lớp), chỉ copy nội dung bên trong
+            inner_pypara = package_src / package_name
+            if package_name == 'pypara' and inner_pypara.exists() and inner_pypara.is_dir():
+                package_dst.mkdir(parents=True, exist_ok=True)
+                for item in inner_pypara.iterdir():
+                    dest = package_dst / item.name
+                    if item.is_dir():
+                        shutil.copytree(item, dest)
+                    else:
+                        shutil.copy2(item, dest)
+            else:
+                shutil.copytree(package_src, package_dst)
             # Ghi under_test.py vào đúng vị trí
             under_test_path = package_dst / 'under_test.py'
         else:
@@ -200,7 +211,10 @@ def run_evolution123(result_execute, path, func_name, all_executed_lines, line_c
                 time.sleep(0.01)
                 # Set PYTHONPATH để import nội bộ hoạt động
                 old_pythonpath = os.environ.get('PYTHONPATH', '')
+                # Luôn set PYTHONPATH thành package_dst (ví dụ: tmp_0_cuong/pypara)
                 if package_dst is not None:
+                    os.environ['PYTHONPATH'] = str(package_dst.parent)
+                else:
                     os.environ['PYTHONPATH'] = str(tmp_dir)
                 # --- Thay thế execute(test_code) bằng chạy subprocess ---
                 try:
@@ -208,11 +222,19 @@ def run_evolution123(result_execute, path, func_name, all_executed_lines, line_c
                         f.write(test_code)
                         test_file = f.name
                     try:
+                        print(f'Test file:   {test_file}------')
+                        env = os.environ.copy()
+                        print('sys.path:', sys.path)
+                        print('cwd:', os.getcwd())
+                        print('PYTHONPATH:', os.environ.get('PYTHONPATH'))
+                        print(f'\n ----------------\n')
                         result = subprocess.run(
                             ['python', test_file],
                             capture_output=True,
                             text=True,
-                            timeout=10
+                            timeout=10,
+                            env=env,
+                            cwd=str(tmp_dir)
                         )
                         if result.returncode == 0:
                             res = True
@@ -223,8 +245,7 @@ def run_evolution123(result_execute, path, func_name, all_executed_lines, line_c
                     finally:
                         os.remove(test_file)
                 finally:
-                    if package_dst is not None:
-                        os.environ['PYTHONPATH'] = old_pythonpath
+                    os.environ['PYTHONPATH'] = old_pythonpath
                 # --- END subprocess exec ---
                 print(res)
                 if res==True:
@@ -235,8 +256,12 @@ def run_evolution123(result_execute, path, func_name, all_executed_lines, line_c
                 else:
                     exec_fails.append({'task':task_num,'test_line':lineno,'error':res})
                     print(res)
-            except:
+                    if check_error and error_feedback is not None:
+                        error_feedback[lineno] = {'test': testcase, 'error': str(res)}
+            except Exception as e:
                 syn_failed+=1
+                if check_error and error_feedback is not None:
+                    error_feedback[lineno] = {'test': testcase, 'error': str(e)}
                 pass
         print(f'--------------PASS_TESTS--------\n {len(passed_tests)} --------------\n')     
         if len(passed_tests)>0: #start measuring coverage
@@ -265,8 +290,8 @@ test_{func_name}()
                 sys.argv = [combined_file_path, arguments]
                 sys.path[0] = str(os.path.dirname(combined_file_path))
                 
-                if j==0:
-                    print(f'combined_code : ------------{combined_code}------------\n')
+                # if j==0:
+                #     print(f'combined_code : ------------{combined_code}------------\n')
                 
                 globs = {
                     '__file__': combined_file_path,
@@ -302,8 +327,7 @@ test_{func_name}()
                         # If we can't find the original file, use string lines as fallback
                         executed_lines.append(lineno)
                 executed_lines = set(executed_lines)
-                # print(f"Debug: t.counts = {t.counts}")
-                print(f"Debug: executed_lines = {executed_lines}")
+                # print(f"Debug: executed_lines = {executed_lines}")
                 if (line_cover>0):
                     if (line_cover in executed_lines):
                         print(f"Line {line_cover} is covered in test {test_name}")
@@ -312,18 +336,15 @@ test_{func_name}()
                 all_executed_lines = set(all_executed_lines)
         else:
             pass
-        print(f"All executed lines: {all_executed_lines}")
-        u = 0
-        m = []
-        for x in line_file:
-            if x not in all_executed_lines:
-                u = u+1
-                m.append(x)
-        missing_line.append({i+1:m})
-        accuracy.append(1- u/len(line_file))
-    print(accuracy)
-    print(missing_line)
-    return accuracy, missing_line, result_execute, all_executed_lines
+        all_executed_lines = [x for x in line_file if x in all_executed_lines]
+        missing_line = [x for x in line_file if x not in all_executed_lines]
+        # if package_dst is not None:
+        #     os.environ['PYTHONPATH'] = old_pythonpath
+        
+    if check_error and error_feedback is not None:
+        return accuracy, missing_line, result_execute, all_executed_lines, error_feedback
+    else:
+        return accuracy, missing_line, result_execute, all_executed_lines
 
     
 def parse_args():
@@ -335,8 +356,8 @@ def parse_args():
 if __name__=='__main__':
     args=parse_args()
     os.chdir('/bigdisk/cuongvd17/SE/TestGeneration/')
-    print(os.getcwd())
-    print(args.path)
+    # print(os.getcwd())
+    # print(args.path)
     generated_data = read_jsonl(args.path)
     # Lấy func_name từ data đầu tiên hoặc dùng giá trị mặc định
     func_name = 'test_function'

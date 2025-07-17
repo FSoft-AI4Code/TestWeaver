@@ -3,14 +3,37 @@ import json
 import re
 import importlib.util
 import io
+import numpy as np
 import tokenize
-
+from get_conditional_line import get_conditional_lines
 import ast
+# def fix_relative_imports(code, package_name):
+#     # Chuyển from .module import ... => from package_name.module import ...
+#     code = re.sub(r'from \.(\w+)', f'from {package_name}.\\1', code)
+#     code = re.sub(r'from \.\.(\w+)', f'from {package_name}.\\1', code)  # đơn giản, có thể cần tinh chỉnh thêm
+#     code = re.sub(r'from \. import (\w+)', f'from {package_name} import \\1', code)
+#     return code
 def fix_relative_imports(code, package_name):
-    # Chuyển from .module import ... => from package_name.module import ...
-    code = re.sub(r'from \.(\w+)', f'from {package_name}.\\1', code)
-    code = re.sub(r'from \.\.(\w+)', f'from {package_name}.\\1', code)  # đơn giản, có thể cần tinh chỉnh thêm
-    code = re.sub(r'from \. import (\w+)', f'from {package_name} import \\1', code)
+    def replace_relative(match):
+        dots = match.group(1)
+        module = match.group(2)
+        levels = len(dots) - 1  # số lượng dấu chấm trừ 1 (vì . là cùng cấp, .. là lên 1 cấp, ...)
+        pkgs = package_name.split('.')
+        if levels > len(pkgs):
+            # Nếu lên quá nhiều cấp, fallback về gốc
+            new_pkg = module
+        else:
+            new_pkg = '.'.join(pkgs[:-levels] if levels else pkgs)
+            if new_pkg:
+                new_pkg = f'{new_pkg}.{module}'
+            else:
+                new_pkg = module
+        return f'from {new_pkg}'
+
+    # Thay thế from .module, from ..module, from ...module
+    code = re.sub(r'from (\.+)(\w+)', replace_relative, code)
+    # Thay thế from . import module
+    code = re.sub(r'from \. import (\w+)', lambda m: f'from {package_name} import {m.group(1)}', code)
     return code
 def remove_space(code):
     final_code = ""
@@ -18,6 +41,202 @@ def remove_space(code):
         if line.strip() != "":
             final_code += line + "\n"
     return final_code
+def line_code(code):
+    """Trả về danh sách số dòng chứa code logic thực sự, loại bỏ dòng trống, import, def, class, v.v."""
+    try:
+        tree = ast.parse(code)
+        lines = code.split('\n')
+        line_numbers = []
+        
+        def collect_lines(node):
+            """Thu thập số dòng từ node và các con của nó"""
+            if hasattr(node, 'lineno'):
+                # Bỏ qua docstring (Expr với Constant)
+                if isinstance(node, ast.Expr) and isinstance(node.value, ast.Constant):
+                    return
+                # Bỏ qua import statements
+                if isinstance(node, (ast.Import, ast.ImportFrom)):
+                    return
+                # Bỏ qua module-level variables (như __author__, __all__, etc.)
+                if isinstance(node, ast.Assign):
+                    # Kiểm tra xem có phải là module-level variable không
+                    for target in node.targets:
+                        if isinstance(target, ast.Name) and target.id.startswith('__'):
+                            return
+                        # Bỏ qua các biến module-level khác
+                        if isinstance(target, ast.Name) and target.id in ['__author__', '__all__', '__version__', '__doc__']:
+                            return
+                # Bỏ qua function/class definitions (chỉ lấy thân)
+                if isinstance(node, (ast.FunctionDef, ast.ClassDef)):
+                    # Chỉ lấy thân hàm/class, không lấy dòng def/class
+                    for child in node.body:
+                        collect_lines(child)
+                    return
+                # Bỏ qua pass, break, continue
+                if isinstance(node, (ast.Pass, ast.Break, ast.Continue)):
+                    return
+                # Bỏ qua return đơn giản (không có giá trị)
+                if isinstance(node, ast.Return) and node.value is None:
+                    return
+                
+                # Lấy các node có logic thực sự:
+                # - Assignment (Assign): biến, constant
+                # - Augmented assignment (AugAssign): +=, -=, etc.
+                # - Function calls (Call)
+                # - Expressions (Expr) không phải docstring
+                # - If, For, While, Try, With statements
+                # - Raise, Assert statements
+                if isinstance(node, (ast.Assign, ast.AugAssign, ast.Call, ast.If, 
+                                   ast.For, ast.While, ast.Try, ast.With, ast.Raise, 
+                                   ast.Assert, ast.Delete, ast.Global, ast.Nonlocal)):
+                    line_numbers.append(node.lineno)
+                elif isinstance(node, ast.Expr) and not isinstance(node.value, ast.Constant):
+                    # Expr không phải docstring (có thể là function call, etc.)
+                    line_numbers.append(node.lineno)
+            
+            # Duyệt các con
+            for child in ast.iter_child_nodes(node):
+                collect_lines(child)
+        
+        collect_lines(tree)
+        
+        # Loại bỏ duplicate và sort
+        line_numbers = sorted(list(set(line_numbers)))
+        
+        # Lọc thêm các dòng không hợp lệ
+        filtered_lines = []
+        for line_num in line_numbers:
+            if line_num <= len(lines):
+                line = lines[line_num - 1].strip()
+                # Bỏ qua dòng trống, comment, import, def, class
+                if (line and 
+                    not line.startswith('#') and 
+                    not line.startswith('import ') and 
+                    not line.startswith('from ') and
+                    not line.startswith('def ') and 
+                    not line.startswith('class ') and
+                    not line.startswith('@') and
+                    line != 'pass' and
+                    line not in ['else:', 'except:', 'finally:', 'elif:'] and
+                    line not in ['{', '}', '[', ']', '(', ')']):
+                    filtered_lines.append(line_num)
+        
+        return filtered_lines
+     
+    except (SyntaxError, IndentationError):
+        # Fallback nếu không parse được AST
+        lines = code.split('\n')
+        line_numbers = []
+    
+        i = 0
+        in_docstring = False
+        docstring_delim = None
+            
+        while i < len(lines):
+            line = lines[i]
+            stripped = line.strip()
+
+            # Bỏ qua dòng trống
+            if not stripped:
+                i += 1
+                continue
+                
+            # Bỏ qua comment
+            if stripped.startswith('#'):
+                i += 1
+                continue
+                
+            # Xử lý docstring - CẢI THIỆN PHẦN NÀY
+            if not in_docstring:
+                # Kiểm tra single-line docstring
+                if (stripped.startswith('"""') and stripped.endswith('"""') and len(stripped) > 3) or \
+                (stripped.startswith("'''") and stripped.endswith("'''") and len(stripped) > 3):
+                    i += 1
+                    continue
+                # Kiểm tra multi-line docstring bắt đầu
+                elif stripped.startswith('"""') and not stripped.endswith('"""'):
+                    in_docstring = True
+                    docstring_delim = '"""'
+                    i += 1
+                    continue
+                elif stripped.startswith("'''") and not stripped.endswith("'''"):
+                    in_docstring = True
+                    docstring_delim = "'''"
+                    i += 1
+                    continue
+            else:
+                # Đang trong docstring - BỎ QUA TẤT CẢ DÒNG TRONG DOCSTRING
+                if docstring_delim and docstring_delim in stripped:
+                    # Tìm thấy kết thúc docstring
+                    in_docstring = False
+                    docstring_delim = None
+                i += 1
+                continue
+                
+            # Bỏ qua import statements
+            if stripped.startswith('import ') or stripped.startswith('from '):
+                i += 1
+                continue
+                
+            # Bỏ qua def, class declarations (chỉ lấy thân hàm/class)
+            if stripped.startswith('def ') or stripped.startswith('class '):
+                i += 1
+                continue
+                
+            # Bỏ qua decorators
+            if stripped.startswith('@'):
+                i += 1
+                continue
+                
+            # Bỏ qua pass statements
+            if stripped == 'pass':
+                i += 1
+                continue
+                
+            # Bỏ qua return statements đơn giản
+            if stripped == 'return' or stripped == 'return None':
+                i += 1
+                continue
+                
+            # Bỏ qua else:, except:, finally: đơn giản
+            if stripped in ['else:', 'except:', 'finally:', 'elif:']:
+                i += 1
+                continue
+                
+            # Bỏ qua dòng chỉ có dấu ngoặc
+            if stripped in ['{', '}', '[', ']', '(', ')']:
+                i += 1
+                continue
+            
+            # Kiểm tra xem có phải là dòng continuation của câu lệnh trước không
+            current_indent = len(line) - len(line.lstrip())
+            
+            # Kiểm tra xem dòng trước có kết thúc bằng dấu phẩy, dấu ngoặc mở, hoặc dấu backslash không
+            is_continuation = False
+            if i > 0:
+                prev_line = lines[i-1].strip()
+                prev_indent = len(lines[i-1]) - len(lines[i-1].lstrip())
+                
+                # Chỉ coi là continuation nếu:
+                # 1. Dòng trước kết thúc bằng dấu continuation và dòng hiện tại có indent lớn hơn
+                # 2. Hoặc dòng hiện tại có indent lớn hơn đáng kể (thuộc block con)
+                if ((prev_line.endswith(',') or 
+                    prev_line.endswith('(') or 
+                    prev_line.endswith('[') or 
+                    prev_line.endswith('{') or
+                    prev_line.endswith('\\')) and 
+                    current_indent > prev_indent):
+                    is_continuation = True
+            
+            # Nếu đây là dòng đầu tiên của câu lệnh hoặc dòng có logic thực sự
+            # (không phải continuation line)
+            if not is_continuation:
+                # Thêm dòng này vào kết quả
+                line_numbers.append(i + 1)
+            
+            i += 1
+    
+    return line_numbers
 def extract_class_names(code: str):
     """
     Trả về danh sách tên tất cả các class trong đoạn code.
@@ -225,25 +444,35 @@ def similarity(a,b):
         return 0.0
     
     return len(intersection) / len(b_set)
-def solve(result_execute, code, target_line):
-    max_threhold = 0
-    path_target = find_path_from_target_to_root(code, target_line)
-    test_good = None
-    best = None
-    execution_good = None
+def find_closest_test(result_execute, target_line, python_code):
+    condition = get_conditional_lines(python_code, target_line)
+    print(condition)
+    for x in condition[::-1]:
+        for _, item in enumerate(result_execute):
+            if x in item['executed_lines']:
+                return item['test']
     
-    # Xử lý trường hợp path_target là None
-    if path_target is None:
-        return None, None, None, 0.0
+    return result_execute[np.random.randint(0, len(result_execute))]['test']
     
-    for i, item in enumerate(result_execute):
-        simi = similarity(item['executed_lines'], path_target)
-        if simi >= max_threhold:
-            best = i
-            max_threhold = simi 
-            test_good = item['test']
-            execution_good = item['executed_lines']
-    return best, test_good, execution_good, max_threhold
+# def solve1(result_execute, code, target_line):
+#     max_threhold = 0
+#     path_target = find_path_from_target_to_root(code, target_line)
+#     test_good = None
+#     best = None
+#     execution_good = None
+    
+#     # Xử lý trường hợp path_target là None
+#     if path_target is None:
+#         return None, None, None, 0.0
+    
+#     for i, item in enumerate(result_execute):
+#         simi = similarity(item['executed_lines'], path_target)
+#         if simi >= max_threhold:
+#             best = i
+#             max_threhold = simi 
+#             test_good = item['test']
+#             execution_good = item['executed_lines']
+#     return best, test_good, execution_good, max_threhold
 
 def extract_python_code_block(text):
     # Tìm đoạn code nằm trong ```python ... ```
@@ -329,130 +558,407 @@ def extract(code, target_line):
             return final_code
         final_code+=f'{line}\n'
     return final_code
+# def reform_code_lines_fixed(code: str) -> str:
+#     """
+#     Sửa lại hàm reform_code_lines để không gộp nhầm các dòng không liên quan.
+#     Chỉ gộp các dòng thực sự là continuation của nhau.
+#     """
+#     import re
+    
+#     lines = code.split('\n')
+#     reformed_lines = []
+#     buffer = ''
+#     paren_count = 0
+    
+#     def remove_inline_comment(s):
+#         in_single = in_double = False
+#         for i, c in enumerate(s):
+#             if c == '"' and not in_single:
+#                 in_double = not in_double
+#             elif c == "'" and not in_double:
+#                 in_single = not in_single
+#             elif c == '#' and not in_single and not in_double:
+#                 return s[:i].rstrip()
+#         return s
+    
+#     i = 0
+#     while i < len(lines):
+#         line = lines[i].rstrip()
+#         stripped = line.strip()
+#         indent = line[:len(line) - len(stripped)]
+#         # Nếu là comment, flush buffer và giữ nguyên comment
+#         if re.match(r'^\s*#', line):
+#             if buffer:
+#                 reformed_lines.append(buffer)
+#                 buffer = ''
+#                 paren_count = 0
+#             reformed_lines.append(line)
+#             i += 1
+#             continue
+#         # Bỏ qua dòng trống
+#         if not stripped:
+#             if buffer:
+#                 reformed_lines.append(buffer)
+#                 buffer = ''
+#                 paren_count = 0
+#             reformed_lines.append('')
+#             i += 1
+#             continue
+#         # Kiểm tra xem có phải là continuation thực sự không
+#         is_continuation = False
+#         if buffer:
+#             prev_stripped = buffer.rstrip()
+#             # Nếu dòng trước kết thúc bằng dấu nối dòng (\ hoặc \\)
+#             if prev_stripped.endswith('\\') or prev_stripped.endswith('\\\\'):
+#                 # Bỏ dấu nối dòng ở cuối buffer
+#                 buffer = buffer.rstrip('\\').rstrip()
+#                 is_continuation = True
+#             elif paren_count > 0:
+#                 is_continuation = True
+#             elif (prev_stripped.endswith(('(', '[', '{', ',')) and 
+#                   not stripped.startswith(('def ', 'class ', 'if ', 'for ', 'while ', 'try ', 'with '))):
+#                 is_continuation = True
+#             elif (prev_stripped.endswith(('+', '-', '*', '/', '%', '//', '**', '&', '|', '^', '<<', '>>')) and
+#                   not stripped.startswith(('def ', 'class ', 'if ', 'for ', 'while ', 'try ', 'with '))):
+#                 is_continuation = True
+#         # Flush buffer nếu không phải continuation
+#         if buffer and not is_continuation:
+#             reformed_lines.append(buffer)
+#             buffer = ''
+#             paren_count = 0
+#         # Xử lý dòng hiện tại
+#         if is_continuation:
+#             buffer += ' ' + remove_inline_comment(stripped)
+#         else:
+#             buffer = indent + remove_inline_comment(stripped)
+#         # Cập nhật paren_count
+#         paren_count = buffer.count('(') + buffer.count('[') + buffer.count('{') - buffer.count(')') - buffer.count(']') - buffer.count('}')
+#         i += 1
+#     # Flush buffer cuối cùng
+#     if buffer:
+#         reformed_lines.append(buffer)
+#     return '\n'.join(reformed_lines)
+def reform_code_lines_fixed(code: str) -> str:
+    '''
+    Sửa lại hàm reform_code_lines để không gộp nhầm các dòng không liên quan.
+    Không gộp các dòng nằm trong docstring (giữa ba nháy kép hoặc ba nháy đơn).
+    Khi gộp, nếu dòng trước kết thúc bằng dấu \ hoặc \\, thì bỏ dấu đó đi trước khi gộp với dòng tiếp theo.
+    '''
+    import re
 
+    lines = code.split('\n')
+    reformed_lines = []
+    buffer = ''
+    paren_count = 0
+    in_docstring = False
+    docstring_delim = None
+
+    def remove_inline_comment(s):
+        in_single = in_double = False
+        for i, c in enumerate(s):
+            if c == '"' and not in_single:
+                in_double = not in_double
+            elif c == "'" and not in_double:
+                in_single = not in_single
+            elif c == '#' and not in_single and not in_double:
+                return s[:i].rstrip()
+        return s
+
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.strip()
+        indent = line[:len(line) - len(stripped)]
+
+        # Xử lý docstring
+        if not in_docstring:
+            if (stripped.startswith('"""') or stripped.startswith("'''")):
+                in_docstring = True
+                docstring_delim = stripped[:3]
+                if buffer:
+                    reformed_lines.append(buffer)
+                    buffer = ''
+                    paren_count = 0
+                reformed_lines.append(line)
+                i += 1
+                continue
+        else:
+            reformed_lines.append(line)
+            # Kết thúc docstring
+            if docstring_delim and docstring_delim in stripped and len(stripped) > 3:
+                in_docstring = False
+                docstring_delim = None
+            elif docstring_delim and stripped.endswith(docstring_delim):
+                in_docstring = False
+                docstring_delim = None
+            i += 1
+            continue
+
+        # Nếu là comment, flush buffer và giữ nguyên comment
+        if re.match(r'^\s*#', line):
+            if buffer:
+                reformed_lines.append(buffer)
+                buffer = ''
+                paren_count = 0
+            reformed_lines.append(line)
+            i += 1
+            continue
+        # Bỏ qua dòng trống
+        if not stripped:
+            if buffer:
+                reformed_lines.append(buffer)
+                buffer = ''
+                paren_count = 0
+            reformed_lines.append('')
+            i += 1
+            continue
+        # Kiểm tra xem có phải là continuation thực sự không
+        is_continuation = False
+        if buffer:
+            prev_stripped = buffer.rstrip()
+            # Nếu dòng trước kết thúc bằng dấu nối dòng (\ hoặc \\)
+            if prev_stripped.endswith('\\') or prev_stripped.endswith('\\\\'):
+                buffer = buffer.rstrip('\\').rstrip()
+                is_continuation = True
+            elif paren_count > 0:
+                is_continuation = True
+            elif (prev_stripped.endswith(('(', '[', '{', ',')) and 
+                  not stripped.startswith(('def ', 'class ', 'if ', 'for ', 'while ', 'try ', 'with '))):
+                is_continuation = True
+            elif (prev_stripped.endswith(('+', '-', '*', '/', '%', '//', '**', '&', '|', '^', '<<', '>>')) and
+                  not stripped.startswith(('def ', 'class ', 'if ', 'for ', 'while ', 'try ', 'with '))):
+                is_continuation = True
+        if buffer and not is_continuation:
+            reformed_lines.append(buffer)
+            buffer = ''
+            paren_count = 0
+        if is_continuation:
+            buffer += ' ' + remove_inline_comment(stripped)
+        else:
+            buffer = indent + remove_inline_comment(stripped)
+        paren_count = buffer.count('(') + buffer.count('[') + buffer.count('{') - buffer.count(')') - buffer.count(']') - buffer.count('}')
+        i += 1
+    if buffer:
+        reformed_lines.append(buffer)
+    return '\n'.join(reformed_lines)
+def re_format_line(code):
+    line_run = line_code(code)
+    final_line = []
+    prev = -1
+    for x in line_run:
+        if prev == -1:
+            prev = x
+            final_line.append(x)
+        else:
+            if x == prev+1:
+                if get_conditional_lines(code,x) == get_conditional_lines(code,prev) or (len(get_conditional_lines(code,x))>0 and get_conditional_lines(code,x)[-1] == prev):
+                    prev = x
+                    continue
+                else:
+                    final_line.append(x)
+                    prev = x
+            else:
+                final_line.append(x)
+                prev = x
+    return final_line
 def write_jsonl(data,path):
     with open(path,'w') as f:
         for d in data:
             f.write(json.dumps(d)+'\n')
-def line_code(code):
+def line_code_option2(code):
     """Trả về danh sách số dòng chứa code logic thực sự, loại bỏ dòng trống, import, def, class, v.v."""
-    lines = code.split('\n')
-    line_numbers = []
+    try:
+        tree = ast.parse(code)
+        lines = code.split('\n')
+        line_numbers = []
+        
+        def collect_lines(node):
+            """Thu thập số dòng từ node và các con của nó"""
+            if hasattr(node, 'lineno'):
+                # Bỏ qua docstring (Expr với Constant)
+                if isinstance(node, ast.Expr) and isinstance(node.value, ast.Constant):
+                    return
+                # Bỏ qua import statements
+                if isinstance(node, (ast.Import, ast.ImportFrom)):
+                    return
+                # Bỏ qua module-level variables (như __author__, __all__, etc.)
+                if isinstance(node, ast.Assign):
+                    # Kiểm tra xem có phải là module-level variable không
+                    for target in node.targets:
+                        if isinstance(target, ast.Name) and target.id.startswith('__'):
+                            return
+                        # Bỏ qua các biến module-level khác
+                        if isinstance(target, ast.Name) and target.id in ['__author__', '__all__', '__version__', '__doc__']:
+                            return
+                # Bỏ qua function/class definitions (chỉ lấy thân)
+                if isinstance(node, (ast.FunctionDef, ast.ClassDef)):
+                    # Chỉ lấy thân hàm/class, không lấy dòng def/class
+                    for child in node.body:
+                        collect_lines(child)
+                    return
+                # Bỏ qua pass, break, continue
+                if isinstance(node, (ast.Pass, ast.Break, ast.Continue)):
+                    return
+                # Bỏ qua return đơn giản
+                if isinstance(node, ast.Return) and (node.value is None or 
+                    (isinstance(node.value, ast.Name) and node.value.id == 'None')):
+                    return
+                
+                # Lấy các node có logic thực sự:
+                # - Assignment (Assign): biến, constant
+                # - Augmented assignment (AugAssign): +=, -=, etc.
+                # - Function calls (Call)
+                # - Expressions (Expr) không phải docstring
+                # - If, For, While, Try, With statements
+                # - Raise, Assert statements
+                if isinstance(node, (ast.Assign, ast.AugAssign, ast.Call, ast.If, 
+                                   ast.For, ast.While, ast.Try, ast.With, ast.Raise, 
+                                   ast.Assert, ast.Delete, ast.Global, ast.Nonlocal)):
+                    line_numbers.append(node.lineno)
+                elif isinstance(node, ast.Expr) and not isinstance(node.value, ast.Constant):
+                    # Expr không phải docstring (có thể là function call, etc.)
+                    line_numbers.append(node.lineno)
+            
+            # Duyệt các con
+            for child in ast.iter_child_nodes(node):
+                collect_lines(child)
+        
+        collect_lines(tree)
+        
+        # Loại bỏ duplicate và sort
+        line_numbers = sorted(list(set(line_numbers)))
+        
+        # Lọc thêm các dòng không hợp lệ
+        filtered_lines = []
+        for line_num in line_numbers:
+            if line_num <= len(lines):
+                line = lines[line_num - 1].strip()
+                # Bỏ qua dòng trống, comment, import, def, class
+                if (line and 
+                    not line.startswith('#') and 
+                    not line.startswith('import ') and 
+                    not line.startswith('from ') and
+                    not line.startswith('def ') and 
+                    not line.startswith('class ') and
+                    not line.startswith('@') and
+                    line != 'pass' and
+                    line not in ['else:', 'except:', 'finally:', 'elif:'] and
+                    line not in ['{', '}', '[', ']', '(', ')']):
+                    filtered_lines.append(line_num)
+        
+        return filtered_lines
+        
+    except (SyntaxError, IndentationError):
+        # Fallback nếu không parse được AST
+        lines = code.split('\n')
+        line_numbers = []
     
-    i = 0
-    in_multiline_comment = False
-    multiline_delim = None
-    while i < len(lines):
-        line = lines[i]
-        stripped = line.strip()
+        i = 0
+        in_docstring = False
+        docstring_delim = None
+            
+        while i < len(lines):
+            line = lines[i]
+            stripped = line.strip()
 
-        # Xử lý bắt đầu/kết thúc comment nhiều dòng
-        if not in_multiline_comment:
-            cond1 = stripped.startswith("'''") and not stripped.endswith("'''")
-            cond2 = stripped.startswith('"""') and not stripped.endswith('"""')
-            cond3 = stripped.startswith('###') and not stripped.endswith('###')
-            if cond1 or cond2 or cond3:
-                in_multiline_comment = True
-                if stripped.startswith("'''"):
-                    multiline_delim = "'''"
-                elif stripped.startswith('"""'):
-                    multiline_delim = '"""'
+            # Bỏ qua dòng trống
+            if not stripped:
+                i += 1
+                continue
+                
+            # Bỏ qua comment
+            if stripped.startswith('#'):
+                i += 1
+                continue
+                
+                # Xử lý docstring
+                if not in_docstring:
+                    # Kiểm tra single-line docstring
+                    if (stripped.startswith('"""') and stripped.endswith('"""') and len(stripped) > 3) or \
+                    (stripped.startswith("'''") and stripped.endswith("'''") and len(stripped) > 3):
+                        i += 1
+                        continue
+                    # Kiểm tra multi-line docstring bắt đầu
+                    elif stripped.startswith('"""') and not stripped.endswith('"""'):
+                        in_docstring = True
+                        docstring_delim = '"""'
+                        i += 1
+                        continue
+                    elif stripped.startswith("'''") and not stripped.endswith("'''"):
+                        in_docstring = True
+                        docstring_delim = "'''"
+                        i += 1
+                        continue
                 else:
-                    multiline_delim = '###'
+                    # Đang trong docstring
+                    if docstring_delim and docstring_delim in stripped:
+                        in_docstring = False
+                        docstring_delim = None
                 i += 1
                 continue
-            # Trường hợp comment nhiều dòng trên 1 dòng
-            cond4 = stripped.startswith("'''") and stripped.endswith("'''") and len(stripped) > 3
-            cond5 = stripped.startswith('"""') and stripped.endswith('"""') and len(stripped) > 3
-            cond6 = stripped.startswith('###') and stripped.endswith('###') and len(stripped) > 3
-            if cond4 or cond5 or cond6:
+                
+            # Bỏ qua import statements
+            if stripped.startswith('import ') or stripped.startswith('from '):
                 i += 1
                 continue
-        else:
-            # Đang trong block comment nhiều dòng
-            if multiline_delim and multiline_delim in stripped:
-                in_multiline_comment = False
-                multiline_delim = None
-            i += 1
-            continue
-
-        # Bỏ qua dòng trống
-        if not stripped:
-            i += 1
-            continue
+                
+            # Bỏ qua def, class declarations (chỉ lấy thân hàm/class)
+            if stripped.startswith('def ') or stripped.startswith('class '):
+                i += 1
+                continue
+                
+            # Bỏ qua decorators
+            if stripped.startswith('@'):
+                i += 1
+                continue
+                
+            # Bỏ qua pass statements
+            if stripped == 'pass':
+                i += 1
+                continue
+                
+            # Bỏ qua return statements đơn giản
+            if stripped == 'return' or stripped == 'return None':
+                i += 1
+                continue
+                
+            # Bỏ qua else:, except:, finally: đơn giản
+            if stripped in ['else:', 'except:', 'finally:', 'elif:']:
+                i += 1
+                continue
+                
+            # Bỏ qua dòng chỉ có dấu ngoặc
+            if stripped in ['{', '}', '[', ']', '(', ')']:
+                i += 1
+                continue
             
-        # Bỏ qua comment
-        if stripped.startswith('#'):
-            i += 1
-            continue
+            # Kiểm tra xem có phải là dòng continuation của câu lệnh trước không
+            current_indent = len(line) - len(line.lstrip())
             
-        # Bỏ qua docstring
-        if stripped.startswith('"""') or stripped.startswith("'''"):
-            i += 1
-            continue
+            # Kiểm tra xem dòng trước có kết thúc bằng dấu phẩy, dấu ngoặc mở, hoặc dấu backslash không
+            is_continuation = False
+            if i > 0:
+                prev_line = lines[i-1].strip()
+                prev_indent = len(lines[i-1]) - len(lines[i-1].lstrip())
+                
+                # Chỉ coi là continuation nếu:
+                # 1. Dòng trước kết thúc bằng dấu continuation và dòng hiện tại có indent lớn hơn
+                # 2. Hoặc dòng hiện tại có indent lớn hơn đáng kể (thuộc block con)
+                if ((prev_line.endswith(',') or 
+                    prev_line.endswith('(') or 
+                    prev_line.endswith('[') or 
+                    prev_line.endswith('{') or
+                    prev_line.endswith('\\')) and 
+                    current_indent > prev_indent):
+                    is_continuation = True
             
-        # Bỏ qua import statements
-        if stripped.startswith('import ') or stripped.startswith('from '):
-            i += 1
-            continue
+            # Nếu đây là dòng đầu tiên của câu lệnh hoặc dòng có logic thực sự
+            # (không phải continuation line)
+            if not is_continuation:
+                # Thêm dòng này vào kết quả
+                line_numbers.append(i + 1)
             
-        # Bỏ qua def, class declarations (chỉ lấy thân hàm/class)
-        if stripped.startswith('def ') or stripped.startswith('class '):
             i += 1
-            continue
-            
-        # Bỏ qua decorators
-        if stripped.startswith('@'):
-            i += 1
-            continue
-            
-        # Bỏ qua pass statements
-        if stripped == 'pass':
-            i += 1
-            continue
-            
-        # Bỏ qua return statements đơn giản
-        if stripped == 'return' or stripped == 'return None':
-            i += 1
-            continue
-            
-        # Bỏ qua else:, except:, finally: đơn giản
-        if stripped in ['else:', 'except:', 'finally:', 'elif:']:
-            i += 1
-            continue
-            
-        # Bỏ qua dòng chỉ có dấu ngoặc
-        if stripped in ['{', '}', '[', ']', '(', ')']:
-            i += 1
-            continue
-        
-        # Kiểm tra xem có phải là dòng continuation của câu lệnh trước không
-        current_indent = len(line) - len(line.lstrip())
-        
-        # Kiểm tra xem dòng trước có kết thúc bằng dấu phẩy, dấu ngoặc mở, hoặc dấu backslash không
-        is_continuation = False
-        if i > 0:
-            prev_line = lines[i-1].strip()
-            prev_indent = len(lines[i-1]) - len(lines[i-1].lstrip())
-            
-            # Chỉ coi là continuation nếu:
-            # 1. Dòng trước kết thúc bằng dấu continuation và dòng hiện tại có indent lớn hơn
-            # 2. Hoặc dòng hiện tại có indent lớn hơn đáng kể (thuộc block con)
-            if ((prev_line.endswith(',') or 
-                 prev_line.endswith('(') or 
-                 prev_line.endswith('[') or 
-                 prev_line.endswith('{') or
-                 prev_line.endswith('\\')) and 
-                current_indent > prev_indent):
-                is_continuation = True
-        
-        # Nếu đây là dòng đầu tiên của câu lệnh hoặc dòng có logic thực sự
-        # (không phải continuation line)
-        if not is_continuation:
-            # Thêm dòng này vào kết quả
-            line_numbers.append(i + 1)
-        
-        i += 1
     
     return line_numbers
 
@@ -705,3 +1211,134 @@ def line_code1(code):
             line_numbers.append(i + 1)
         i += 1
     return line_numbers
+
+def reform_code_lines(code: str) -> str:
+    import re
+    lines = code.split('\n')
+    reformed_lines = []
+    buffer = ''
+    buffer_indent = ''
+    paren_count = 0
+
+    def remove_inline_comment(s):
+        in_single = in_double = False
+        for i, c in enumerate(s):
+            if c == '"' and not in_single:
+                in_double = not in_double
+            elif c == "'" and not in_double:
+                in_single = not in_single
+            elif c == '#' and not in_single and not in_double:
+                return s[:i].rstrip()
+        return s
+
+    for idx, line in enumerate(lines):
+        stripped = line.strip()
+        indent = line[:len(line) - len(stripped)]
+        # Nếu là comment, flush buffer (nếu có), giữ nguyên comment
+        if re.match(r'^\s*#', line):
+            if buffer:
+                reformed_lines.append(buffer)
+                buffer = ''
+                buffer_indent = ''
+                paren_count = 0
+            reformed_lines.append(line)
+            continue
+        # Bỏ qua dòng trống
+        if not stripped:
+            if buffer:
+                reformed_lines.append(buffer)
+                buffer = ''
+                buffer_indent = ''
+                paren_count = 0
+            reformed_lines.append('')
+            continue
+        # Đếm số lượng ngoặc mở/đóng để biết còn trong biểu thức chưa kết thúc
+        open_paren = stripped.count('(') + stripped.count('[') + stripped.count('{')
+        close_paren = stripped.count(')') + stripped.count(']') + stripped.count('}')
+        # Kiểm tra continuation: dòng trước kết thúc bằng dấu nối hoặc còn ngoặc chưa đóng
+        is_continuation = False
+        if buffer:
+            prev = buffer.rstrip()
+            prev_paren_count = buffer.count('(') + buffer.count('[') + buffer.count('{') - buffer.count(')') - buffer.count(']') - buffer.count('}')
+            if prev.endswith('\\') and not prev.endswith('\\\\'):
+                reformed_lines.append(buffer)
+                buffer = ''
+                buffer_indent = ''
+                paren_count = 0
+                buffer = indent + remove_inline_comment(stripped)
+                buffer_indent = indent
+                paren_count = buffer.count('(') + buffer.count('[') + buffer.count('{') - buffer.count(')') - buffer.count(']') - buffer.count('}')
+                continue
+            elif (
+                prev.endswith(('(', '[', '{', ',', '+', '-', '*', '/', '%', '<', '>', '==', '!=', '<=', '>=', '|', '&', '^', '~'))
+                or prev_paren_count > 0
+            ):
+                is_continuation = True
+        if buffer and not is_continuation:
+            reformed_lines.append(buffer)
+            buffer = ''
+            buffer_indent = ''
+            paren_count = 0
+        if is_continuation:
+            buffer += ' ' + remove_inline_comment(stripped)
+        else:
+            buffer = indent + remove_inline_comment(stripped)
+            buffer_indent = indent
+        paren_count = buffer.count('(') + buffer.count('[') + buffer.count('{') - buffer.count(')') - buffer.count(']') - buffer.count('}')
+    if buffer:
+        reformed_lines.append(buffer)
+    return '\n'.join(reformed_lines)
+def get_branch_arcs_ast(source: str):
+    """
+    Trả về list các cặp (from_line, to_line) cho các nhánh if/else/for/while/try/except/with.
+    Chỉ là gần đúng, không thể đầy đủ như coverage.py.
+    """
+    tree = ast.parse(source)
+    arcs = []
+
+    for node in ast.walk(tree):
+        # IF
+        if isinstance(node, ast.If):
+            if hasattr(node, 'lineno'):
+                if node.body:
+                    arcs.append((node.lineno, node.body[0].lineno))  # if True
+                if node.orelse:
+                    arcs.append((node.lineno, node.orelse[0].lineno))  # if False
+        # FOR
+        if isinstance(node, ast.For):
+            if hasattr(node, 'lineno'):
+                if node.body:
+                    arcs.append((node.lineno, node.body[0].lineno))  # for body
+                if node.orelse:
+                    arcs.append((node.lineno, node.orelse[0].lineno))
+        # WHILE
+        if isinstance(node, ast.While):
+            if hasattr(node, 'lineno'):
+                if node.body:
+                    arcs.append((node.lineno, node.body[0].lineno))  # while body
+                if node.orelse:
+                    arcs.append((node.lineno, node.orelse[0].lineno))
+        # TRY
+        if isinstance(node, ast.Try):
+            if hasattr(node, 'lineno'):
+                for handler in node.handlers:
+                    if hasattr(handler, 'lineno'):
+                        arcs.append((node.lineno, handler.lineno))
+                if node.finalbody:
+                    arcs.append((node.lineno, node.finalbody[0].lineno))
+        # WITH
+        if isinstance(node, (ast.With, ast.AsyncWith)):
+            if hasattr(node, 'lineno') and node.body:
+                arcs.append((node.lineno, node.body[0].lineno))
+        # EXCEPT
+        if isinstance(node, ast.ExceptHandler):
+            if hasattr(node, 'lineno') and node.body:
+                arcs.append((node.lineno, node.body[0].lineno))
+        # MATCH (Python 3.10+)
+        if hasattr(ast, 'Match') and isinstance(node, ast.Match):
+            if hasattr(node, 'lineno'):
+                for case in node.cases:
+                    if hasattr(case, 'lineno'):
+                        arcs.append((node.lineno, case.lineno))
+
+    return arcs
