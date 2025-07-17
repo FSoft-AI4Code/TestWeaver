@@ -1,0 +1,14 @@
+Consider the following program under test:
+
+{code}
+
+The following test input was executed:
+
+{test}
+
+However, it produced the following error:
+
+{error}
+
+Please revise the test to eliminate the error.  
+Respond only with the complete corrected Python code, enclosed in triple backticks.
