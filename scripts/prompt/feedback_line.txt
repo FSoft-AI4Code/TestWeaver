@@ -1,19 +1,20 @@
-Given the following Python program and function '{func_name}' in class {class_name}, please write a test case to reach line code: {code_linene}.
+Given the following Python program and the function '{func_name}' within the class '{class_name}', your task is to write a test case that executes the specific line of code: {code_linene}.
 
-You are provided with a test case which nearly covers code line: ---- {code_linene}:
+You are provided with a closely related test case that nearly covers line {code_linene}:  
 
 {test}
 
-Here is a *cheatsheet* for the gold execution trace for above example test case, use the information here but pretend you did all the reasoning about execution yourself.
+Additionally, here is a *cheatsheet* containing the gold execution trace for the above example test case. You may use this information to inform your reasoning, but present your analysis as if you derived it independently.
 {code}
 
 <instructions>
+Using the provided closest test case, please:
+1. Find the place of {code_linene} in the code above (almost the last line of code)
+2. Analyze and explain **why** the given test case does **not** execute line `{code_linene}`.
+3. Based on your analysis, outline a **step-by-step strategy** to ensure that line is executed.
+4. Finally, write a **new test case** that successfully triggers the execution of line `{code_linene}`.
 
-1. Analyze **why** the provided test case does **not** reach line `{code_linene}`.
-2. Based on your analysis, describe a **step-by-step strategy** to reach that line.
-3. Then, generate a **new test case** that triggers the execution of line `{code_linene}`.
-
-Your generated test case should start with the following template:
+Your generated test case should begin with the following template:
 
 ```python
 def test_{class_name}():
@@ -21,10 +22,11 @@ def test_{class_name}():
     assert solution.
 ```
 
-Please structure your response in two parts:
-- Wrap your **step-by-step reasoning** inside `<thinking>` tags.
-- Wrap the final **Python test case** inside `<answer>` tags, using backticks.
+Please structure your response in two distinct sections:
+- Enclose your **step-by-step reasoning** within `<thinking>` tags.
+- Enclose your final **Python test case** within `<answer>` tags, using backticks for code formatting.
 
-Note: If the class under test is an abstract class (i.e., it has abstract methods), do NOT instantiate it directly in your test. Instead, create a subclass that implements all abstract methods before instantiating, or only test static/class methods without instantiation.
+Important:
+- If the class under test is abstract (i.e., it contains abstract methods), do **not** instantiate it directly in your test. Instead, create a concrete subclass that implements all abstract methods before instantiation, or only test static/class methods without instantiating the abstract class.
 
 </instructions>
