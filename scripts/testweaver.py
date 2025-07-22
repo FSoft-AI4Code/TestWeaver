@@ -897,7 +897,7 @@ def run_test_generation_algorithm(package, files, output_dir, pkg_top, add_to_py
         print(f"Added {pkg_top} to PYTHONPATH")
     
     # Initialize Claude client
-    client = openai.OpenAI(api_key=os.getenv('coverup'), base_url=os.getenv("ANTHROPIC_BASE_URL"))
+    client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'), base_url=os.getenv("OPENAI_BASE_URL"))
     
     # Load templates
     # prompt_template = open('scripts/prompt/template_base.txt').read()
@@ -915,11 +915,8 @@ def run_test_generation_algorithm(package, files, output_dir, pkg_top, add_to_py
     all_missing_lines = []
     
     for i, file_path in enumerate(files):
-        # if file_path != 'typesystem/fields.py':
-        #     print(file_path)
-        #     continue
-        if i<=2:
-            continue
+
+ 
         coverage_result = run_test_generation_for_file(
             client, file_path, package, output_dir, prompt_template, system_message, pkg_top
         )
