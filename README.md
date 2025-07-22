@@ -39,7 +39,7 @@ You need to set up access to an LLM provider before running TestWeaver.
 
 ```bash
 echo "OPENAI_API_KEY=sk-your-actual-api-key-here" > .env
-echo "OPENAI_BASE_URL=sk-your-openai-api-key" >> .env
+echo "OPENAI_BASE_URL=https://api.openai.com/v1" >> .env
 ```
 
 ## 📂 Prepare Dataset for Evaluation
@@ -68,7 +68,10 @@ This command will execute five experimental configurations:
 The results will be saved under the `output/cm/...` directory.
 
 ```bash
-python testweaver.py --test-index ...
+cd scripts/
+export PYTHONPATH=$(pwd)
+export sample_id=21  # The id of your chosen Codamosa module, e.g. 22 is corresponding to 'tqdm' module   
+python testweaver.py --test-index $sample_id
 ```
 
 

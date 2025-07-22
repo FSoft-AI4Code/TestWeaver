@@ -24,7 +24,7 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("requests").setLevel(logging.WARNING)
 
-test_apps = Path("codamosa/replication/test-apps")
+test_apps = Path("../codamosa/replication/test-apps")
 mutap_benchmarks = Path("MuTAP-benchmarks")
 eval_path = Path(__file__).parent.parent
 
@@ -306,7 +306,7 @@ def testgeneration_feedback(client, prompt, epoch, install_missing=True):
     """Generate test cases with execution feedback"""
     generated_tests=[]
     messages=[
-            {"role": "system", "content": open('scripts/prompt/system_exec.txt').read()},
+            {"role": "system", "content": open('./prompt/system_exec.txt').read()},
             {"role": "user", "content": prompt},
         ]
     for i in range(epoch):
@@ -413,7 +413,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         class_name = class_segment.name
         
  
-        prompt = open('scripts/prompt/template_base_no_import.txt').read().format(program=class_segment_code, func_name=class_name)
+        prompt = open('./prompt/template_base_no_import.txt').read().format(program=class_segment_code, func_name=class_name)
 
         generated_tests = []
         generated_tests = testgeneration_multiround(client, prompt, generated_tests, system_message, install_missing=True)
@@ -446,7 +446,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
                 for lineno, info in error_feedback.items():
                     old_test = info['test']
                     error_msg = info['error']
-                    prompt = open('scripts/prompt/fix_error.txt').read().format(code = class_segment_code, test = old_test, error = error_msg)
+                    prompt = open('./prompt/fix_error.txt').read().format(code = class_segment_code, test = old_test, error = error_msg)
                     fixed = testgeneration_multiround_error(client, prompt, system_message)
                     if len(fixed)!=0:
                         for x in fixed:
@@ -540,8 +540,8 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         # response_line = client.chat.completions.create(
         #     model='deepseek-v3-0324',
         #     messages=[
-        #     {"role": "system", "content": open('scripts/prompt/system_import.txt').read()},
-        #     {"role": "user", "content": open('scripts/prompt/find_import.txt').read().format(code=remove_external_imports(filtered_code), import_tool=extract_external_import_lines(python_code))},
+        #     {"role": "system", "content": open('./prompt/system_import.txt').read()},
+        #     {"role": "user", "content": open('./prompt/find_import.txt').read().format(code=remove_external_imports(filtered_code), import_tool=extract_external_import_lines(python_code))},
         # ],
         #     max_tokens=1024,
         # )
@@ -569,14 +569,14 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         # Đưa external_code vào đầu prompt
         # prompt = prompt_template.format(program=class_segment_code, func_name=class_name, import_tool=external_code)
         if external_code != '':
-            prompt_line = open('scripts/prompt/template_line.txt').read().format(
+            prompt_line = open('./prompt/template_line.txt').read().format(
                 # func_name=function_name, 
                 import_tool=external_code,
                 class_name=class_name, 
                 program=code_in_line(filtered_code), 
                 lineno=lineno1
             )
-            prompt_line_not_slicing = open('scripts/prompt/template_line.txt').read().format(
+            prompt_line_not_slicing = open('./prompt/template_line.txt').read().format(
                 # func_name=function_name, 
                 import_tool=external_code,
                 class_name=class_name, 
@@ -584,13 +584,13 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
                 lineno=lineno1
             )
         else:
-            prompt_line = open('scripts/prompt/template_line_no_import.txt').read().format(
+            prompt_line = open('./prompt/template_line_no_import.txt').read().format(
                 func_name=function_name, 
                 class_name=class_name, 
                 program=code_in_line(filtered_code), 
                 lineno=lineno1
             )
-            prompt_line_not_slicing = open('scripts/prompt/template_line_no_import.txt').read().format(
+            prompt_line_not_slicing = open('./prompt/template_line_no_import.txt').read().format(
                 func_name=function_name, 
                 class_name=class_name, 
                 program=code_in_line(python_code), 
@@ -739,7 +739,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         
 ###########  OUR PROPOSED METHOD ############        
       
-        prompt_line = open('scripts/prompt/feedback_line.txt').read().format(
+        prompt_line = open('./prompt/feedback_line.txt').read().format(
         func_name=function_name, 
         class_name=class_name, 
         test=test_run, 
@@ -749,7 +749,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
 
 
 ######### ABLATION STUDY ##########
-        prompt_line_no_exe = open('scripts/prompt/feedback_line_no_execution.txt').read().format(
+        prompt_line_no_exe = open('./prompt/feedback_line_no_execution.txt').read().format(
         func_name=function_name, 
         class_name=class_name, 
         test=test_run, 
@@ -758,7 +758,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         )
 ######### ABLATION STUDY ##########
 
-        prompt_line_no_test = open('scripts/prompt/feedback_line_no_test.txt').read().format(
+        prompt_line_no_test = open('./prompt/feedback_line_no_test.txt').read().format(
         func_name=function_name, 
         class_name=class_name, 
         code = filtered_code,
@@ -900,10 +900,10 @@ def run_test_generation_algorithm(package, files, output_dir, pkg_top, add_to_py
     client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'), base_url=os.getenv("OPENAI_BASE_URL"))
     
     # Load templates
-    # prompt_template = open('scripts/prompt/template_base.txt').read()
-    prompt_template = open('scripts/prompt/template_base.txt').read()
+    # prompt_template = open('./prompt/template_base.txt').read()
+    prompt_template = open('./prompt/template_base.txt').read()
 
-    system_template = open('scripts/prompt/system.txt').read()
+    system_template = open('./prompt/system.txt').read()
     system_message = system_template.format(lang='python')
     
     print(f"Processing {len(files)} files for package {package}")
