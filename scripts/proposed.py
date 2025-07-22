@@ -12,11 +12,9 @@ import logging
 from typing import List
 from segment import get_missing_coverage
 import openai
-import re
 from dotenv import load_dotenv
-from get_conditional_line import get_conditional_lines, debug_dependencies
 from eval_overall import run_evolution123
-from data_utils import write_jsonl, line_code1, reform_code_lines,reform_code_lines_fixed, fix_relative_imports, parse_import_tool, remove_space, code_in_line, remove_external_imports,line_code, remove_comments_and_docstrings, find_closest_test, get_code_from_import_line, extract_python_code_block, extract_external_import_lines,extract_line, extract_test_func, find_enclosing_def_class, re_format_line
+from data_utils import write_jsonl, line_code1,reform_code_lines_fixed, fix_relative_imports, parse_import_tool, code_in_line, remove_external_imports,line_code, remove_comments_and_docstrings, find_closest_test, get_code_from_import_line, extract_python_code_block, extract_external_import_lines,extract_line, extract_test_func, find_enclosing_def_class, re_format_line
 from utils.codetransform import static_slicing
 from utils.codetransform.next import execute_and_trace
 
@@ -128,7 +126,6 @@ def parse_args():
     ap.add_argument('--suite', choices=['cm', '1_0', 'mutap'], default='cm',
                     help='suite of modules to compare')
 
-    ap.add_argument('--skip-package', action='append', default=[], help='skip given package')
 
     ap.add_argument('--config', type=str, help='specify a (non-default) configuration to use')
 
@@ -211,6 +208,7 @@ def load_suite(suite):
 
 
 ### SEED TEST GENERATION ####
+
 def testgeneration_multiround(client, prompt, generated_tests, system_message, install_missing=True):
     """Generate test cases with multi-round conversation"""
     template_append="Generate another test method for the function under test. Your answer must be different from previously-generated test cases, and should cover different statements and branches. CRITICAL: You MUST include ALL necessary imports at the very beginning of your test function. Always start your test with the required imports, then the test function. Try different input values, edge cases, and test scenarios but still remain function name."
@@ -318,7 +316,6 @@ def testgeneration_feedback(client, prompt, epoch, install_missing=True):
             max_tokens=2048,
             timeout = 100,
         )
-        # print(f'------------------{i} ---------------------{response.choices[0].message.content}')
         generated_test = extract_python_code_block(response.choices[0].message.content)
         if generated_test!="":
             # Check for missing imports and install them
@@ -328,129 +325,10 @@ def testgeneration_feedback(client, prompt, epoch, install_missing=True):
                     install_missing_imports(missing, install_missing=True)
             
             generated_tests.append(generated_test)
-            # print(generated_test)
 
     return generated_tests
 
-def create_test_file(test_content, test_dir, test_name, source_file_path, install_missing=True):
-    """Create a test file with the given content and proper imports (absolute import, no code gốc ghép vào, test file nằm trong cùng package với file gốc)"""
-    source_file_path = Path(source_file_path)
-    source_file_name = source_file_path.stem
-    source_file_dir = source_file_path.parent
 
-    # Đảm bảo test file nằm cùng package với file gốc
-    test_dir = source_file_dir
-    test_file = test_dir / f"{test_name}.py"
-
-    # Tìm project root (cha của package)
-    project_root = Path(__file__).resolve().parent.parent
-
-    # Check for missing imports in test content and install them
-    if install_missing:
-        if missing := missing_imports(find_imports(test_content)):
-            print(f"Missing modules in test content: {' '.join(missing)}")
-            install_missing_imports(missing, install_missing=True)
-
-    # Enhanced imports handling
-    common_imports = """import sys
-import os
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).parent.parent))  # Thêm project root vào sys.path
-
-# Add common imports that might be needed
-try:
-    import pytest
-except ImportError:
-    pass
-
-try:
-    import json
-except ImportError:
-    pass
-
-try:
-    import datetime
-except ImportError:
-    pass
-
-try:
-    import unittest
-    from unittest.mock import patch, Mock, MagicMock
-except ImportError:
-    pass
-
-try:
-    import unittest.mock as mock
-    patch = mock.patch
-    Mock = mock.Mock
-    MagicMock = mock.MagicMock
-except ImportError:
-    pass
-
-# Common mock objects for testing
-try:
-    # Mock for file operations
-    mock_open = mock.mock_open()
-    
-    # Mock for subprocess calls
-    mock_subprocess = mock.Mock()
-    mock_subprocess.return_value.returncode = 0
-    mock_subprocess.return_value.stdout = b'Success'
-    
-    # Mock for configuration objects
-    mock_config = mock.Mock()
-    mock_config.get.return_value = 'default_value'
-    
-    # Mock for display/logging
-    mock_display = mock.Mock()
-    mock_display.verbosity = 0
-    mock_display.display = mock.Mock()
-    mock_display.warning = mock.Mock()
-    mock_display.error = mock.Mock()
-    
-    # Mock for parser objects
-    mock_parser = mock.Mock()
-    mock_parser.add_argument = mock.Mock()
-    mock_parser.parse_args = mock.Mock()
-    
-    # Mock for inventory objects
-    mock_inventory = mock.Mock()
-    mock_inventory.get_hosts = mock.Mock(return_value=[])
-    
-    # Mock for variable manager
-    mock_variable_manager = mock.Mock()
-    
-    # Mock for loader
-    mock_loader = mock.Mock()
-    mock_loader.load = mock.Mock()
-    mock_loader.cleanup_all_tmp_files = mock.Mock()
-except:
-    pass
-"""
-
-    # Xác định tên package/module để import
-    try:
-        rel_path = source_file_path.relative_to(project_root)
-        parts = rel_path.parts[:-1]  # Bỏ tên file, chỉ lấy các thư mục
-        if parts:
-            package_name = ".".join(parts)
-            import_line = f"from {package_name}.{source_file_name} import *\n"
-        else:
-            import_line = f"import {source_file_name}\n"
-    except Exception:
-        # Fallback nếu không xác định được package
-        import_line = f"import {source_file_name}\n"
-
-    # Fix common issues in test content
-    test_content = fix_test_content(test_content)
-    
-    test_file_content = f"""{common_imports}
-{import_line}
-{test_content}
-"""
-
-    test_file.write_text(test_file_content)
-    return test_file
 
 def run_test_generation_for_file(client, file_path, package, output_dir, prompt_template, system_message, pkg_top):
     """Run test generation for a single Python file with coverage measurement using logic from test_new.ipynb"""
@@ -488,7 +366,6 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
             python_code = fix_relative_imports(python_code, package_for_imports)
             python_code1 = python_code
             python_code = reform_code_lines_fixed(python_code)
-            # print(f'python_code: ------------{python_code}------------')
             
     except FileNotFoundError:
         # print(os.getcwd())
@@ -509,8 +386,9 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
     sucess_run = 0
     fail_run = 0
     all_line_before_filter = 0
-    # python_code = fix_line_breaks_in_code(python_code)
-    # Phase 1: Basic test generation for this file
+
+
+    ########################## Phase 1: Basic test generation for this file
     print(f"Phase 1: Basic test generation for {file_path}")
     coverage = {
     "files": {
@@ -523,7 +401,6 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
 }
     divide_code = get_missing_coverage(coverage, line_limit=100)
     generated_tests = []
-    print(f'divide_code:--------------------------- {len(divide_code)} ---------------------------')
     
     if not divide_code:
         print(f"Warning: No class segments found in {file_path}")
@@ -532,25 +409,6 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
     for i, class_segment in enumerate(divide_code):
         # Xác định tên file an toàn
         safe_file_id = str(Path(file_path).relative_to(pkg_top)).replace('/', '_').replace('\\', '_').replace('.', '_')
-        # Xử lý class_segment là object hay string
-        # if isinstance(class_segment, str):
-        #     class_name = Path(file_path).stem  # hoặc 'global'
-        #     try:
-        #         lineno = class_segment.end - 1  # type: ignore
-        #         class_segment_code, _, _, _ = static_slicing.static_slicing(python_code, lineno)
-        #     except AttributeError:
-        #         # Nếu không có attribute end thì dùng toàn bộ code
-        #         class_segment_code = python_code
-        # else:
-        #     # Nếu là CodeSegment object - sử dụng getattr để tránh lỗi linter
-        #     class_name = getattr(class_segment, 'name', Path(file_path).stem)
-        #     try:
-        #         lineno = class_segment.end - 1
-        #         class_segment_code, _, _, _ = static_slicing.static_slicing(python_code, lineno)
-        #     except Exception as e:
-        #         class_segment_code = python_code
-        #         print(f"[WARNING] static_slicing failed for {file_path} (CodeSegment): {e}")
-        #         continue
         class_segment_code = class_segment.get_excerpt(tag_lines = False)
         class_name = class_segment.name
         
@@ -627,8 +485,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         'len_missing_lines': len(missing_line),
         'coverage_percentage': coverage_percentage_phase1
     }
-    with open("repos_ran_cc.txt", "a") as f:
-        f.write(f"Phase 1:  {covered_lines_phase1}\n\n\n")
+
     try:
         with open(output_dir / f"{Path(file_path).stem}_phase1_coverage.json", "w") as f:
             json.dump(coverage_result_phase1, f, indent=2)
@@ -679,7 +536,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         
         total_filter_nums += filter_num_lines
         all_line_before_filter += len(line_code1(python_code))
-        
+        external_code = ''
         # response_line = client.chat.completions.create(
         #     model='deepseek-v3-0324',
         #     messages=[
@@ -711,7 +568,6 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         #             print(f"[WARNING] get_code_from_import_line failed for {import_line}: {e}")
         # Đưa external_code vào đầu prompt
         # prompt = prompt_template.format(program=class_segment_code, func_name=class_name, import_tool=external_code)
-        external_code = ''
         if external_code != '':
             prompt_line = open('scripts/prompt/template_line.txt').read().format(
                 # func_name=function_name, 
@@ -774,13 +630,11 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         if lineno not in missing_line_phase2:
             sucess_run+=1
             print(f'Line {lineno} is covered')
-            with open("repos_ran_cc.txt", "a") as f:
-                f.write(f"Phase 2:   Line:  {lineno} is covered\n")
+
         else:
             print(f'Line {lineno} is not covered')
             fail_run+=1
-            with open("repos_ran_cc.txt", "a") as f:
-                f.write(f"Phase 2:   Line:  {lineno} is not covered\n")
+
             # missing_final.append(lineno)
         
         missing_test.remove(lineno)
@@ -828,7 +682,8 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
     except Exception as e:
         print(f"Error writing phase 2 coverage file: {e}")
 
-    # Phase 3: Generate with feedback for this file
+
+    ################################# Phase 3: Generate with feedback for this file
     print(f"Phase 3: Generate with feedback for {file_path}")
     miss_feedback = []
     missing_final = [x for x in missing_line_phase2 if x in re_format_line(python_code)]
@@ -952,13 +807,11 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
             if lineno not in missing_line_phase3:
                 sucess_run+=1
                 print(f'Line {lineno} is covered')
-                with open("repos_ran_cc.txt", "a") as f:
-                    f.write(f"Phase 3:   Line:  {lineno} is covered\n")
+    
             else:
                 print(f'Line {lineno} is not covered')
                 fail_run+=1
-                with open("repos_ran_cc.txt", "a") as f:
-                    f.write(f"Phase 3:   Line:  {lineno} is not covered\n")
+            
             
             missing_final.remove(lineno)
             for x in missing_final[:]:  # Create a copy to avoid modification during iteration
@@ -971,10 +824,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
             missing_final.remove(lineno)
     
 
-    with open("repos_ran_cc.txt", "a") as f:
-        f.write(f"Sucess run: {sucess_run}\n")
-        f.write(f"Fail run: {fail_run}\n")
-        f.write(f"Total run: {sucess_run+fail_run}\n")
+
  
     all_execution_line_set_phase3 = set(all_execution_line)
     covered_lines_phase3 = len(line_code1(python_code1)) - len(line_code(python_code)) + len(all_execution_line_set_phase3)
@@ -1036,7 +886,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
     
     return coverage_result_phase3
 
-def run_test_generation_algorithm(package, src, files, output_dir, pkg_top, config='default', install_missing=True, add_to_pythonpath=True):
+def run_test_generation_algorithm(package, files, output_dir, pkg_top, add_to_pythonpath=True):
     """Run test generation algorithm for a specific package with coverage measurement using logic from test_new.ipynb"""
     # print(f"Running test generation algorithm for package: {package}")
     
@@ -1149,8 +999,7 @@ if __name__ == "__main__":
     args = parse_args()
     pkg = load_suite(args.suite)
     pkg_key = list(pkg.keys())
-    # for i, k in enumerate(pkg_key):
-    #     print(f'{i} {k}')
+
     start_time = time.time()
     if args.test_index is not None:
         if args.test_index < 0 or args.test_index >= len(pkg_key):
@@ -1163,8 +1012,6 @@ if __name__ == "__main__":
         package = pkg[pkg_top]['package']
         src = pkg[pkg_top]['src']
         files = pkg[pkg_top]['files']
-        if package in args.skip_package:
-            sys.exit(0)
         if args.only:
             if args.only not in files:
                 print(f"{args.only} not among {package} suite files.")
@@ -1178,10 +1025,7 @@ if __name__ == "__main__":
             output.mkdir(parents=True, exist_ok=True)
         if not args.dry_run:
             run_test_generation_algorithm(
-                package, src, files, output, pkg_top, 
-                args.config if args.config else 'default',
-                install_missing=getattr(args, 'install_missing_modules', True),
-                add_to_pythonpath=getattr(args, 'add_to_pythonpath', True)
+                package, files, output, pkg_top, add_to_pythonpath=getattr(args, 'add_to_pythonpath', True)
             )
         else:
             print(f"Would run test generation algorithm for package {package} with output to {output}")

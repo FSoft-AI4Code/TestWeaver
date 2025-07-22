@@ -526,7 +526,6 @@ class Trace:
             filename = frame.f_code.co_filename
             lineno = frame.f_lineno
             key = filename, lineno
-            #Cuong
             print(key)
             self.counts[key] = self.counts.get(key, 0) + 1
 

@@ -1,18 +1,12 @@
 import os
 import json
 import re
-import importlib.util
 import io
 import numpy as np
 import tokenize
 from get_conditional_line import get_conditional_lines
 import ast
-# def fix_relative_imports(code, package_name):
-#     # Chuyển from .module import ... => from package_name.module import ...
-#     code = re.sub(r'from \.(\w+)', f'from {package_name}.\\1', code)
-#     code = re.sub(r'from \.\.(\w+)', f'from {package_name}.\\1', code)  # đơn giản, có thể cần tinh chỉnh thêm
-#     code = re.sub(r'from \. import (\w+)', f'from {package_name} import \\1', code)
-#     return code
+
 def fix_relative_imports(code, package_name):
     def replace_relative(match):
         dots = match.group(1)
@@ -558,86 +552,7 @@ def extract(code, target_line):
             return final_code
         final_code+=f'{line}\n'
     return final_code
-# def reform_code_lines_fixed(code: str) -> str:
-#     """
-#     Sửa lại hàm reform_code_lines để không gộp nhầm các dòng không liên quan.
-#     Chỉ gộp các dòng thực sự là continuation của nhau.
-#     """
-#     import re
-    
-#     lines = code.split('\n')
-#     reformed_lines = []
-#     buffer = ''
-#     paren_count = 0
-    
-#     def remove_inline_comment(s):
-#         in_single = in_double = False
-#         for i, c in enumerate(s):
-#             if c == '"' and not in_single:
-#                 in_double = not in_double
-#             elif c == "'" and not in_double:
-#                 in_single = not in_single
-#             elif c == '#' and not in_single and not in_double:
-#                 return s[:i].rstrip()
-#         return s
-    
-#     i = 0
-#     while i < len(lines):
-#         line = lines[i].rstrip()
-#         stripped = line.strip()
-#         indent = line[:len(line) - len(stripped)]
-#         # Nếu là comment, flush buffer và giữ nguyên comment
-#         if re.match(r'^\s*#', line):
-#             if buffer:
-#                 reformed_lines.append(buffer)
-#                 buffer = ''
-#                 paren_count = 0
-#             reformed_lines.append(line)
-#             i += 1
-#             continue
-#         # Bỏ qua dòng trống
-#         if not stripped:
-#             if buffer:
-#                 reformed_lines.append(buffer)
-#                 buffer = ''
-#                 paren_count = 0
-#             reformed_lines.append('')
-#             i += 1
-#             continue
-#         # Kiểm tra xem có phải là continuation thực sự không
-#         is_continuation = False
-#         if buffer:
-#             prev_stripped = buffer.rstrip()
-#             # Nếu dòng trước kết thúc bằng dấu nối dòng (\ hoặc \\)
-#             if prev_stripped.endswith('\\') or prev_stripped.endswith('\\\\'):
-#                 # Bỏ dấu nối dòng ở cuối buffer
-#                 buffer = buffer.rstrip('\\').rstrip()
-#                 is_continuation = True
-#             elif paren_count > 0:
-#                 is_continuation = True
-#             elif (prev_stripped.endswith(('(', '[', '{', ',')) and 
-#                   not stripped.startswith(('def ', 'class ', 'if ', 'for ', 'while ', 'try ', 'with '))):
-#                 is_continuation = True
-#             elif (prev_stripped.endswith(('+', '-', '*', '/', '%', '//', '**', '&', '|', '^', '<<', '>>')) and
-#                   not stripped.startswith(('def ', 'class ', 'if ', 'for ', 'while ', 'try ', 'with '))):
-#                 is_continuation = True
-#         # Flush buffer nếu không phải continuation
-#         if buffer and not is_continuation:
-#             reformed_lines.append(buffer)
-#             buffer = ''
-#             paren_count = 0
-#         # Xử lý dòng hiện tại
-#         if is_continuation:
-#             buffer += ' ' + remove_inline_comment(stripped)
-#         else:
-#             buffer = indent + remove_inline_comment(stripped)
-#         # Cập nhật paren_count
-#         paren_count = buffer.count('(') + buffer.count('[') + buffer.count('{') - buffer.count(')') - buffer.count(']') - buffer.count('}')
-#         i += 1
-#     # Flush buffer cuối cùng
-#     if buffer:
-#         reformed_lines.append(buffer)
-#     return '\n'.join(reformed_lines)
+
 def reform_code_lines_fixed(code: str) -> str:
     '''
     Sửa lại hàm reform_code_lines để không gộp nhầm các dòng không liên quan.

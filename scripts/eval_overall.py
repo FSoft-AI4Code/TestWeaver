@@ -1,22 +1,16 @@
 import os
 import subprocess
-import json
 import signal
 import random
 random.seed(42)
 import shutil
 import time
-import re
 from pathlib import Path
 from tqdm import tqdm
-from argparse import ArgumentParser
-from copy import deepcopy
 import sys
 import trace_execution
-import io
 import os
-import linecache
-from data_utils import read_jsonl, write_jsonl, add_lineno, add_lineno_comment,line_code
+from data_utils import read_jsonl,line_code
 import tempfile
 
 class TimeoutHandler:
@@ -58,7 +52,7 @@ def execute(test_code,timeout=5):
             '__name__': '__main__',
         }
         
-        # Thêm pytest nếu có thể
+        # add pytest if possible
         try:
             exec_globals['pytest'] = __import__('pytest')
         except ImportError:
@@ -87,7 +81,6 @@ def execute(test_code,timeout=5):
                 self.parser = MockParser()
                 
             def init_parser(self):
-                # Method này không làm gì, chỉ để test có thể gọi
                 pass
                 
         class MockDisplay:
@@ -135,10 +128,8 @@ def execute(test_code,timeout=5):
     except AssertionError: #assertionerror is considered as executable
         return True
     except TimeoutError:
-        #print("timed out")
         return False
     except Exception as e: 
-        #print(f"failed: {type(e).__name__}")
         return type(e).__name__, e #return error type and error message
     
 
@@ -146,7 +137,6 @@ def execute(test_code,timeout=5):
 def run_evolution123(result_execute, path, func_name, all_executed_lines, line_cover = 0,  package_root=None, package_name=None, check_error=False):
     generated_data = read_jsonl(path)
     all_executed_lines = set(all_executed_lines)
-    # print(f'generated_data: ---{path}\n\n\n---------{generated_data}------------')
     accuracy = []
     missing_line = []
     error_feedback = {} if check_error else None
@@ -161,9 +151,9 @@ def run_evolution123(result_execute, path, func_name, all_executed_lines, line_c
         code=data['code']
         test_cases=data['tests']
     
-        tmp_dir = Path(f'tmp_{i}_cuong')
+        tmp_dir = Path(f'tmp_{i}_test')
         tmp_dir.mkdir(exist_ok=True)
-        # Copy toàn bộ package vào tmp_dir/package_name
+        # Copy all package into tmp_dir/package_name
         package_dst = None
         if package_root and package_name:
             package_src = Path(package_root) / package_name
@@ -200,23 +190,19 @@ def run_evolution123(result_execute, path, func_name, all_executed_lines, line_c
                 print(res)
                 total_syn_correct+=1
 
-                # Ghi test_code vào đúng vị trí trong package tạm
                 if package_dst is not None:
                     test_file_path = package_dst / f'test_{j}.py'
                 else:
                     test_file_path = tmp_dir / f'test_{j}.py'
                 test_code=code+f'\n{testcase}'+f'\ntest_{func_name}()'
-                # print(f'test_code: ---{test_code}------------')
                 print(f'\n{testcase}'+f'\ntest_{func_name}()')
                 time.sleep(0.01)
                 # Set PYTHONPATH để import nội bộ hoạt động
                 old_pythonpath = os.environ.get('PYTHONPATH', '')
-                # Luôn set PYTHONPATH thành package_dst (ví dụ: tmp_0_cuong/pypara)
                 if package_dst is not None:
                     os.environ['PYTHONPATH'] = str(package_dst.parent)
                 else:
                     os.environ['PYTHONPATH'] = str(tmp_dir)
-                # --- Thay thế execute(test_code) bằng chạy subprocess ---
                 try:
                     with tempfile.NamedTemporaryFile('w', suffix='.py', delete=False) as f:
                         f.write(test_code)
@@ -270,7 +256,6 @@ def run_evolution123(result_execute, path, func_name, all_executed_lines, line_c
                     filename = package_dst / test_name
                 else:
                     filename = tmp_dir / test_name
-                # Create a combined file that includes both source and test code
                 combined_code = f"""
 # Source code
 {code}
@@ -280,7 +265,6 @@ def run_evolution123(result_execute, path, func_name, all_executed_lines, line_c
 test_{func_name}()
 """
                 
-                # Write combined code to a temporary file
                 with tempfile.NamedTemporaryFile('w', suffix='.py', delete=False) as combined_file:
                     combined_file.write(combined_code)
                     combined_file_path = combined_file.name
@@ -290,8 +274,7 @@ test_{func_name}()
                 sys.argv = [combined_file_path, arguments]
                 sys.path[0] = str(os.path.dirname(combined_file_path))
                 
-                # if j==0:
-                #     print(f'combined_code : ------------{combined_code}------------\n')
+
                 
                 globs = {
                     '__file__': combined_file_path,
@@ -327,7 +310,6 @@ test_{func_name}()
                         # If we can't find the original file, use string lines as fallback
                         executed_lines.append(lineno)
                 executed_lines = set(executed_lines)
-                # print(f"Debug: executed_lines = {executed_lines}")
                 if (line_cover>0):
                     if (line_cover in executed_lines):
                         print(f"Line {line_cover} is covered in test {test_name}")
@@ -338,8 +320,7 @@ test_{func_name}()
             pass
         all_executed_lines = [x for x in line_file if x in all_executed_lines]
         missing_line = [x for x in line_file if x not in all_executed_lines]
-        # if package_dst is not None:
-        #     os.environ['PYTHONPATH'] = old_pythonpath
+
         
     if check_error and error_feedback is not None:
         return accuracy, missing_line, result_execute, all_executed_lines, error_feedback
@@ -347,23 +328,5 @@ test_{func_name}()
         return accuracy, missing_line, result_execute, all_executed_lines
 
     
-def parse_args():
-    parser = ArgumentParser()
-    parser.add_argument("--path", type=str, default='predictions/testing_feedback.jsonl')
-    return parser.parse_args()
 
-
-if __name__=='__main__':
-    args=parse_args()
-    os.chdir('/bigdisk/cuongvd17/SE/TestGeneration/')
-    # print(os.getcwd())
-    # print(args.path)
-    generated_data = read_jsonl(args.path)
-    # Lấy func_name từ data đầu tiên hoặc dùng giá trị mặc định
-    func_name = 'test_function'
-    if generated_data:
-        func_name = generated_data[0].get('func_name', 'test_function')
-    accuracy, missing_line, _ = run_evolution123([], 'predictions/testing_feedback.jsonl', func_name)
-    print(f'Accuracy: {accuracy}')
-    print(f'Missing lines: {missing_line}')
 
