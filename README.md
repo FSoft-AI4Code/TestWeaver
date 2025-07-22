@@ -23,14 +23,8 @@ Unlike traditional test generators, **TestWeaver** incrementally builds a test s
 
 ## 🔧 Setup
 
-### 1. Clone the repository
 
-```bash
-git clone https://github.com/<your-org-or-user>/testweaver.git
-cd testweaver
-```
-
-### 2. Install dependencies
+### . Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -55,12 +49,30 @@ export OPENAI_API_KEY=sk-...
 export Deepseek_API_KEY=...
 ```
 
+## 📂 Prepare Dataset for Evaluation
+
+We conduct our evaluation using the **CodaMosa (CM) suite**,  a dataset derived from 35 open-source Python projects.
+
+To download the dataset, run:
+
+```bash
+git clone https://github.com/plasma-umass/codamosa.git
+```
 
 
 
-## 🚀 Usage
+### 🧪 Run TestWeaver on a Specific Subproject
 
-Run TestWeaver with your project:
+Run TestWeaver on a specific subproject within a larger repository.  
+This command will execute five experimental configurations:
+
+1. With slicing  
+2. Without slicing  
+3. Without execution-in-line  
+4. Without closest-test retrieval  
+5. Full TestWeaver pipeline
+
+The results will be saved under the `output/cm/...` directory.
 
 ```bash
 python testweaver.py --test-index ...

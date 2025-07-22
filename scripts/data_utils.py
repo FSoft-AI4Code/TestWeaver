@@ -82,7 +82,7 @@ def line_code(code):
                 # - Raise, Assert statements
                 if isinstance(node, (ast.Assign, ast.AugAssign, ast.Call, ast.If, 
                                    ast.For, ast.While, ast.Try, ast.With, ast.Raise, 
-                                   ast.Assert, ast.Delete, ast.Global, ast.Nonlocal)):
+                                   ast.Assert, ast.Delete, ast.Global, ast.Nonlocal, ast.Return)):
                     line_numbers.append(node.lineno)
                 elif isinstance(node, ast.Expr) and not isinstance(node.value, ast.Constant):
                     # Expr không phải docstring (có thể là function call, etc.)
@@ -554,11 +554,7 @@ def extract(code, target_line):
     return final_code
 
 def reform_code_lines_fixed(code: str) -> str:
-    '''
-    Sửa lại hàm reform_code_lines để không gộp nhầm các dòng không liên quan.
-    Không gộp các dòng nằm trong docstring (giữa ba nháy kép hoặc ba nháy đơn).
-    Khi gộp, nếu dòng trước kết thúc bằng dấu \ hoặc \\, thì bỏ dấu đó đi trước khi gộp với dòng tiếp theo.
-    '''
+
     import re
 
     lines = code.split('\n')
