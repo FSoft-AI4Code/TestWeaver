@@ -70,7 +70,7 @@ The results will be saved under the `output/cm/...` directory.
 ```bash
 cd scripts/
 export PYTHONPATH=$(pwd)
-export sample_id=21  # The id of your chosen Codamosa module, e.g. 22 is corresponding to 'tqdm' module   
+export sample_id=21  # The id of your chosen Codamosa module, e.g. 21 is corresponding to 'tqdm' module   
 python testweaver.py --test-index $sample_id
 ```
 
