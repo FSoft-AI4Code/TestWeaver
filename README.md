@@ -37,9 +37,10 @@ pip install -r requirements.txt
 
 You need to set up access to an LLM provider before running TestWeaver.
 
+```bash
 echo "OPENAI_API_KEY=sk-your-actual-api-key-here" > .env
 echo "OPENAI_BASE_URL=sk-your-openai-api-key" >> .env
-
+```
 
 ## 📂 Prepare Dataset for Evaluation
 
