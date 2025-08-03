@@ -54,9 +54,22 @@ git clone https://github.com/plasma-umass/codamosa.git
 
 
 
-### 🧪 Run TestWeaver on a Specific Subproject
+### 🧪 Running TestWeaver on a Specific Subproject
 
-Run TestWeaver on a specific subproject within a larger repository.  
+You can run **TestWeaver** on a specific subproject within a larger repository.  
+This will launch an experimental run.
+
+The results will be saved under the `output/cm/...` directory.
+
+```bash
+cd scripts/
+export PYTHONPATH=$(pwd)
+export sample_id=21  # The id of your chosen Codamosa module, e.g. 21 is corresponding to 'tqdm' module   
+python testweaver.py --test-index $sample_id
+```
+### 🧪 Running TestWeaver Ablation Study
+
+To evaluate the impact of different components, you can run TestWeaver in an ablation study mode.
 This command will execute five experimental configurations:
 
 1. With slicing  
@@ -73,7 +86,6 @@ export PYTHONPATH=$(pwd)
 export sample_id=21  # The id of your chosen Codamosa module, e.g. 21 is corresponding to 'tqdm' module   
 python testweaver.py --test-index $sample_id
 ```
-
 
 
 
