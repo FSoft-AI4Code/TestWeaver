@@ -23,7 +23,7 @@ logging.getLogger("openai").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("requests").setLevel(logging.WARNING)
-
+print(os.getcwd())
 test_apps = Path("../codamosa/replication/test-apps")
 mutap_benchmarks = Path("MuTAP-benchmarks")
 eval_path = Path(__file__).parent.parent
@@ -135,11 +135,6 @@ def parse_args():
                     help='run CoverUp instead of measuring per-test coverage')
     ap.set_defaults(get_test_coverage=True)
 
-    # ap.add_argument('--interactive', dest='interactive', action='store_true',
-    #             help='interactive')
-    # ap.add_argument('--no-interactive', dest='interactive', action='store_false',
-    #                 help='interactive')
-    # ap.set_defaults(interactive=True)
 
     ap.add_argument('--only', dest='only', action='store_true',
                 help='only run the specified test(s)')
@@ -166,8 +161,7 @@ def parse_args():
 
     args = ap.parse_args()
 
-    # if args.interactive and not args.package:
-    #     ap.error("package is required when using --interactive.")
+
 
     return args
 
@@ -209,14 +203,14 @@ def load_suite(suite):
 
 ### SEED TEST GENERATION ####
 
-def testgeneration_multiround(client, prompt, generated_tests, system_message, install_missing=True):
+def testgeneration_multiround(client, prompt, generated_tests, system_message, epoch = 9, install_missing=True):
     """Generate test cases with multi-round conversation"""
     template_append="Generate another test method for the function under test. Your answer must be different from previously-generated test cases, and should cover different statements and branches. CRITICAL: You MUST include ALL necessary imports at the very beginning of your test function. Always start your test with the required imports, then the test function. Try different input values, edge cases, and test scenarios but still remain function name."
     messages=[
         {"role": "system", "content": system_message},
             {"role": "user", "content": prompt},
         ]
-    for _ in range(1):
+    for _ in range(epoch):
         response = client.chat.completions.create(
             model='deepseek-v3-0324',
             messages=messages,
@@ -238,14 +232,14 @@ def testgeneration_multiround(client, prompt, generated_tests, system_message, i
 
     return generated_tests
 
-def testgeneration_multiround_error(client, prompt, system_message, install_missing=True):
+def testgeneration_multiround_error(client, prompt, system_message, epoch = 3, install_missing=True):
     """Generate test cases with multi-round conversation"""
     messages=[
         {"role": "system", "content": system_message},
             {"role": "user", "content": prompt},
         ]
     generated_test = []
-    for _ in range(2):
+    for _ in range(epoch):
         response = client.chat.completions.create(
             model='deepseek-v3-0324',
             messages=messages,
@@ -345,9 +339,6 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         if file_path_obj.is_relative_to(pkg_top_obj):
             relative_path = file_path_obj.relative_to(pkg_top_obj)
             if len(relative_path.parts) > 1:
-                # Use the actual package structure (last parts of the path)
-                # For example: if file is in black/src/blib2to3/pgen2/file.py
-                # the package should be blib2to3.pgen2
                 path_parts = list(relative_path.parts[:-1])  # Exclude filename
                 if len(path_parts) >= 2:
                     # Use the last two parts as package name
@@ -377,7 +368,6 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         print(f"No content in file {file_path}")
         return None
     
-    print(f"Read {len(python_code)} characters from {file_path}")
     
     # Initialize result tracking like in test_new.ipynb
     result_execute = []
@@ -401,6 +391,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
 }
     divide_code = get_missing_coverage(coverage, line_limit=100)
     generated_tests = []
+    print(f'divide_code:--------------------------- {len(divide_code)} ---------------------------')
     
     if not divide_code:
         print(f"Warning: No class segments found in {file_path}")
@@ -497,7 +488,6 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
     
     
     
-#################       Ablatation 1: with SLICING  ############################# ########
     print(f"Phase 2: Target line coverage with slicingfor {file_path}")
     missing_test = [x for x in missing_line if x in re_format_line(python_code)]
     # missing_final = []
@@ -576,13 +566,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
                 program=code_in_line(filtered_code), 
                 lineno=lineno1
             )
-            prompt_line_not_slicing = open('./prompt/template_line.txt').read().format(
-                # func_name=function_name, 
-                import_tool=external_code,
-                class_name=class_name, 
-                program=code_in_line(python_code), 
-                lineno=lineno1
-            )
+
         else:
             prompt_line = open('./prompt/template_line_no_import.txt').read().format(
                 func_name=function_name, 
@@ -590,43 +574,23 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
                 program=code_in_line(filtered_code), 
                 lineno=lineno1
             )
-            prompt_line_not_slicing = open('./prompt/template_line_no_import.txt').read().format(
-                func_name=function_name, 
-                class_name=class_name, 
-                program=code_in_line(python_code), 
-                lineno=lineno1
-            )
-        generate_test = testgeneration_multiround_line(client, prompt_line, system_message, epoch = 0, install_missing=True)
-        generate_test_not_slicing = testgeneration_multiround_line(client, prompt_line_not_slicing, system_message, epoch = 1, install_missing=True)
+
+        generate_test = testgeneration_multiround_line(client, prompt_line, system_message, epoch = 6, install_missing=True)
         testing_data = {
             'task_num': f"{package}_{safe_file_id}_{lineno}",
             'task_title': f"Line coverage for {package}",
             'code': python_code,
             'tests': generate_test
         }
-        testing_data_not_slicing = {
-            'task_num': f"{package}_{safe_file_id}_{lineno}_not_slicing",
-            'task_title': f"Line coverage for {package}",
-            'code': python_code,
-            'tests': generate_test_not_slicing
-        }
+
         test_file = output_dir / f"testing_{safe_file_id}_{lineno}.jsonl"
         write_jsonl([testing_data], str(test_file))
-        test_file_not_slicing = output_dir / f"testing_{safe_file_id}_{lineno}_not_slicing.jsonl"
-        write_jsonl([testing_data_not_slicing], str(test_file_not_slicing))
-        
-        
+                
         _, missing_line_phase2, result_execute, all_execution_line = run_evolution123(
             result_execute, str(test_file), func_name=class_name, all_executed_lines=all_execution_line, line_cover=lineno,
             package_root=str(pkg_top.parent), package_name=pkg_top.name
         )
-        
-        _, missing_line_p2_not_slicing, result_execute, all_execution_line1 = run_evolution123(
-            result_execute, str(test_file_not_slicing), func_name=class_name, all_executed_lines=all_execution_line1, line_cover=lineno,
-            package_root=str(pkg_top.parent), package_name=pkg_top.name
-        )
-
-        
+                
         if lineno not in missing_line_phase2:
             sucess_run+=1
             print(f'Line {lineno} is covered')
@@ -645,7 +609,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
                 missing_test.remove(x)
         print(f'Lines left to cover: {missing_test}')
     
-    # Sau khi phase 2 kết thúc, ghi coverage phase 2
+
     all_execution_line_set_phase2 = set(all_execution_line)
     covered_lines_phase2 = len(line_code1(python_code1)) - len(line_code(python_code)) + len(all_execution_line_set_phase2)
     coverage_percentage_phase2 = (covered_lines_phase2 / len(line_code1(python_code1))) * 100 
@@ -664,24 +628,6 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
     except Exception as e:
         print(f"Error writing phase 2 coverage file: {e}")
         
-    all_execution_line_set_phase2_not_slicing = set(all_execution_line1)
-    covered_lines_phase2_not_slicing = len(line_code1(python_code1)) - len(line_code(python_code)) + len(all_execution_line_set_phase2_not_slicing)
-    coverage_percentage_phase2_not_slicing = (covered_lines_phase2_not_slicing / len(line_code1(python_code1))) * 100 
-    coverage_result_phase2_not_slicing = {
-        'file': file_path,
-        'total_lines': len(line_code1(python_code1)),
-        'covered_lines': covered_lines_phase2_not_slicing,
-        'missing_lines': missing_line_p2_not_slicing,
-        'len_missing_lines': len(missing_line_p2_not_slicing),
-        'coverage_percentage': coverage_percentage_phase2_not_slicing
-    }
-    try:
-        with open(output_dir / f"{Path(file_path).stem}_phase2_coverage_not_slicing.json", "w") as f:
-            json.dump(coverage_result_phase2_not_slicing, f, indent=2)
-        print(f"Saved phase 2 coverage to {output_dir / f'{Path(file_path).stem}_phase2_coverage_not_slicing.json'}")
-    except Exception as e:
-        print(f"Error writing phase 2 coverage file: {e}")
-
 
     ################################# Phase 3: Generate with feedback for this file
     print(f"Phase 3: Generate with feedback for {file_path}")
@@ -748,26 +694,8 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         )
 
 
-######### ABLATION STUDY ##########
-        prompt_line_no_exe = open('./prompt/feedback_line_no_execution.txt').read().format(
-        func_name=function_name, 
-        class_name=class_name, 
-        test=test_run, 
-        code=filtered_code, 
-        code_linene=extract_line(python_code, lineno)
-        )
-######### ABLATION STUDY ##########
+        generate_test = testgeneration_feedback(client, prompt_line, epoch = 5, install_missing=True)
 
-        prompt_line_no_test = open('./prompt/feedback_line_no_test.txt').read().format(
-        func_name=function_name, 
-        class_name=class_name, 
-        code = filtered_code,
-        code_linene=extract_line(python_code, lineno)
-        )
-        generate_test = testgeneration_feedback(client, prompt_line, epoch = 6, install_missing=True)
-        generate_test_no_exe = testgeneration_feedback(client, prompt_line_no_exe, epoch = 1, install_missing=True)
-        generate_test_no_test = testgeneration_feedback(client, prompt_line_no_test, epoch = 1, install_missing=True)
-        
         
         if len(generate_test) > 0:
             testing_data = {
@@ -775,32 +703,12 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
                 'code': python_code,
                 'tests': generate_test
             }
-            testing_data_no_exe = {
-                'task_num': f"{package}_{safe_file_id}_{lineno}_feedback_no_exe",
-                'code': python_code,
-                'tests': generate_test_no_exe
-            }
-            testing_data_no_test = {
-                'task_num': f"{package}_{safe_file_id}_{lineno}_feedback_no_test",
-                'code': python_code,
-                'tests': generate_test_no_test
-            }
             test_file = output_dir / f"feed_testing1_{package}_{safe_file_id}_{lineno}.jsonl"
-            test_file_no_exe = output_dir / f"feed_testing1_{package}_{safe_file_id}_{lineno}_no_exe.jsonl"
-            test_file_no_test = output_dir / f"feed_testing1_{package}_{safe_file_id}_{lineno}_no_test.jsonl"
+
             write_jsonl([testing_data], str(test_file))
-            write_jsonl([testing_data_no_exe], str(test_file_no_exe))
-            write_jsonl([testing_data_no_test], str(test_file_no_test))
+
             _, missing_line_phase3, result_execute, all_execution_line = run_evolution123(
                 result_execute, str(test_file), func_name=class_name, all_executed_lines=all_execution_line, line_cover=lineno, 
-                package_root=str(pkg_top.parent), package_name=pkg_top.name
-            )
-            _, missing_line_phase3_no_exe, result_execute, all_execution_line2 = run_evolution123(
-                result_execute, str(test_file_no_exe), func_name=class_name, all_executed_lines=all_execution_line2, line_cover=lineno, 
-                package_root=str(pkg_top.parent), package_name=pkg_top.name
-            )
-            _, missing_line_phase3_no_test, result_execute, all_execution_line3 = run_evolution123(
-                result_execute, str(test_file_no_test), func_name=class_name, all_executed_lines=all_execution_line3, line_cover=lineno, 
                 package_root=str(pkg_top.parent), package_name=pkg_top.name
             )
 
@@ -838,31 +746,6 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         'filter_nums': (total_filter_nums/all_line_before_filter)*100,
         'coverage_percentage': coverage_percentage_phase3
     }
-    # Phase 3 not execute
-    all_execution_line_set_phase3_not_exe = set(all_execution_line2)
-    covered_lines_phase3_not_exe = len(line_code1(python_code1)) - len(line_code(python_code)) + len(all_execution_line_set_phase3_not_exe)
-    coverage_percentage_phase3_not_exe = (covered_lines_phase3_not_exe / len(line_code1(python_code1))) * 100 
-    coverage_result_phase3_not_exe = {
-        'file': file_path,
-        'total_lines': len(line_code1(python_code1)),
-        'covered_lines': covered_lines_phase3_not_exe,
-        'missing_lines': missing_line_phase3_no_exe,
-        'len_missing_lines': len(missing_line_phase3_no_exe),
-        'coverage_percentage': coverage_percentage_phase3_not_exe
-    }
-    # Phase 3 not test
-    all_execution_line_set_phase3_not_test = set(all_execution_line3)
-    covered_lines_phase3_not_test = len(line_code1(python_code1)) - len(line_code(python_code)) + len(all_execution_line_set_phase3_not_test)
-    coverage_percentage_phase3_not_test = (covered_lines_phase3_not_test / len(line_code1(python_code1))) * 100 
-    coverage_result_phase3_not_test = {
-        'file': file_path,
-        'total_lines': len(line_code1(python_code1)),
-        'covered_lines': covered_lines_phase3_not_test,
-        'missing_lines': missing_line_phase3_no_test,
-        'len_missing_lines': len(missing_line_phase3_no_test),
-        'coverage_percentage': coverage_percentage_phase3_not_test
-    }
-    
     
     
     # }
@@ -870,12 +753,6 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         with open(output_dir / f"{Path(file_path).stem}_phase3_coverage.json", "w") as f:
             json.dump(coverage_result_phase3, f, indent=2)
         print(f"Saved phase 3 coverage to {output_dir / f'{Path(file_path).stem}_phase3_coverage.json'}")
-        with open(output_dir / f"{Path(file_path).stem}_phase3_coverage_not_exe.json", "w") as f:
-            json.dump(coverage_result_phase3_not_exe, f, indent=2)
-        print(f"Saved phase 3 coverage to {output_dir / f'{Path(file_path).stem}_phase3_coverage_not_exe.json'}")
-        with open(output_dir / f"{Path(file_path).stem}_phase3_coverage_not_test.json", "w") as f:
-            json.dump(coverage_result_phase3_not_test, f, indent=2)
-        print(f"Saved phase 3 coverage to {output_dir / f'{Path(file_path).stem}_phase3_coverage_not_test.json'}")
     except Exception as e:
         print(f"Error writing phase 3 coverage file: {e}")
     
@@ -888,10 +765,9 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
 
 def run_test_generation_algorithm(package, files, output_dir, pkg_top, add_to_pythonpath=True):
     """Run test generation algorithm for a specific package with coverage measurement using logic from test_new.ipynb"""
-    # print(f"Running test generation algorithm for package: {package}")
     
     # Add package directory to PYTHONPATH if requested
-    # result_execute = []
+
     if add_to_pythonpath:
         add_dir_to_pythonpath(pkg_top)
         print(f"Added {pkg_top} to PYTHONPATH")
@@ -899,16 +775,14 @@ def run_test_generation_algorithm(package, files, output_dir, pkg_top, add_to_py
     # Initialize Claude client
     client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'), base_url=os.getenv("OPENAI_BASE_URL"))
     
-    # Load templates
-    # prompt_template = open('./prompt/template_base.txt').read()
+
     prompt_template = open('./prompt/template_base.txt').read()
 
     system_template = open('./prompt/system.txt').read()
     system_message = system_template.format(lang='python')
     
     print(f"Processing {len(files)} files for package {package}")
-    # print(f"Source files: {files}")
-    # print(f"Package root: {pkg_top}")
+
     
     # Process each file separately and collect coverage results
     all_coverage_results = []
@@ -1028,6 +902,5 @@ if __name__ == "__main__":
             print(f"Would run test generation algorithm for package {package} with output to {output}")
         print(f"Total running time: {time.time() - start_time:.2f} seconds")
     else:
-        # Vòng lặp cho toàn bộ pkg như cũ (nếu không truyền test_index)
-        print('NO - NO - NO')
+        print('NO')
     print(f"Total running time: {time.time() - start_time:.2f} seconds")
