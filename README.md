@@ -84,7 +84,7 @@ The results will be saved under the `output/cm/...` directory.
 cd scripts/
 export PYTHONPATH=$(pwd)
 export sample_id=21  # The id of your chosen Codamosa module, e.g. 21 is corresponding to 'tqdm' module   
-python testweaver.py --test-index $sample_id
+python ablate.py --test-index $sample_id
 ```
 
 
