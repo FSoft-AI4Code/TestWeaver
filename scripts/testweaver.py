@@ -204,12 +204,20 @@ def load_suite(suite):
 ### SEED TEST GENERATION ####
 
 def testgeneration_multiround(client, prompt, generated_tests, system_message, epoch = 9, install_missing=True):
-    """Generate test cases with multi-round conversation"""
+    """
+    Generate multiple test cases using multi-round conversation with a model.
+
+    Each round produces a new test function that should cover different statements
+    and branches than previous ones. Missing imports are detected and optionally installed.
+    """
+    
     template_append="Generate another test method for the function under test. Your answer must be different from previously-generated test cases, and should cover different statements and branches. CRITICAL: You MUST include ALL necessary imports at the very beginning of your test function. Always start your test with the required imports, then the test function. Try different input values, edge cases, and test scenarios but still remain function name."
     messages=[
         {"role": "system", "content": system_message},
             {"role": "user", "content": prompt},
         ]
+    
+    # Multi-round generation
     for _ in range(epoch):
         response = client.chat.completions.create(
             model='deepseek-v3-0324',
@@ -233,11 +241,19 @@ def testgeneration_multiround(client, prompt, generated_tests, system_message, e
     return generated_tests
 
 def testgeneration_multiround_error(client, prompt, system_message, epoch = 3, install_missing=True):
-    """Generate test cases with multi-round conversation"""
-    messages=[
+    """
+    Generate multiple test cases using multi-round conversation with a model,
+    focusing on error-prone scenarios.
+
+    Each round produces a new test function. Missing imports are detected and optionally installed.
+    """
+    
+    # Initialize conversation history
+    messages = [
         {"role": "system", "content": system_message},
-            {"role": "user", "content": prompt},
-        ]
+        {"role": "user", "content": prompt},
+    ]
+    # Multi-round generation
     generated_test = []
     for _ in range(epoch):
         response = client.chat.completions.create(
@@ -258,16 +274,27 @@ def testgeneration_multiround_error(client, prompt, system_message, epoch = 3, i
         print(test_gen)
 
     return generated_test
+
 #### TEST GENERATION FOR SPECIFIC LINE ####
 
 def testgeneration_multiround_line(client, prompt, system_message, epoch, install_missing=True):
-    """Generate test cases for specific line coverage"""
+    """
+    Generate multiple test cases targeting specific line coverage using multi-round conversation.
+
+    Each round produces a new test function that should cover different statements
+    and branches. Missing imports are detected and optionally installed.
+    """
+    
     template_append="Generate another test method for the function under test. Your answer must be different from previously-generated test cases, and should cover different statements and branches. CRITICAL: You MUST include ALL necessary imports at the very beginning of your test function. Always start your test with the required imports, then the test function. Try different input values, edge cases, and test scenarios but still remain function name."
+    
     generated_tests=[]
+    
+    # Initialize conversation history
     messages=[
             {"role": "user", "content": prompt},
             {"role": "system", "content": system_message},
         ]
+    # Multi-round generation
     for _ in range(epoch):
         response = client.chat.completions.create(
             model='deepseek-v3-0324',
@@ -292,13 +319,20 @@ def testgeneration_multiround_line(client, prompt, system_message, epoch, instal
 
 
 
-
 #### TEST GENERATION FOR SPECIFIC LINE WITH EXECUTION FEEDBACK ####
 
 
 def testgeneration_feedback(client, prompt, epoch, install_missing=True):
-    """Generate test cases with execution feedback"""
+    """
+    Generate test cases with execution feedback using multi-round conversation.
+
+    Each round produces a new test function. Python code is extracted from 
+    the model's response, missing imports are detected, and optionally installed.
+    """
+    
     generated_tests=[]
+    
+    # Initialize conversation history
     messages=[
             {"role": "system", "content": open('./prompt/system_exec.txt').read()},
             {"role": "user", "content": prompt},
@@ -325,7 +359,23 @@ def testgeneration_feedback(client, prompt, epoch, install_missing=True):
 
 
 def run_test_generation_for_file(client, file_path, package, output_dir, prompt_template, system_message, pkg_top):
-    """Run test generation for a single Python file with coverage measurement using logic from test_new.ipynb"""
+    """
+    Run test generation for a single Python file with coverage measurement.
+    
+    This uses the logic from 'test_new.ipynb'. The function ensures the file
+    path is absolute (using the package root if necessary) and prepares for
+    test generation.
+    
+    Args:
+        client: LLM client for generating tests.
+        file_path (str): Path to the Python file.
+        package (str): Package name or identifier.
+        output_dir (str): Directory to store generated tests or results.
+        prompt_template (str): Template for prompting test generation.
+        system_message (str): System message guiding the model.
+        pkg_top (Path): Root directory of the package for relative paths.
+    """
+    
     print(f"Processing file: {file_path}")
     # Convert relative path to absolute path using pkg_top 
     if not Path(file_path).is_absolute():
@@ -378,7 +428,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
     all_line_before_filter = 0
 
 
-    ########################## Phase 1: Basic test generation for this file
+# ======================== Phase 1: Basic test generation ========================
     print(f"Phase 1: Basic test generation for {file_path}")
     coverage = {
     "files": {
@@ -403,7 +453,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         class_segment_code = class_segment.get_excerpt(tag_lines = False)
         class_name = class_segment.name
         
- 
+    # Prepare the prompt for test generation using the template
         prompt = open('./prompt/template_base_no_import.txt').read().format(program=class_segment_code, func_name=class_name)
 
         generated_tests = []
@@ -490,11 +540,9 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
     
     print(f"Phase 2: Target line coverage with slicingfor {file_path}")
     missing_test = [x for x in missing_line if x in re_format_line(python_code)]
-    # missing_final = []
     all_execution_line1 = set(all_execution_line)
     while len(missing_test) > 0:
         print(f'line code ----------{extract_line(python_code, missing_test[0])}----------------------')
-        # print(f'line code real {line_code(python_code)}------------')
         lineno = missing_test[0]
         lineno1 = extract_line(python_code, lineno)
         filtered_code, _, filter_num_lines, _ = static_slicing.static_slicing(python_code, lineno)
@@ -773,6 +821,7 @@ def run_test_generation_algorithm(package, files, output_dir, pkg_top, add_to_py
         print(f"Added {pkg_top} to PYTHONPATH")
     
     # Initialize Claude client
+    print('api_key', os.getenv('OPENAI_API_KEY'))
     client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'), base_url=os.getenv("OPENAI_BASE_URL"))
     
 

@@ -133,8 +133,29 @@ def execute(test_code,timeout=5):
         return type(e).__name__, e #return error type and error message
     
 
-"""Compute syntactical and execution correctness (with coverage)."""
 def run_evolution123(result_execute, path, func_name, all_executed_lines, line_cover = 0,  package_root=None, package_name=None, check_error=False):
+    """
+    Compute syntactical and execution correctness (with coverage) for generated tests.
+
+    Args:
+        result_execute: List to store execution results.
+        path (str): Path to JSONL file containing generated test cases.
+        func_name (str): Name of the function under test.
+        all_executed_lines: Iterable of previously executed lines.
+        line_cover (int, optional): Line number to specifically track coverage. Defaults to 0.
+        package_root (optional): Root directory of the package. Defaults to None.
+        package_name (optional): Name of the package. Defaults to None.
+        check_error (bool, optional): Whether to collect error feedback. Defaults to False.
+
+    Returns:
+        Tuple containing:
+            - accuracy (list): Syntactical correctness per test
+            - missing_line (list): Lines not executed
+            - result_execute (list): Details of executed lines per test
+            - all_executed_lines (set): Updated set of all executed lines
+            - error_feedback (dict, optional): Mapping of test line -> errors if check_error=True
+    """
+    
     generated_data = read_jsonl(path)
     all_executed_lines = set(all_executed_lines)
     accuracy = []
@@ -160,7 +181,6 @@ def run_evolution123(result_execute, path, func_name, all_executed_lines, line_c
             package_dst = tmp_dir / package_name
             if package_dst.exists():
                 shutil.rmtree(package_dst)
-            # Nếu package_src bên trong lại có thư mục pypara (bị lồng 2 lớp), chỉ copy nội dung bên trong
             inner_pypara = package_src / package_name
             if package_name == 'pypara' and inner_pypara.exists() and inner_pypara.is_dir():
                 package_dst.mkdir(parents=True, exist_ok=True)
