@@ -1,0 +1,424 @@
+codamosa {"file": "codamosa/replication/test-apps/PySnooper/pysnooper/pycompat.py", "total_lines": 62, "covered_lines": 61, "missing_lines": [12], "coverage_percentage": 98.38709677419355, "filter_average": 0, "len_missing_lines": 1}
+codamosa {"file": "codamosa/replication/test-apps/PySnooper/pysnooper/tracer.py", "total_lines": 316, "covered_lines": 290, "missing_lines": [64, 77, 101, 102, 114, 121, 123, 278, 283, 314, 315, 316, 362, 376, 378, 379, 380, 381, 405, 406, 407, 429, 441, 443, 444, 447], "coverage_percentage": 91.77215189873418, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/PySnooper/pysnooper/utils.py", "total_lines": 60, "covered_lines": 60, "missing_lines": [], "coverage_percentage": 100.0, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/PySnooper/pysnooper/variables.py", "total_lines": 95, "covered_lines": 83, "missing_lines": [26, 39, 43, 62, 66, 90, 105, 108, 119, 120, 121, 126], "coverage_percentage": 87.36842105263159, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/ansible/lib/ansible/cli/adhoc.py", "total_lines": 121, "covered_lines": 80, "missing_lines": [48, 51, 54, 59, 61, 62, 67, 69, 73, 74, 81, 103, 104, 108, 109, 114, 115, 116, 121, 122, 126, 127, 131, 132, 135, 136, 137, 139, 140, 142, 144, 145, 147, 151, 152, 153, 164, 165, 169, 172, 174], "coverage_percentage": 66.11570247933885, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/ansible/lib/ansible/cli/arguments/option_helpers.py", "total_lines": 246, "covered_lines": 236, "missing_lines": [57, 58, 61, 122, 125, 148, 166, 228, 321, 322], "coverage_percentage": 95.9349593495935, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/apimd/apimd/loader.py", "total_lines": 112, "covered_lines": 88, "missing_lines": [41, 70, 71, 72, 73, 84, 85, 86, 87, 89, 90, 91, 92, 93, 95, 97, 98, 99, 101, 102, 105, 127, 128, 143], "coverage_percentage": 78.57142857142857, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/codetiming/codetiming/_timers.py", "total_lines": 44, "covered_lines": 44, "missing_lines": [], "coverage_percentage": 100.0, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/cookiecutter/cookiecutter/find.py", "total_lines": 20, "covered_lines": 20, "missing_lines": [], "coverage_percentage": 100.0, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/cookiecutter/cookiecutter/prompt.py", "total_lines": 104, "covered_lines": 100, "missing_lines": [19, 110, 112, 116], "coverage_percentage": 96.15384615384616, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/cookiecutter/cookiecutter/replay.py", "total_lines": 29, "covered_lines": 15, "missing_lines": [21, 22, 24, 25, 30, 31, 33, 35, 36, 44, 46, 47, 49, 50], "coverage_percentage": 51.724137931034484, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/cookiecutter/cookiecutter/repository.py", "total_lines": 57, "covered_lines": 43, "missing_lines": [89, 91, 99, 100, 101, 108, 109, 112, 115, 116, 119, 123, 124, 125], "coverage_percentage": 75.43859649122807, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/cookiecutter/cookiecutter/zipfile.py", "total_lines": 68, "covered_lines": 39, "missing_lines": [27, 33, 36, 43, 44, 45, 46, 54, 57, 62, 63, 64, 70, 71, 75, 80, 81, 83, 87, 92, 93, 94, 95, 96, 100, 101, 102, 107, 108], "coverage_percentage": 57.35294117647059, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/dataclasses-json/dataclasses_json/cfg.py", "total_lines": 55, "covered_lines": 55, "missing_lines": [], "coverage_percentage": 100.0, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/dataclasses-json/dataclasses_json/core.py", "total_lines": 249, "covered_lines": 190, "missing_lines": [21, 28, 32, 33, 37, 41, 46, 56, 63, 67, 72, 74, 77, 82, 88, 94, 97, 101, 104, 112, 122, 125, 132, 135, 140, 143, 147, 151, 156, 162, 163, 167, 170, 172, 178, 180, 185, 191, 192, 196, 199, 207, 210, 211, 216, 217, 229, 238, 241, 245, 253, 254, 258, 260, 261, 265, 266, 283, 299], "coverage_percentage": 76.30522088353415, "filter_average": 0, "len_missing_lines": 59}
+codamosa {"file": "codamosa/replication/test-apps/dataclasses-json/dataclasses_json/mm.py", "total_lines": 237, "covered_lines": 198, "missing_lines": [26, 46, 66, 77, 84, 85, 89, 91, 92, 93, 94, 97, 105, 108, 222, 235, 236, 242, 244, 248, 249, 252, 255, 256, 258, 259, 262, 264, 267, 270, 279, 291, 293, 303, 307, 312, 321, 324, 330], "coverage_percentage": 83.54430379746836, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/dataclasses-json/dataclasses_json/undefined.py", "total_lines": 151, "covered_lines": 133, "missing_lines": [14, 50, 51, 70, 125, 127, 142, 143, 145, 147, 162, 164, 176, 189, 197, 199, 207, 231], "coverage_percentage": 88.0794701986755, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/docstring_parser/docstring_parser/common.py", "total_lines": 89, "covered_lines": 88, "missing_lines": [119], "coverage_percentage": 98.87640449438202, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/docstring_parser/docstring_parser/google.py", "total_lines": 182, "covered_lines": 168, "missing_lines": [146, 149, 152, 163, 167, 170, 173, 181, 189, 190, 194, 203, 206, 207], "coverage_percentage": 92.3076923076923, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/docstring_parser/docstring_parser/numpydoc.py", "total_lines": 199, "covered_lines": 191, "missing_lines": [166, 168, 183, 186, 188, 213, 214, 221], "coverage_percentage": 95.97989949748744, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/docstring_parser/docstring_parser/parser.py", "total_lines": 17, "covered_lines": 7, "missing_lines": [15, 16, 17, 18, 19, 20, 22, 23, 24, 25], "coverage_percentage": 41.17647058823529, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/docstring_parser/docstring_parser/rest.py", "total_lines": 93, "covered_lines": 83, "missing_lines": [25, 29, 34, 38, 44, 55, 60, 71, 74, 97], "coverage_percentage": 89.24731182795699, "filter_average": 0, "len_missing_lines": 10}
+codamosa {"file": "codamosa/replication/test-apps/flutes/flutes/iterator.py", "total_lines": 273, "covered_lines": 221, "missing_lines": [7, 8, 9, 24, 26, 28, 29, 31, 32, 33, 48, 50, 52, 53, 70, 72, 74, 75, 96, 98, 134, 135, 137, 138, 139, 140, 142, 144, 145, 175, 176, 177, 179, 181, 183, 184, 185, 214, 227, 234, 246, 254, 259, 270, 304, 341, 344, 368, 369, 378, 379, 383], "coverage_percentage": 80.95238095238095, "filter_average": 0}
+codamosa {"file": "codamosa/replication/test-apps/pyMonet/pymonet/box.py", "total_lines": 64, "covered_lines": 53, "missing_lines": [4, 5, 18, 21, 24, 35, 46, 57, 68, 79, 90], "coverage_percentage": 82.8125, "filter_average": 0, "len_missing_lines": 11}
+codamosa {"file": "codamosa/replication/test-apps/pyMonet/pymonet/either.py", "total_lines": 118, "covered_lines": 106, "missing_lines": [4, 5, 15, 31, 32, 44, 93, 109, 134, 145, 160, 171], "coverage_percentage": 89.83050847457628, "filter_average": 0, "len_missing_lines": 12}
+codamosa {"file": "codamosa/replication/test-apps/tqdm/tqdm/_tqdm_pandas.py", "total_lines": 15, "covered_lines": 13, "missing_lines": [15, 19], "coverage_percentage": 86.66666666666667, "filter_average": 0, "len_missing_lines": 2}
+codamosa {"file": "codamosa/replication/test-apps/sty/sty/lib.py", "total_lines": 19, "covered_lines": 15, "missing_lines": [10, 11, 23, 24], "coverage_percentage": 78.94736842105263, "filter_average": 0, "len_missing_lines": 4}
+codamosa {"file": "codamosa/replication/test-apps/tqdm/tqdm/auto.py", "total_lines": 30, "covered_lines": 23, "missing_lines": [20, 21, 25, 26, 27, 36, 42], "coverage_percentage": 76.66666666666667, "filter_average": 0, "len_missing_lines": 7}
+codamosa {"file": "codamosa/replication/test-apps/tqdm/tqdm/contrib/itertools.py", "total_lines": 26, "covered_lines": 14, "missing_lines": [22, 23, 24, 25, 27, 29, 30, 31, 32, 33, 34, 35], "coverage_percentage": 53.84615384615385, "filter_average": 0, "len_missing_lines": 12}
+codamosa {"file": "codamosa/replication/test-apps/pytutils/pytutils/env.py", "total_lines": 40, "covered_lines": 35, "missing_lines": [8, 28, 31, 35, 59], "coverage_percentage": 87.5, "filter_average": 0, "len_missing_lines": 5}
+codamosa {"file": "codamosa/replication/test-apps/pytutils/pytutils/excs.py", "total_lines": 9, "covered_lines": 7, "missing_lines": [9, 10], "coverage_percentage": 77.77777777777779, "filter_average": 0, "len_missing_lines": 2}
+codamosa {"file": "codamosa/replication/test-apps/pypara/pypara/accounting/journaling.py", "total_lines": 79, "covered_lines": 68, "missing_lines": [18, 30, 33, 44, 104, 107, 148, 149, 159, 160, 163], "coverage_percentage": 86.07594936708861, "filter_average": 0, "len_missing_lines": 11}
+codamosa {"file": "codamosa/replication/test-apps/pytutils/pytutils/files.py", "total_lines": 47, "covered_lines": 32, "missing_lines": [23, 24, 26, 27, 31, 32, 37, 40, 46, 49, 52, 59, 60, 63, 68], "coverage_percentage": 68.08510638297872, "filter_average": 0, "len_missing_lines": 15}
+codamosa {"file": "codamosa/replication/test-apps/thonny/thonny/jedi_utils.py", "total_lines": 95, "covered_lines": 74, "missing_lines": [13, 14, 23, 28, 44, 47, 48, 50, 52, 53, 62, 65, 66, 70, 71, 79, 90, 91, 106, 109, 110], "coverage_percentage": 77.89473684210526, "filter_average": 0, "len_missing_lines": 21}
+codamosa {"file": "codamosa/replication/test-apps/tqdm/tqdm/contrib/logging.py", "total_lines": 91, "covered_lines": 64, "missing_lines": [10, 20, 21, 24, 25, 26, 27, 29, 31, 35, 39, 40, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 113, 114, 115], "coverage_percentage": 70.32967032967034, "filter_average": 0, "len_missing_lines": 27}
+codamosa {"file": "codamosa/replication/test-apps/thonny/thonny/plugins/pgzero_frontend.py", "total_lines": 22, "covered_lines": 16, "missing_lines": [10, 12, 16, 19, 23, 25], "coverage_percentage": 72.72727272727273, "filter_average": 0, "len_missing_lines": 6}
+codamosa {"file": "codamosa/replication/test-apps/py-backwards/py_backwards/compiler.py", "total_lines": 60, "covered_lines": 35, "missing_lines": [18, 19, 20, 22, 23, 24, 27, 29, 30, 31, 33, 36, 40, 41, 44, 45, 49, 57, 60, 62, 77, 78, 79, 80, 81], "coverage_percentage": 58.333333333333336, "filter_average": 0, "len_missing_lines": 25}
+codamosa {"file": "codamosa/replication/test-apps/py-backwards/py_backwards/conf.py", "total_lines": 8, "covered_lines": 6, "missing_lines": [9, 13], "coverage_percentage": 75.0, "filter_average": 0, "len_missing_lines": 2}
+codamosa {"file": "codamosa/replication/test-apps/tqdm/tqdm/contrib/telegram.py", "total_lines": 111, "covered_lines": 72, "missing_lines": [29, 33, 34, 35, 36, 37, 38, 42, 44, 45, 47, 49, 50, 52, 57, 58, 59, 60, 62, 63, 65, 66, 67, 78, 79, 113, 114, 115, 116, 119, 120, 122, 124, 125, 128, 130, 135, 137, 145], "coverage_percentage": 64.86486486486487, "filter_average": 0, "len_missing_lines": 39}
+codamosa {"file": "codamosa/replication/test-apps/pypara/pypara/accounting/ledger.py", "total_lines": 106, "covered_lines": 91, "missing_lines": [19, 23, 111, 118, 131, 134, 163, 166, 168, 169, 172, 175, 214, 217, 220], "coverage_percentage": 85.84905660377359, "filter_average": 0, "len_missing_lines": 15}
+codamosa {"file": "codamosa/replication/test-apps/pyMonet/pymonet/immutable_list.py", "total_lines": 103, "covered_lines": 79, "missing_lines": [132, 135, 14, 141, 19, 152, 155, 156, 33, 34, 159, 36, 37, 45, 66, 77, 88, 99, 100, 102, 113, 114, 116, 121], "coverage_percentage": 76.69902912621359, "filter_average": 0, "len_missing_lines": 24}
+codamosa {"file": "codamosa/replication/test-apps/py-backwards/py_backwards/files.py", "total_lines": 29, "covered_lines": 18, "missing_lines": [15, 17, 18, 21, 25, 29, 32, 33, 34, 35, 36], "coverage_percentage": 62.06896551724138, "filter_average": 0, "len_missing_lines": 11}
+codamosa {"file": "codamosa/replication/test-apps/tqdm/tqdm/contrib/utils_worker.py", "total_lines": 29, "covered_lines": 15, "missing_lines": [21, 22, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 39], "coverage_percentage": 51.724137931034484, "filter_average": 0, "len_missing_lines": 14}
+codamosa {"file": "codamosa/replication/test-apps/typesystem/typesystem/base.py", "total_lines": 170, "covered_lines": 153, "missing_lines": [12, 15, 40, 41, 49, 53, 58, 61, 65, 72, 105, 106, 109, 115, 119, 134, 197], "coverage_percentage": 90.0, "filter_average": 0, "len_missing_lines": 17}
+codamosa {"file": "codamosa/replication/test-apps/pypara/pypara/commons/errors.py", "total_lines": 14, "covered_lines": 12, "missing_lines": [27, 28], "coverage_percentage": 85.71428571428571, "filter_average": 0, "len_missing_lines": 2}
+codamosa {"file": "codamosa/replication/test-apps/youtube-dl/youtube_dl/aes.py", "total_lines": 237, "covered_lines": 196, "missing_lines": [21, 22, 25, 31, 46, 47, 50, 56, 72, 73, 76, 84, 98, 99, 104, 110, 114, 119, 134, 137, 155, 158, 181, 184, 187, 190, 196, 201, 206, 207, 228, 236, 240, 246, 252, 257, 265, 269, 277, 285, 290], "coverage_percentage": 82.70042194092827, "filter_average": 0, "len_missing_lines": 41}
+codamosa {"file": "codamosa/replication/test-apps/typesystem/typesystem/composites.py", "total_lines": 78, "covered_lines": 52, "missing_lines": [13, 16, 20, 31, 34, 39, 41, 42, 43, 44, 45, 47, 49, 50, 51, 63, 65, 68, 80, 83, 88, 91, 102, 109, 111, 113], "coverage_percentage": 66.66666666666666, "filter_average": 0, "len_missing_lines": 26}
+codamosa {"file": "codamosa/replication/test-apps/pyMonet/pymonet/lazy.py", "total_lines": 96, "covered_lines": 81, "missing_lines": [4, 5, 20, 21, 25, 155, 31, 43, 46, 61, 73, 85, 88, 97, 110], "coverage_percentage": 84.375, "filter_average": 0, "len_missing_lines": 15}
+codamosa {"file": "codamosa/replication/test-apps/tqdm/tqdm/gui.py", "total_lines": 132, "covered_lines": 107, "missing_lines": [132, 139, 144, 150, 156, 157, 158, 164, 166, 42, 43, 172, 47, 48, 51, 54, 60, 71, 74, 80, 86, 96, 102, 105, 120], "coverage_percentage": 81.06060606060606, "filter_average": 0, "len_missing_lines": 25}
+codamosa {"file": "codamosa/replication/test-apps/pyMonet/pymonet/maybe.py", "total_lines": 111, "covered_lines": 93, "missing_lines": [15, 20, 31, 40, 52, 53, 65, 66, 79, 80, 93, 94, 106, 120, 133, 146, 159, 172], "coverage_percentage": 83.78378378378379, "filter_average": 0, "len_missing_lines": 18}
+codamosa {"file": "codamosa/replication/test-apps/pyMonet/pymonet/monad_try.py", "total_lines": 87, "covered_lines": 75, "missing_lines": [11, 15, 33, 36, 47, 49, 60, 73, 86, 101, 103, 124], "coverage_percentage": 86.20689655172413, "filter_average": 0, "len_missing_lines": 12}
+codamosa {"file": "codamosa/replication/test-apps/tqdm/tqdm/notebook.py", "total_lines": 210, "covered_lines": 154, "missing_lines": [26, 32, 33, 34, 39, 40, 44, 54, 56, 57, 58, 60, 66, 82, 87, 93, 113, 114, 119, 125, 133, 135, 136, 138, 141, 143, 159, 168, 178, 182, 185, 186, 189, 191, 196, 201, 220, 231, 235, 246, 247, 250, 257, 261, 273, 280, 283, 284, 287, 303, 304, 305, 306, 307, 310, 319], "coverage_percentage": 73.33333333333333, "filter_average": 0, "len_missing_lines": 56}
+codamosa {"file": "codamosa/replication/test-apps/pyMonet/pymonet/semigroups.py", "total_lines": 99, "covered_lines": 76, "missing_lines": [11, 17, 29, 32, 41, 49, 52, 61, 69, 72, 81, 90, 99, 108, 117, 126, 135, 143, 146, 155, 163, 166, 175], "coverage_percentage": 76.76767676767676, "filter_average": 0, "len_missing_lines": 23}
+codamosa {"file": "codamosa/replication/test-apps/tqdm/tqdm/rich.py", "total_lines": 96, "covered_lines": 81, "missing_lines": [33, 38, 53, 58, 59, 75, 76, 79, 86, 94, 99, 103, 112, 114, 124], "coverage_percentage": 84.375, "filter_average": 0, "len_missing_lines": 15}
+codamosa {"file": "codamosa/replication/test-apps/typesystem/typesystem/fields.py", "total_lines": 545, "covered_lines": 410, "missing_lines": [515, 520, 524, 20, 24, 27, 30, 35, 36, 39, 42, 553, 556, 559, 52, 563, 55, 568, 569, 61, 65, 576, 68, 577, 580, 583, 584, 74, 76, 82, 85, 88, 601, 604, 93, 96, 609, 102, 109, 112, 117, 118, 125, 128, 129, 132, 135, 137, 138, 142, 145, 146, 150, 155, 165, 168, 174, 181, 186, 188, 192, 194, 195, 198, 207, 208, 215, 217, 218, 221, 223, 224, 226, 227, 231, 232, 238, 242, 246, 249, 253, 258, 262, 264, 265, 269, 274, 275, 283, 286, 291, 296, 305, 308, 311, 315, 320, 329, 337, 342, 345, 348, 349, 361, 362, 367, 372, 373, 379, 380, 392, 393, 404, 405, 410, 416, 417, 418, 428, 429, 435, 438, 443, 449, 455, 459, 465, 470, 473, 479, 482, 488, 498, 501, 507], "coverage_percentage": 75.22935779816514, "filter_average": 0, "len_missing_lines": 135}
+codamosa {"file": "codamosa/replication/test-apps/typesystem/typesystem/formats.py", "total_lines": 110, "covered_lines": 79, "missing_lines": [128, 133, 139, 142, 145, 21, 25, 152, 28, 31, 35, 38, 41, 45, 46, 52, 61, 64, 67, 71, 72, 76, 82, 85, 91, 94, 97, 102, 106, 119, 125], "coverage_percentage": 71.81818181818181, "filter_average": 0, "len_missing_lines": 31}
+codamosa {"file": "codamosa/replication/test-apps/flutils/flutils/codecs/b64.py", "total_lines": 65, "covered_lines": 54, "missing_lines": [29, 32, 33, 36, 37, 60, 63, 66, 71, 76, 85], "coverage_percentage": 83.07692307692308, "filter_average": 0, "len_missing_lines": 11}
+codamosa {"file": "codamosa/replication/test-apps/typesystem/typesystem/json_schema.py", "total_lines": 401, "covered_lines": 158, "missing_lines": [11, 14, 16, 18, 20, 22, 24, 26, 29, 33, 34, 36, 37, 38, 39, 40, 42, 43, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 63, 65, 66, 67, 74, 76, 77, 78, 80, 81, 83, 84, 92, 93, 94, 96, 98, 99, 101, 102, 104, 105, 106, 107, 117, 118, 119, 121, 122, 123, 125, 126, 127, 128, 130, 131, 132, 134, 135, 136, 138, 139, 141, 143, 144, 146, 147, 149, 151, 152, 154, 155, 156, 159, 161, 162, 165, 167, 168, 170, 171, 173, 175, 176, 179, 181, 182, 184, 188, 189, 190, 194, 195, 196, 200, 201, 202, 206, 207, 208, 212, 213, 214, 218, 219, 220, 224, 225, 226, 230, 231, 232, 233, 234, 239, 241, 245, 246, 248, 249, 250, 251, 252, 253, 255, 257, 258, 259, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 291, 292, 293, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 306, 307, 308, 309, 311, 312, 313, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 326, 327, 328, 329, 330, 331, 332, 333, 334, 336, 337, 338, 340, 341, 342, 344, 345, 346, 348, 349, 350, 352, 353, 354, 356, 357, 358, 359, 360, 361, 362, 364, 365, 366, 368, 369, 370, 372, 373, 378, 379, 380], "coverage_percentage": 39.40149625935162, "filter_average": 0, "len_missing_lines": 243}
+codamosa {"file": "codamosa/replication/test-apps/flutils/flutils/codecs/raw_utf8_escape.py", "total_lines": 89, "covered_lines": 68, "missing_lines": [11, 43, 46, 49, 50, 56, 60, 63, 64, 69, 96, 99, 105, 109, 112, 113, 116, 119, 124, 131, 134], "coverage_percentage": 76.40449438202246, "filter_average": 0, "len_missing_lines": 21}
+codamosa {"file": "codamosa/replication/test-apps/flutils/flutils/decorators.py", "total_lines": 48, "covered_lines": 43, "missing_lines": [58, 62, 66, 76, 79], "coverage_percentage": 89.58333333333334, "filter_average": 0, "len_missing_lines": 5}
+codamosa {"file": "codamosa/replication/test-apps/flutils/flutils/namedtupleutils.py", "total_lines": 130, "covered_lines": 128, "missing_lines": [89, 117], "coverage_percentage": 98.46153846153847, "filter_average": 0, "len_missing_lines": 2}
+codamosa {"file": "codamosa/replication/test-apps/flutils/flutils/objutils.py", "total_lines": 163, "covered_lines": 151, "missing_lines": [9, 31, 32, 57, 58, 82, 83, 108, 109, 169, 196, 197], "coverage_percentage": 92.63803680981594, "filter_average": 0, "len_missing_lines": 12}
+codamosa {"file": "codamosa/replication/test-apps/flutils/flutils/packages.py", "total_lines": 222, "covered_lines": 188, "missing_lines": [62, 74, 78, 81, 87, 91, 94, 105, 113, 166, 167, 171, 180, 181, 182, 184, 186, 187, 188, 189, 191, 192, 194, 195, 201, 202, 204, 206, 207, 209, 210, 212, 213, 214], "coverage_percentage": 84.68468468468468, "filter_average": 0, "len_missing_lines": 34}
+codamosa {"file": "codamosa/replication/test-apps/flutils/flutils/pathutils.py", "total_lines": 432, "covered_lines": 398, "missing_lines": [16, 68, 71, 74, 77, 81, 82, 91, 92, 93, 94, 96, 97, 148, 149, 155, 160, 162, 163, 170, 171, 172, 173, 175, 176, 232, 243, 259, 381, 382, 530, 532, 533, 534], "coverage_percentage": 92.12962962962963, "filter_average": 0, "len_missing_lines": 34}
+codamosa {"file": "codamosa/replication/test-apps/flutils/flutils/setuputils/cfg.py", "total_lines": 117, "covered_lines": 80, "missing_lines": [17, 27, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 43, 44, 45, 47, 48, 50, 51, 55, 61, 62, 69, 73, 84, 85, 86, 100, 103, 104, 105, 106, 107, 108, 109], "coverage_percentage": 68.37606837606837, "filter_average": 0, "len_missing_lines": 37}
+codamosa {"file": "codamosa/replication/test-apps/py-backwards/py_backwards/main.py", "total_lines": 40, "covered_lines": 34, "missing_lines": [13, 23, 29, 32, 38, 41], "coverage_percentage": 85.0, "filter_average": 0, "len_missing_lines": 6}
+codamosa {"file": "codamosa/replication/test-apps/ansible/lib/ansible/cli/inventory.py", "total_lines": 276, "covered_lines": 195, "missing_lines": [36, 46, 49, 52, 55, 58, 59, 63, 68, 83, 85, 86, 89, 90, 92, 114, 115, 116, 117, 119, 124, 126, 127, 128, 130, 133, 134, 136, 137, 147, 160, 177, 180, 190, 191, 194, 206, 238, 239, 244, 245, 252, 253, 255, 262, 268, 269, 270, 272, 276, 281, 284, 285, 286, 287, 288, 289, 298, 301, 304, 305, 306, 312, 315, 321, 322, 324, 328, 331, 336, 338, 339, 348, 349, 352, 353, 356, 359, 361, 363, 367], "coverage_percentage": 70.65217391304348, "filter_average": 0, "len_missing_lines": 81}
+ansible/cli/console {"file": "ansible/cli/console", "total_lines": 331.0, "covered_lines": 285, "missing_lines": 0, "coverage_percentage": 86.10271903323263}
+ansible/cli/doc {"file": "ansible/cli/doc", "total_lines": 900.0, "covered_lines": 488, "missing_lines": 0, "coverage_percentage": 54.22222222222223}
+ansible/cli/scripts/ansible_connection_cli_stub {"file": "ansible/cli/scripts/ansible_connection_cli_stub", "total_lines": 243.0, "covered_lines": 91, "missing_lines": 0, "coverage_percentage": 37.4485596707819}
+ansible/cli/vault {"file": "ansible/cli/vault", "total_lines": 279.0, "covered_lines": 212, "missing_lines": 0, "coverage_percentage": 75.98566308243727}
+ansible/collections/list {"file": "ansible/collections/list", "total_lines": 57.0, "covered_lines": 9, "missing_lines": 0, "coverage_percentage": 15.789473684210526}
+ansible/config/data {"file": "ansible/config/data", "total_lines": 28.0, "covered_lines": 14, "missing_lines": 0, "coverage_percentage": 50.0}
+ansible/config/manager {"file": "ansible/config/manager", "total_lines": 370.0, "covered_lines": 350, "missing_lines": 0, "coverage_percentage": 94.5945945945946}
+ansible/constants {"file": "ansible/constants", "total_lines": 138.0, "covered_lines": 136, "missing_lines": 0, "coverage_percentage": 98.55072463768117}
+ansible/context {"file": "ansible/context", "total_lines": 21.0, "covered_lines": 14, "missing_lines": 0, "coverage_percentage": 66.66666666666666}
+ansible/executor/discovery/python_target {"file": "ansible/executor/discovery/python_target", "total_lines": 26.0, "covered_lines": 19, "missing_lines": 0, "coverage_percentage": 73.07692307692307}
+ansible/executor/interpreter_discovery {"file": "ansible/executor/interpreter_discovery", "total_lines": 121.0, "covered_lines": 40, "missing_lines": 0, "coverage_percentage": 33.057851239669425}
+ansible/executor/play_iterator {"file": "ansible/executor/play_iterator", "total_lines": 377.0, "covered_lines": 142, "missing_lines": 0, "coverage_percentage": 37.6657824933687}
+ansible/executor/playbook_executor {"file": "ansible/executor/playbook_executor", "total_lines": 193.0, "covered_lines": 141, "missing_lines": 0, "coverage_percentage": 73.05699481865285}
+ansible/executor/powershell/module_manifest {"file": "ansible/executor/powershell/module_manifest", "total_lines": 252.0, "covered_lines": 233, "missing_lines": 0, "coverage_percentage": 92.46031746031747}
+ansible/executor/process/worker {"file": "ansible/executor/process/worker", "total_lines": 104.0, "covered_lines": 99, "missing_lines": 0, "coverage_percentage": 95.1923076923077}
+ansible/executor/stats {"file": "ansible/executor/stats", "total_lines": 53.0, "covered_lines": 49, "missing_lines": 0, "coverage_percentage": 92.45283018867924}
+ansible/executor/task_result {"file": "ansible/executor/task_result", "total_lines": 89.0, "covered_lines": 88, "missing_lines": 0, "coverage_percentage": 98.87640449438202}
+ansible/galaxy/api {"file": "ansible/galaxy/api", "total_lines": 569.0, "covered_lines": 353, "missing_lines": 0, "coverage_percentage": 62.038664323374334}
+ansible/galaxy/token {"file": "ansible/galaxy/token", "total_lines": 109.0, "covered_lines": 109.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/inventory/data {"file": "ansible/inventory/data", "total_lines": 168.0, "covered_lines": 148, "missing_lines": 0, "coverage_percentage": 88.09523809523809}
+ansible/inventory/group {"file": "ansible/inventory/group", "total_lines": 191.0, "covered_lines": 191.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/inventory/helpers {"file": "ansible/inventory/helpers", "total_lines": 10.0, "covered_lines": 10, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/inventory/host {"file": "ansible/inventory/host", "total_lines": 102.0, "covered_lines": 86, "missing_lines": 0, "coverage_percentage": 84.31372549019608}
+ansible/inventory/manager {"file": "ansible/inventory/manager", "total_lines": 341.0, "covered_lines": 282, "missing_lines": 0, "coverage_percentage": 82.69794721407625}
+ansible/module_utils/api {"file": "ansible/module_utils/api", "total_lines": 92.0, "covered_lines": 92.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/common/_utils {"file": "ansible/module_utils/common/_utils", "total_lines": 14.0, "covered_lines": 13, "missing_lines": 0, "coverage_percentage": 92.85714285714286}
+ansible/module_utils/common/arg_spec {"file": "ansible/module_utils/common/arg_spec", "total_lines": 122.0, "covered_lines": 92, "missing_lines": 0, "coverage_percentage": 75.40983606557377}
+ansible/module_utils/common/collections {"file": "ansible/module_utils/common/collections", "total_lines": 53.0, "covered_lines": 53.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/common/dict_transformations {"file": "ansible/module_utils/common/dict_transformations", "total_lines": 83.0, "covered_lines": 83.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/common/json {"file": "ansible/module_utils/common/json", "total_lines": 42.0, "covered_lines": 36, "missing_lines": 0, "coverage_percentage": 85.71428571428571}
+ansible/module_utils/common/locale {"file": "ansible/module_utils/common/locale", "total_lines": 27.0, "covered_lines": 27.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/common/network {"file": "ansible/module_utils/common/network", "total_lines": 96.0, "covered_lines": 96.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/common/parameters {"file": "ansible/module_utils/common/parameters", "total_lines": 477.0, "covered_lines": 423, "missing_lines": 0, "coverage_percentage": 88.67924528301887}
+ansible/module_utils/common/process {"file": "ansible/module_utils/common/process", "total_lines": 26.0, "covered_lines": 5, "missing_lines": 0, "coverage_percentage": 19.230769230769234}
+ansible/module_utils/common/sys_info {"file": "ansible/module_utils/common/sys_info", "total_lines": 60.0, "covered_lines": 60.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/common/text/converters {"file": "ansible/module_utils/common/text/converters", "total_lines": 117.0, "covered_lines": 109, "missing_lines": 0, "coverage_percentage": 93.16239316239316}
+ansible/module_utils/common/text/formatters {"file": "ansible/module_utils/common/text/formatters", "total_lines": 67.0, "covered_lines": 60, "missing_lines": 0, "coverage_percentage": 89.55223880597015}
+ansible/module_utils/common/validation {"file": "ansible/module_utils/common/validation", "total_lines": 264.0, "covered_lines": 264.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/compat/selinux {"file": "ansible/module_utils/compat/selinux", "total_lines": 71.0, "covered_lines": 59, "missing_lines": 0, "coverage_percentage": 83.09859154929578}
+ansible/module_utils/compat/version {"file": "ansible/module_utils/compat/version", "total_lines": 115.0, "covered_lines": 103, "missing_lines": 0, "coverage_percentage": 89.56521739130436}
+ansible/module_utils/connection {"file": "ansible/module_utils/connection", "total_lines": 128.0, "covered_lines": 99, "missing_lines": 0, "coverage_percentage": 77.34375}
+ansible/module_utils/facts/ansible_collector {"file": "ansible/module_utils/facts/ansible_collector", "total_lines": 84.0, "covered_lines": 67, "missing_lines": 0, "coverage_percentage": 79.76190476190477}
+ansible/module_utils/facts/collector {"file": "ansible/module_utils/facts/collector", "total_lines": 212.0, "covered_lines": 212.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/compat {"file": "ansible/module_utils/facts/compat", "total_lines": 24.0, "covered_lines": 24.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/hardware/aix {"file": "ansible/module_utils/facts/hardware/aix", "total_lines": 162.0, "covered_lines": 125, "missing_lines": 0, "coverage_percentage": 77.1604938271605}
+ansible/module_utils/facts/hardware/darwin {"file": "ansible/module_utils/facts/hardware/darwin", "total_lines": 91.0, "covered_lines": 68, "missing_lines": 0, "coverage_percentage": 74.72527472527473}
+ansible/module_utils/facts/hardware/freebsd {"file": "ansible/module_utils/facts/hardware/freebsd", "total_lines": 161.0, "covered_lines": 157, "missing_lines": 0, "coverage_percentage": 97.51552795031056}
+ansible/module_utils/facts/hardware/hpux {"file": "ansible/module_utils/facts/hardware/hpux", "total_lines": 108.0, "covered_lines": 79, "missing_lines": 0, "coverage_percentage": 73.14814814814815}
+ansible/module_utils/facts/hardware/hurd {"file": "ansible/module_utils/facts/hardware/hurd", "total_lines": 24.0, "covered_lines": 24.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/hardware/netbsd {"file": "ansible/module_utils/facts/hardware/netbsd", "total_lines": 102.0, "covered_lines": 86, "missing_lines": 0, "coverage_percentage": 84.31372549019608}
+ansible/module_utils/facts/hardware/openbsd {"file": "ansible/module_utils/facts/hardware/openbsd", "total_lines": 101.0, "covered_lines": 82, "missing_lines": 0, "coverage_percentage": 81.1881188118812}
+ansible/module_utils/facts/hardware/sunos {"file": "ansible/module_utils/facts/hardware/sunos", "total_lines": 169.0, "covered_lines": 119, "missing_lines": 0, "coverage_percentage": 70.41420118343196}
+ansible/module_utils/facts/network/aix {"file": "ansible/module_utils/facts/network/aix", "total_lines": 97.0, "covered_lines": 33, "missing_lines": 0, "coverage_percentage": 34.02061855670103}
+ansible/module_utils/facts/network/darwin {"file": "ansible/module_utils/facts/network/darwin", "total_lines": 20.0, "covered_lines": 9, "missing_lines": 0, "coverage_percentage": 45.0}
+ansible/module_utils/facts/network/fc_wwn {"file": "ansible/module_utils/facts/network/fc_wwn", "total_lines": 64.0, "covered_lines": 7, "missing_lines": 0, "coverage_percentage": 10.9375}
+ansible/module_utils/facts/network/generic_bsd {"file": "ansible/module_utils/facts/network/generic_bsd", "total_lines": 195.0, "covered_lines": 126, "missing_lines": 0, "coverage_percentage": 64.61538461538461}
+ansible/module_utils/facts/network/hpux {"file": "ansible/module_utils/facts/network/hpux", "total_lines": 49.0, "covered_lines": 49.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/network/hurd {"file": "ansible/module_utils/facts/network/hurd", "total_lines": 51.0, "covered_lines": 51.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/network/linux {"file": "ansible/module_utils/facts/network/linux", "total_lines": 236.0, "covered_lines": 102, "missing_lines": 0, "coverage_percentage": 43.22033898305085}
+ansible/module_utils/facts/network/sunos {"file": "ansible/module_utils/facts/network/sunos", "total_lines": 69.0, "covered_lines": 28, "missing_lines": 0, "coverage_percentage": 40.57971014492754}
+ansible/module_utils/facts/other/facter {"file": "ansible/module_utils/facts/other/facter", "total_lines": 42.0, "covered_lines": 42, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/other/ohai {"file": "ansible/module_utils/facts/other/ohai", "total_lines": 40.0, "covered_lines": 40.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/packages {"file": "ansible/module_utils/facts/packages", "total_lines": 53.0, "covered_lines": 43, "missing_lines": 0, "coverage_percentage": 81.13207547169812}
+ansible/module_utils/facts/sysctl {"file": "ansible/module_utils/facts/sysctl", "total_lines": 32.0, "covered_lines": 32.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/system/apparmor {"file": "ansible/module_utils/facts/system/apparmor", "total_lines": 15.0, "covered_lines": 15.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/system/caps {"file": "ansible/module_utils/facts/system/caps", "total_lines": 27.0, "covered_lines": 26, "missing_lines": 0, "coverage_percentage": 96.29629629629629}
+ansible/module_utils/facts/system/chroot {"file": "ansible/module_utils/facts/system/chroot", "total_lines": 30.0, "covered_lines": 30.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/system/cmdline {"file": "ansible/module_utils/facts/system/cmdline", "total_lines": 45.0, "covered_lines": 36, "missing_lines": 0, "coverage_percentage": 80.0}
+ansible/module_utils/facts/system/date_time {"file": "ansible/module_utils/facts/system/date_time", "total_lines": 40.0, "covered_lines": 40, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/system/distribution {"file": "ansible/module_utils/facts/system/distribution", "total_lines": 502.0, "covered_lines": 331, "missing_lines": 0, "coverage_percentage": 65.93625498007968}
+ansible/module_utils/facts/system/dns {"file": "ansible/module_utils/facts/system/dns", "total_lines": 42.0, "covered_lines": 5, "missing_lines": 0, "coverage_percentage": 11.904761904761903}
+ansible/module_utils/facts/system/fips {"file": "ansible/module_utils/facts/system/fips", "total_lines": 14.0, "covered_lines": 14, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/system/local {"file": "ansible/module_utils/facts/system/local", "total_lines": 66.0, "covered_lines": 16, "missing_lines": 0, "coverage_percentage": 24.242424242424242}
+ansible/module_utils/facts/system/lsb {"file": "ansible/module_utils/facts/system/lsb", "total_lines": 64.0, "covered_lines": 50, "missing_lines": 0, "coverage_percentage": 78.125}
+ansible/module_utils/facts/system/platform {"file": "ansible/module_utils/facts/system/platform", "total_lines": 55.0, "covered_lines": 44, "missing_lines": 0, "coverage_percentage": 80.0}
+ansible/module_utils/facts/system/python {"file": "ansible/module_utils/facts/system/python", "total_lines": 34.0, "covered_lines": 34, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/system/selinux {"file": "ansible/module_utils/facts/system/selinux", "total_lines": 52.0, "covered_lines": 52.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/system/service_mgr {"file": "ansible/module_utils/facts/system/service_mgr", "total_lines": 82.0, "covered_lines": 25, "missing_lines": 0, "coverage_percentage": 30.48780487804878}
+ansible/module_utils/facts/system/ssh_pub_keys {"file": "ansible/module_utils/facts/system/ssh_pub_keys", "total_lines": 23.0, "covered_lines": 6, "missing_lines": 0, "coverage_percentage": 26.08695652173913}
+ansible/module_utils/facts/system/user {"file": "ansible/module_utils/facts/system/user", "total_lines": 26.0, "covered_lines": 26.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/utils {"file": "ansible/module_utils/facts/utils", "total_lines": 50.0, "covered_lines": 50.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/virtual/freebsd {"file": "ansible/module_utils/facts/virtual/freebsd", "total_lines": 41.0, "covered_lines": 41.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/virtual/hpux {"file": "ansible/module_utils/facts/virtual/hpux", "total_lines": 44.0, "covered_lines": 44.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/virtual/linux {"file": "ansible/module_utils/facts/virtual/linux", "total_lines": 307.0, "covered_lines": 38, "missing_lines": 0, "coverage_percentage": 12.37785016286645}
+ansible/module_utils/facts/virtual/netbsd {"file": "ansible/module_utils/facts/virtual/netbsd", "total_lines": 38.0, "covered_lines": 38.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/virtual/openbsd {"file": "ansible/module_utils/facts/virtual/openbsd", "total_lines": 38.0, "covered_lines": 38, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/module_utils/facts/virtual/sunos {"file": "ansible/module_utils/facts/virtual/sunos", "total_lines": 92.0, "covered_lines": 11, "missing_lines": 0, "coverage_percentage": 11.956521739130435}
+ansible/module_utils/facts/virtual/sysctl {"file": "ansible/module_utils/facts/virtual/sysctl", "total_lines": 85.0, "covered_lines": 13, "missing_lines": 0, "coverage_percentage": 15.294117647058824}
+ansible/module_utils/pycompat24 {"file": "ansible/module_utils/pycompat24", "total_lines": 33.0, "covered_lines": 7, "missing_lines": 0, "coverage_percentage": 21.21212121212121}
+ansible/module_utils/splitter {"file": "ansible/module_utils/splitter", "total_lines": 94.0, "covered_lines": 32, "missing_lines": 0, "coverage_percentage": 34.04255319148936}
+ansible/module_utils/urls {"file": "ansible/module_utils/urls", "total_lines": 1053.0, "covered_lines": 537, "missing_lines": 0, "coverage_percentage": 50.997150997150996}
+ansible/module_utils/yumdnf {"file": "ansible/module_utils/yumdnf", "total_lines": 119.0, "covered_lines": 116, "missing_lines": 0, "coverage_percentage": 97.47899159663865}
+ansible/modules/apt_repository {"file": "ansible/modules/apt_repository", "total_lines": 365.0, "covered_lines": 161, "missing_lines": 0, "coverage_percentage": 44.109589041095894}
+ansible/modules/command {"file": "ansible/modules/command", "total_lines": 129.0, "covered_lines": 119, "missing_lines": 0, "coverage_percentage": 92.24806201550388}
+ansible/modules/cron {"file": "ansible/modules/cron", "total_lines": 380.0, "covered_lines": 151, "missing_lines": 0, "coverage_percentage": 39.73684210526316}
+ansible/modules/debconf {"file": "ansible/modules/debconf", "total_lines": 76.0, "covered_lines": 24, "missing_lines": 0, "coverage_percentage": 31.57894736842105}
+ansible/modules/dnf {"file": "ansible/modules/dnf", "total_lines": 697.0, "covered_lines": 127, "missing_lines": 0, "coverage_percentage": 18.220946915351508}
+ansible/modules/dpkg_selections {"file": "ansible/modules/dpkg_selections", "total_lines": 25.0, "covered_lines": 1, "missing_lines": 0, "coverage_percentage": 4.0}
+ansible/modules/expect {"file": "ansible/modules/expect", "total_lines": 106.0, "covered_lines": 29, "missing_lines": 0, "coverage_percentage": 27.358490566037734}
+ansible/modules/getent {"file": "ansible/modules/getent", "total_lines": 62.0, "covered_lines": 6, "missing_lines": 0, "coverage_percentage": 9.67741935483871}
+ansible/modules/iptables {"file": "ansible/modules/iptables", "total_lines": 267.0, "covered_lines": 103, "missing_lines": 0, "coverage_percentage": 38.57677902621723}
+ansible/modules/lineinfile {"file": "ansible/modules/lineinfile", "total_lines": 269.0, "covered_lines": 47, "missing_lines": 0, "coverage_percentage": 17.472118959107807}
+ansible/modules/ping {"file": "ansible/modules/ping", "total_lines": 18.0, "covered_lines": 17, "missing_lines": 0, "coverage_percentage": 94.44444444444444}
+ansible/modules/pip {"file": "ansible/modules/pip", "total_lines": 360.0, "covered_lines": 145, "missing_lines": 0, "coverage_percentage": 40.27777777777778}
+ansible/modules/replace {"file": "ansible/modules/replace", "total_lines": 108.0, "covered_lines": 8, "missing_lines": 0, "coverage_percentage": 7.4074074074074066}
+ansible/modules/rpm_key {"file": "ansible/modules/rpm_key", "total_lines": 128.0, "covered_lines": 71, "missing_lines": 0, "coverage_percentage": 55.46875}
+ansible/modules/slurp {"file": "ansible/modules/slurp", "total_lines": 32.0, "covered_lines": 0, "missing_lines": 0, "coverage_percentage": 0.0}
+ansible/modules/subversion {"file": "ansible/modules/subversion", "total_lines": 195.0, "covered_lines": 41, "missing_lines": 0, "coverage_percentage": 21.025641025641026}
+ansible/modules/systemd {"file": "ansible/modules/systemd", "total_lines": 176.0, "covered_lines": 44, "missing_lines": 0, "coverage_percentage": 25.0}
+ansible/modules/sysvinit {"file": "ansible/modules/sysvinit", "total_lines": 168.0, "covered_lines": 15, "missing_lines": 0, "coverage_percentage": 8.928571428571429}
+ansible/modules/yum_repository {"file": "ansible/modules/yum_repository", "total_lines": 171.0, "covered_lines": 51, "missing_lines": 0, "coverage_percentage": 29.82456140350877}
+ansible/parsing/ajson {"file": "ansible/parsing/ajson", "total_lines": 26.0, "covered_lines": 26.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/parsing/dataloader {"file": "ansible/parsing/dataloader", "total_lines": 248.0, "covered_lines": 245, "missing_lines": 0, "coverage_percentage": 98.79032258064517}
+ansible/parsing/mod_args {"file": "ansible/parsing/mod_args", "total_lines": 142.0, "covered_lines": 131, "missing_lines": 0, "coverage_percentage": 92.25352112676056}
+ansible/parsing/quoting {"file": "ansible/parsing/quoting", "total_lines": 8.0, "covered_lines": 8, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/parsing/splitter {"file": "ansible/parsing/splitter", "total_lines": 132.0, "covered_lines": 132.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/parsing/utils/addresses {"file": "ansible/parsing/utils/addresses", "total_lines": 48.0, "covered_lines": 47, "missing_lines": 0, "coverage_percentage": 97.91666666666666}
+ansible/parsing/utils/jsonify {"file": "ansible/parsing/utils/jsonify", "total_lines": 13.0, "covered_lines": 13.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/parsing/utils/yaml {"file": "ansible/parsing/utils/yaml", "total_lines": 41.0, "covered_lines": 41.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/parsing/yaml/constructor {"file": "ansible/parsing/yaml/constructor", "total_lines": 112.0, "covered_lines": 100, "missing_lines": 0, "coverage_percentage": 89.28571428571429}
+ansible/parsing/yaml/dumper {"file": "ansible/parsing/yaml/dumper", "total_lines": 52.0, "covered_lines": 52.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/parsing/yaml/loader {"file": "ansible/parsing/yaml/loader", "total_lines": 23.0, "covered_lines": 12, "missing_lines": 0, "coverage_percentage": 52.17391304347826}
+ansible/parsing/yaml/objects {"file": "ansible/parsing/yaml/objects", "total_lines": 230.0, "covered_lines": 230.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/playbook/attribute {"file": "ansible/playbook/attribute", "total_lines": 48.0, "covered_lines": 48, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/playbook/base {"file": "ansible/playbook/base", "total_lines": 554.0, "covered_lines": 434, "missing_lines": 0, "coverage_percentage": 78.33935018050542}
+ansible/playbook/block {"file": "ansible/playbook/block", "total_lines": 280.0, "covered_lines": 219, "missing_lines": 0, "coverage_percentage": 78.21428571428571}
+ansible/playbook/collectionsearch {"file": "ansible/playbook/collectionsearch", "total_lines": 31.0, "covered_lines": 17, "missing_lines": 0, "coverage_percentage": 54.83870967741935}
+ansible/playbook/conditional {"file": "ansible/playbook/conditional", "total_lines": 117.0, "covered_lines": 63, "missing_lines": 0, "coverage_percentage": 53.84615384615385}
+ansible/playbook/handler_task_include {"file": "ansible/playbook/handler_task_include", "total_lines": 13.0, "covered_lines": 13, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/playbook/helpers {"file": "ansible/playbook/helpers", "total_lines": 210.0, "covered_lines": 90, "missing_lines": 0, "coverage_percentage": 42.857142857142854}
+ansible/playbook/included_file {"file": "ansible/playbook/included_file", "total_lines": 150.0, "covered_lines": 82, "missing_lines": 0, "coverage_percentage": 54.666666666666664}
+ansible/playbook/play {"file": "ansible/playbook/play", "total_lines": 217.0, "covered_lines": 209, "missing_lines": 0, "coverage_percentage": 96.31336405529954}
+ansible/playbook/play_context {"file": "ansible/playbook/play_context", "total_lines": 168.0, "covered_lines": 87, "missing_lines": 0, "coverage_percentage": 51.78571428571429}
+ansible/playbook/playbook_include {"file": "ansible/playbook/playbook_include", "total_lines": 96.0, "covered_lines": 47, "missing_lines": 0, "coverage_percentage": 48.95833333333333}
+ansible/playbook/role/definition {"file": "ansible/playbook/role/definition", "total_lines": 112.0, "covered_lines": 107, "missing_lines": 0, "coverage_percentage": 95.53571428571429}
+ansible/playbook/role/include {"file": "ansible/playbook/role/include", "total_lines": 26.0, "covered_lines": 26.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/playbook/role/metadata {"file": "ansible/playbook/role/metadata", "total_lines": 69.0, "covered_lines": 35, "missing_lines": 0, "coverage_percentage": 50.72463768115942}
+ansible/playbook/role/requirement {"file": "ansible/playbook/role/requirement", "total_lines": 70.0, "covered_lines": 20, "missing_lines": 0, "coverage_percentage": 28.57142857142857}
+ansible/playbook/role_include {"file": "ansible/playbook/role_include", "total_lines": 105.0, "covered_lines": 78, "missing_lines": 0, "coverage_percentage": 74.28571428571429}
+ansible/playbook/taggable {"file": "ansible/playbook/taggable", "total_lines": 50.0, "covered_lines": 49, "missing_lines": 0, "coverage_percentage": 98.0}
+ansible/playbook/task {"file": "ansible/playbook/task", "total_lines": 287.0, "covered_lines": 260, "missing_lines": 0, "coverage_percentage": 90.59233449477352}
+ansible/playbook/task_include {"file": "ansible/playbook/task_include", "total_lines": 81.0, "covered_lines": 66, "missing_lines": 0, "coverage_percentage": 81.48148148148148}
+ansible/plugins/action/assemble {"file": "ansible/plugins/action/assemble", "total_lines": 98.0, "covered_lines": 9, "missing_lines": 0, "coverage_percentage": 9.183673469387756}
+ansible/plugins/action/assert {"file": "ansible/plugins/action/assert", "total_lines": 55.0, "covered_lines": 4, "missing_lines": 0, "coverage_percentage": 7.2727272727272725}
+ansible/plugins/action/copy {"file": "ansible/plugins/action/copy", "total_lines": 309.0, "covered_lines": 74, "missing_lines": 0, "coverage_percentage": 23.948220064724918}
+ansible/plugins/action/debug {"file": "ansible/plugins/action/debug", "total_lines": 41.0, "covered_lines": 4, "missing_lines": 0, "coverage_percentage": 9.75609756097561}
+ansible/plugins/action/fail {"file": "ansible/plugins/action/fail", "total_lines": 18.0, "covered_lines": 0, "missing_lines": 0, "coverage_percentage": 0.0}
+ansible/plugins/action/fetch {"file": "ansible/plugins/action/fetch", "total_lines": 128.0, "covered_lines": 10, "missing_lines": 0, "coverage_percentage": 7.8125}
+ansible/plugins/action/gather_facts {"file": "ansible/plugins/action/gather_facts", "total_lines": 94.0, "covered_lines": 18, "missing_lines": 0, "coverage_percentage": 19.148936170212767}
+ansible/plugins/action/group_by {"file": "ansible/plugins/action/group_by", "total_lines": 25.0, "covered_lines": 25, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/action/include_vars {"file": "ansible/plugins/action/include_vars", "total_lines": 189.0, "covered_lines": 110, "missing_lines": 0, "coverage_percentage": 58.201058201058196}
+ansible/plugins/action/normal {"file": "ansible/plugins/action/normal", "total_lines": 21.0, "covered_lines": 0, "missing_lines": 0, "coverage_percentage": 0.0}
+ansible/plugins/action/pause {"file": "ansible/plugins/action/pause", "total_lines": 187.0, "covered_lines": 65, "missing_lines": 0, "coverage_percentage": 34.75935828877005}
+ansible/plugins/action/reboot {"file": "ansible/plugins/action/reboot", "total_lines": 342.0, "covered_lines": 323, "missing_lines": 0, "coverage_percentage": 94.44444444444444}
+ansible/plugins/action/service {"file": "ansible/plugins/action/service", "total_lines": 55.0, "covered_lines": 3, "missing_lines": 0, "coverage_percentage": 5.454545454545454}
+ansible/plugins/action/set_fact {"file": "ansible/plugins/action/set_fact", "total_lines": 32.0, "covered_lines": 31, "missing_lines": 0, "coverage_percentage": 96.875}
+ansible/plugins/action/set_stats {"file": "ansible/plugins/action/set_stats", "total_lines": 40.0, "covered_lines": 39, "missing_lines": 0, "coverage_percentage": 97.5}
+ansible/plugins/action/shell {"file": "ansible/plugins/action/shell", "total_lines": 16.0, "covered_lines": 16, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/action/unarchive {"file": "ansible/plugins/action/unarchive", "total_lines": 58.0, "covered_lines": 5, "missing_lines": 0, "coverage_percentage": 8.620689655172415}
+ansible/plugins/action/validate_argument_spec {"file": "ansible/plugins/action/validate_argument_spec", "total_lines": 44.0, "covered_lines": 18, "missing_lines": 0, "coverage_percentage": 40.909090909090914}
+ansible/plugins/action/wait_for_connection {"file": "ansible/plugins/action/wait_for_connection", "total_lines": 69.0, "covered_lines": 33, "missing_lines": 0, "coverage_percentage": 47.82608695652174}
+ansible/plugins/action/yum {"file": "ansible/plugins/action/yum", "total_lines": 53.0, "covered_lines": 5, "missing_lines": 0, "coverage_percentage": 9.433962264150944}
+ansible/plugins/become/su {"file": "ansible/plugins/become/su", "total_lines": 27.0, "covered_lines": 27.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/become/sudo {"file": "ansible/plugins/become/sudo", "total_lines": 24.0, "covered_lines": 1, "missing_lines": 0, "coverage_percentage": 4.166666666666666}
+ansible/plugins/cache/jsonfile {"file": "ansible/plugins/cache/jsonfile", "total_lines": 15.0, "covered_lines": 0, "missing_lines": 0, "coverage_percentage": 0.0}
+ansible/plugins/callback/default {"file": "ansible/plugins/callback/default", "total_lines": 282.0, "covered_lines": 244, "missing_lines": 0, "coverage_percentage": 86.52482269503547}
+ansible/plugins/callback/junit {"file": "ansible/plugins/callback/junit", "total_lines": 163.0, "covered_lines": 154, "missing_lines": 0, "coverage_percentage": 94.47852760736197}
+ansible/plugins/callback/minimal {"file": "ansible/plugins/callback/minimal", "total_lines": 40.0, "covered_lines": 40.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/callback/oneline {"file": "ansible/plugins/callback/oneline", "total_lines": 41.0, "covered_lines": 41.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/callback/tree {"file": "ansible/plugins/callback/tree", "total_lines": 39.0, "covered_lines": 2, "missing_lines": 0, "coverage_percentage": 5.128205128205128}
+ansible/plugins/connection/paramiko_ssh {"file": "ansible/plugins/connection/paramiko_ssh", "total_lines": 300.0, "covered_lines": 99, "missing_lines": 0, "coverage_percentage": 33.0}
+ansible/plugins/connection/psrp {"file": "ansible/plugins/connection/psrp", "total_lines": 375.0, "covered_lines": 225, "missing_lines": 0, "coverage_percentage": 60.0}
+ansible/plugins/filter/core {"file": "ansible/plugins/filter/core", "total_lines": 406.0, "covered_lines": 322, "missing_lines": 0, "coverage_percentage": 79.3103448275862}
+ansible/plugins/filter/encryption {"file": "ansible/plugins/filter/encryption", "total_lines": 56.0, "covered_lines": 56.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/filter/mathstuff {"file": "ansible/plugins/filter/mathstuff", "total_lines": 173.0, "covered_lines": 126, "missing_lines": 0, "coverage_percentage": 72.83236994219652}
+ansible/plugins/filter/urls {"file": "ansible/plugins/filter/urls", "total_lines": 46.0, "covered_lines": 37, "missing_lines": 0, "coverage_percentage": 80.43478260869566}
+ansible/plugins/filter/urlsplit {"file": "ansible/plugins/filter/urlsplit", "total_lines": 17.0, "covered_lines": 17.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/inventory/advanced_host_list {"file": "ansible/plugins/inventory/advanced_host_list", "total_lines": 33.0, "covered_lines": 33.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/inventory/auto {"file": "ansible/plugins/inventory/auto", "total_lines": 31.0, "covered_lines": 31.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/inventory/constructed {"file": "ansible/plugins/inventory/constructed", "total_lines": 62.0, "covered_lines": 56, "missing_lines": 0, "coverage_percentage": 90.32258064516128}
+ansible/plugins/inventory/generator {"file": "ansible/plugins/inventory/generator", "total_lines": 48.0, "covered_lines": 48, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/inventory/host_list {"file": "ansible/plugins/inventory/host_list", "total_lines": 33.0, "covered_lines": 0, "missing_lines": 0, "coverage_percentage": 0.0}
+ansible/plugins/inventory/ini {"file": "ansible/plugins/inventory/ini", "total_lines": 148.0, "covered_lines": 61, "missing_lines": 0, "coverage_percentage": 41.21621621621622}
+ansible/plugins/inventory/toml {"file": "ansible/plugins/inventory/toml", "total_lines": 119.0, "covered_lines": 119.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/inventory/yaml {"file": "ansible/plugins/inventory/yaml", "total_lines": 76.0, "covered_lines": 24, "missing_lines": 0, "coverage_percentage": 31.57894736842105}
+ansible/plugins/loader {"file": "ansible/plugins/loader", "total_lines": 802.0, "covered_lines": 690, "missing_lines": 0, "coverage_percentage": 86.0349127182045}
+ansible/plugins/lookup/config {"file": "ansible/plugins/lookup/config", "total_lines": 66.0, "covered_lines": 20, "missing_lines": 0, "coverage_percentage": 30.303030303030305}
+ansible/plugins/lookup/csvfile {"file": "ansible/plugins/lookup/csvfile", "total_lines": 75.0, "covered_lines": 36, "missing_lines": 0, "coverage_percentage": 48.0}
+ansible/plugins/lookup/file {"file": "ansible/plugins/lookup/file", "total_lines": 31.0, "covered_lines": 31.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/lookup/fileglob {"file": "ansible/plugins/lookup/fileglob", "total_lines": 32.0, "covered_lines": 5, "missing_lines": 0, "coverage_percentage": 15.625}
+ansible/plugins/lookup/first_found {"file": "ansible/plugins/lookup/first_found", "total_lines": 63.0, "covered_lines": 38, "missing_lines": 0, "coverage_percentage": 60.317460317460316}
+ansible/plugins/lookup/ini {"file": "ansible/plugins/lookup/ini", "total_lines": 89.0, "covered_lines": 40, "missing_lines": 0, "coverage_percentage": 44.9438202247191}
+ansible/plugins/lookup/inventory_hostnames {"file": "ansible/plugins/lookup/inventory_hostnames", "total_lines": 19.0, "covered_lines": 19, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/lookup/nested {"file": "ansible/plugins/lookup/nested", "total_lines": 34.0, "covered_lines": 34.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/lookup/random_choice {"file": "ansible/plugins/lookup/random_choice", "total_lines": 18.0, "covered_lines": 18, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/lookup/sequence {"file": "ansible/plugins/lookup/sequence", "total_lines": 127.0, "covered_lines": 108, "missing_lines": 0, "coverage_percentage": 85.03937007874016}
+ansible/plugins/lookup/subelements {"file": "ansible/plugins/lookup/subelements", "total_lines": 63.0, "covered_lines": 10, "missing_lines": 0, "coverage_percentage": 15.873015873015872}
+ansible/plugins/lookup/template {"file": "ansible/plugins/lookup/template", "total_lines": 59.0, "covered_lines": 55, "missing_lines": 0, "coverage_percentage": 93.22033898305084}
+ansible/plugins/lookup/together {"file": "ansible/plugins/lookup/together", "total_lines": 23.0, "covered_lines": 23.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/lookup/unvault {"file": "ansible/plugins/lookup/unvault", "total_lines": 25.0, "covered_lines": 25.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/lookup/url {"file": "ansible/plugins/lookup/url", "total_lines": 46.0, "covered_lines": 10, "missing_lines": 0, "coverage_percentage": 21.73913043478261}
+ansible/plugins/lookup/varnames {"file": "ansible/plugins/lookup/varnames", "total_lines": 28.0, "covered_lines": 8, "missing_lines": 0, "coverage_percentage": 28.57142857142857}
+ansible/plugins/lookup/vars {"file": "ansible/plugins/lookup/vars", "total_lines": 33.0, "covered_lines": 33.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/shell/powershell {"file": "ansible/plugins/shell/powershell", "total_lines": 129.0, "covered_lines": 129.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/strategy/debug {"file": "ansible/plugins/strategy/debug", "total_lines": 11.0, "covered_lines": 11.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/strategy/free {"file": "ansible/plugins/strategy/free", "total_lines": 153.0, "covered_lines": 37, "missing_lines": 0, "coverage_percentage": 24.18300653594771}
+ansible/plugins/strategy/host_pinned {"file": "ansible/plugins/strategy/host_pinned", "total_lines": 10.0, "covered_lines": 10, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/plugins/strategy/linear {"file": "ansible/plugins/strategy/linear", "total_lines": 286.0, "covered_lines": 67, "missing_lines": 0, "coverage_percentage": 23.426573426573427}
+ansible/plugins/vars/host_group_vars {"file": "ansible/plugins/vars/host_group_vars", "total_lines": 46.0, "covered_lines": 46.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/template/native_helpers {"file": "ansible/template/native_helpers", "total_lines": 42.0, "covered_lines": 42.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/template/safe_eval {"file": "ansible/template/safe_eval", "total_lines": 71.0, "covered_lines": 9, "missing_lines": 0, "coverage_percentage": 12.676056338028168}
+ansible/template/vars {"file": "ansible/template/vars", "total_lines": 64.0, "covered_lines": 55, "missing_lines": 0, "coverage_percentage": 85.9375}
+ansible/utils/_junit_xml {"file": "ansible/utils/_junit_xml", "total_lines": 173.0, "covered_lines": 172, "missing_lines": 0, "coverage_percentage": 99.42196531791907}
+ansible/utils/collection_loader/_collection_config {"file": "ansible/utils/collection_loader/_collection_config", "total_lines": 70.0, "covered_lines": 64, "missing_lines": 0, "coverage_percentage": 91.42857142857143}
+ansible/utils/collection_loader/_collection_finder {"file": "ansible/utils/collection_loader/_collection_finder", "total_lines": 607.0, "covered_lines": 566, "missing_lines": 0, "coverage_percentage": 93.24546952224053}
+ansible/utils/color {"file": "ansible/utils/color", "total_lines": 55.0, "covered_lines": 45, "missing_lines": 0, "coverage_percentage": 81.81818181818183}
+ansible/utils/context_objects {"file": "ansible/utils/context_objects", "total_lines": 50.0, "covered_lines": 50.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/utils/hashing {"file": "ansible/utils/hashing", "total_lines": 46.0, "covered_lines": 44, "missing_lines": 0, "coverage_percentage": 95.65217391304348}
+ansible/utils/helpers {"file": "ansible/utils/helpers", "total_lines": 15.0, "covered_lines": 15, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/utils/jsonrpc {"file": "ansible/utils/jsonrpc", "total_lines": 82.0, "covered_lines": 45, "missing_lines": 0, "coverage_percentage": 54.87804878048781}
+ansible/utils/listify {"file": "ansible/utils/listify", "total_lines": 12.0, "covered_lines": 12.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/utils/lock {"file": "ansible/utils/lock", "total_lines": 14.0, "covered_lines": 14.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/utils/py3compat {"file": "ansible/utils/py3compat", "total_lines": 36.0, "covered_lines": 32, "missing_lines": 0, "coverage_percentage": 88.88888888888889}
+ansible/utils/singleton {"file": "ansible/utils/singleton", "total_lines": 16.0, "covered_lines": 16, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/utils/unsafe_proxy {"file": "ansible/utils/unsafe_proxy", "total_lines": 56.0, "covered_lines": 51, "missing_lines": 0, "coverage_percentage": 91.07142857142857}
+ansible/utils/vars {"file": "ansible/utils/vars", "total_lines": 138.0, "covered_lines": 123, "missing_lines": 0, "coverage_percentage": 89.13043478260869}
+ansible/utils/version {"file": "ansible/utils/version", "total_lines": 154.0, "covered_lines": 154.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/vars/clean {"file": "ansible/vars/clean", "total_lines": 91.0, "covered_lines": 91.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/vars/fact_cache {"file": "ansible/vars/fact_cache", "total_lines": 44.0, "covered_lines": 44.0, "missing_lines": 0, "coverage_percentage": 100.0}
+ansible/vars/hostvars {"file": "ansible/vars/hostvars", "total_lines": 74.0, "covered_lines": 68, "missing_lines": 0, "coverage_percentage": 91.8918918918919}
+ansible/vars/manager {"file": "ansible/vars/manager", "total_lines": 422.0, "covered_lines": 149, "missing_lines": 0, "coverage_percentage": 35.308056872037916}
+ansible/vars/plugins {"file": "ansible/vars/plugins", "total_lines": 62.0, "covered_lines": 50, "missing_lines": 0, "coverage_percentage": 80.64516129032258}
+ansible/vars/reserved {"file": "ansible/vars/reserved", "total_lines": 38.0, "covered_lines": 32, "missing_lines": 0, "coverage_percentage": 84.21052631578947}
+apimd/parser {"file": "apimd/parser", "total_lines": 448.0, "covered_lines": 327, "missing_lines": 0, "coverage_percentage": 72.99107142857143}
+blib2to3/pgen2/grammar {"file": "blib2to3/pgen2/grammar", "total_lines": 70.0, "covered_lines": 64, "missing_lines": 0, "coverage_percentage": 91.42857142857143}
+blib2to3/pgen2/literals {"file": "blib2to3/pgen2/literals", "total_lines": 51.0, "covered_lines": 46, "missing_lines": 0, "coverage_percentage": 90.19607843137256}
+blib2to3/pgen2/parse {"file": "blib2to3/pgen2/parse", "total_lines": 104.0, "covered_lines": 68, "missing_lines": 0, "coverage_percentage": 65.38461538461539}
+blib2to3/pgen2/pgen {"file": "blib2to3/pgen2/pgen", "total_lines": 318.0, "covered_lines": 318, "missing_lines": 0, "coverage_percentage": 100.0}
+blib2to3/pgen2/tokenize {"file": "blib2to3/pgen2/tokenize", "total_lines": 435.0, "covered_lines": 287, "missing_lines": 0, "coverage_percentage": 65.97701149425286}
+blib2to3/pytree {"file": "blib2to3/pytree", "total_lines": 527.0, "covered_lines": 412, "missing_lines": 0, "coverage_percentage": 78.17836812144212}
+flutes/structure {"file": "flutes/structure", "total_lines": 54.0, "covered_lines": 53, "missing_lines": 0, "coverage_percentage": 98.14814814814815}
+flutes/timing {"file": "flutes/timing", "total_lines": 11.0, "covered_lines": 11, "missing_lines": 0, "coverage_percentage": 100.0}
+flutils/txtutils {"file": "flutils/txtutils", "total_lines": 165.0, "covered_lines": 144, "missing_lines": 0, "coverage_percentage": 87.27272727272727}
+httpie/cli/argparser {"file": "httpie/cli/argparser", "total_lines": 279.0, "covered_lines": 155, "missing_lines": 0, "coverage_percentage": 55.55555555555556}
+httpie/cli/definition {"file": "httpie/cli/definition", "total_lines": 333.0, "covered_lines": 333.0, "missing_lines": 0, "coverage_percentage": 100.0}
+httpie/cli/requestitems {"file": "httpie/cli/requestitems", "total_lines": 102.0, "covered_lines": 102.0, "missing_lines": 0, "coverage_percentage": 100.0}
+httpie/client {"file": "httpie/client", "total_lines": 213.0, "covered_lines": 113, "missing_lines": 0, "coverage_percentage": 53.051643192488264}
+httpie/config {"file": "httpie/config", "total_lines": 94.0, "covered_lines": 94, "missing_lines": 0, "coverage_percentage": 100.0}
+httpie/context {"file": "httpie/context", "total_lines": 90.0, "covered_lines": 81, "missing_lines": 0, "coverage_percentage": 90.0}
+httpie/core {"file": "httpie/core", "total_lines": 180.0, "covered_lines": 53, "missing_lines": 0, "coverage_percentage": 29.444444444444446}
+httpie/models {"file": "httpie/models", "total_lines": 89.0, "covered_lines": 73, "missing_lines": 0, "coverage_percentage": 82.02247191011236}
+httpie/output/formatters/colors {"file": "httpie/output/formatters/colors", "total_lines": 200.0, "covered_lines": 200.0, "missing_lines": 0, "coverage_percentage": 100.0}
+httpie/output/formatters/headers {"file": "httpie/output/formatters/headers", "total_lines": 9.0, "covered_lines": 9, "missing_lines": 0, "coverage_percentage": 100.0}
+httpie/output/formatters/json {"file": "httpie/output/formatters/json", "total_lines": 21.0, "covered_lines": 20, "missing_lines": 0, "coverage_percentage": 95.23809523809523}
+httpie/output/processing {"file": "httpie/output/processing", "total_lines": 34.0, "covered_lines": 34.0, "missing_lines": 0, "coverage_percentage": 100.0}
+httpie/output/streams {"file": "httpie/output/streams", "total_lines": 118.0, "covered_lines": 82, "missing_lines": 0, "coverage_percentage": 69.49152542372882}
+httpie/output/writer {"file": "httpie/output/writer", "total_lines": 107.0, "covered_lines": 85, "missing_lines": 0, "coverage_percentage": 79.43925233644859}
+httpie/plugins/base {"file": "httpie/plugins/base", "total_lines": 39.0, "covered_lines": 39.0, "missing_lines": 0, "coverage_percentage": 100.0}
+httpie/plugins/manager {"file": "httpie/plugins/manager", "total_lines": 41.0, "covered_lines": 41.0, "missing_lines": 0, "coverage_percentage": 100.0}
+httpie/sessions {"file": "httpie/sessions", "total_lines": 110.0, "covered_lines": 85, "missing_lines": 0, "coverage_percentage": 77.27272727272727}
+httpie/uploads {"file": "httpie/uploads", "total_lines": 92.0, "covered_lines": 92.0, "missing_lines": 0, "coverage_percentage": 100.0}
+httpie/utils {"file": "httpie/utils", "total_lines": 59.0, "covered_lines": 59.0, "missing_lines": 0, "coverage_percentage": 100.0}
+isort/exceptions {"file": "isort/exceptions", "total_lines": 99.0, "covered_lines": 99.0, "missing_lines": 0, "coverage_percentage": 100.0}
+isort/format {"file": "isort/format", "total_lines": 100.0, "covered_lines": 100.0, "missing_lines": 0, "coverage_percentage": 100.0}
+py_backwards/transformers/base {"file": "py_backwards/transformers/base", "total_lines": 96.0, "covered_lines": 96.0, "missing_lines": 0, "coverage_percentage": 100.0}
+py_backwards/transformers/dict_unpacking {"file": "py_backwards/transformers/dict_unpacking", "total_lines": 54.0, "covered_lines": 52, "missing_lines": 0, "coverage_percentage": 96.29629629629629}
+py_backwards/transformers/metaclass {"file": "py_backwards/transformers/metaclass", "total_lines": 25.0, "covered_lines": 25, "missing_lines": 0, "coverage_percentage": 100.0}
+py_backwards/transformers/python2_future {"file": "py_backwards/transformers/python2_future", "total_lines": 16.0, "covered_lines": 13, "missing_lines": 0, "coverage_percentage": 81.25}
+py_backwards/transformers/return_from_generator {"file": "py_backwards/transformers/return_from_generator", "total_lines": 45.0, "covered_lines": 40, "missing_lines": 0, "coverage_percentage": 88.88888888888889}
+py_backwards/transformers/six_moves {"file": "py_backwards/transformers/six_moves", "total_lines": 182.0, "covered_lines": 182.0, "missing_lines": 0, "coverage_percentage": 100.0}
+py_backwards/transformers/starred_unpacking {"file": "py_backwards/transformers/starred_unpacking", "total_lines": 54.0, "covered_lines": 54.0, "missing_lines": 0, "coverage_percentage": 100.0}
+py_backwards/transformers/string_types {"file": "py_backwards/transformers/string_types", "total_lines": 15.0, "covered_lines": 15, "missing_lines": 0, "coverage_percentage": 100.0}
+py_backwards/transformers/super_without_arguments {"file": "py_backwards/transformers/super_without_arguments", "total_lines": 25.0, "covered_lines": 10, "missing_lines": 0, "coverage_percentage": 40.0}
+py_backwards/transformers/variables_annotations {"file": "py_backwards/transformers/variables_annotations", "total_lines": 26.0, "covered_lines": 11, "missing_lines": 0, "coverage_percentage": 42.30769230769231}
+py_backwards/transformers/yield_from {"file": "py_backwards/transformers/yield_from", "total_lines": 64.0, "covered_lines": 49, "missing_lines": 0, "coverage_percentage": 76.5625}
+py_backwards/types {"file": "py_backwards/types", "total_lines": 18.0, "covered_lines": 16, "missing_lines": 0, "coverage_percentage": 88.88888888888889}
+py_backwards/utils/helpers {"file": "py_backwards/utils/helpers", "total_lines": 29.0, "covered_lines": 29, "missing_lines": 0, "coverage_percentage": 100.0}
+py_backwards/utils/snippet {"file": "py_backwards/utils/snippet", "total_lines": 93.0, "covered_lines": 93.0, "missing_lines": 0, "coverage_percentage": 100.0}
+py_backwards/utils/tree {"file": "py_backwards/utils/tree", "total_lines": 45.0, "covered_lines": 39, "missing_lines": 0, "coverage_percentage": 86.66666666666667}
+pymonet/task {"file": "pymonet/task", "total_lines": 22.0, "covered_lines": 22.0, "missing_lines": 0, "coverage_percentage": 100.0}
+pymonet/utils {"file": "pymonet/utils", "total_lines": 57.0, "covered_lines": 57.0, "missing_lines": 0, "coverage_percentage": 100.0}
+pymonet/validation {"file": "pymonet/validation", "total_lines": 48.0, "covered_lines": 48.0, "missing_lines": 0, "coverage_percentage": 100.0}
+pypara/dcc {"file": "pypara/dcc", "total_lines": 208.0, "covered_lines": 208.0, "missing_lines": 0, "coverage_percentage": 100.0}
+pypara/exchange {"file": "pypara/exchange", "total_lines": 48.0, "covered_lines": 30, "missing_lines": 0, "coverage_percentage": 62.5}
+pypara/monetary {"file": "pypara/monetary", "total_lines": 711.0, "covered_lines": 656, "missing_lines": 0, "coverage_percentage": 92.26441631504923}
+pytutils/lazy/lazy_import {"file": "pytutils/lazy/lazy_import", "total_lines": 218.0, "covered_lines": 99, "missing_lines": 0, "coverage_percentage": 45.412844036697244}
+pytutils/lazy/lazy_regex {"file": "pytutils/lazy/lazy_regex", "total_lines": 96.0, "covered_lines": 63, "missing_lines": 0, "coverage_percentage": 65.625}
+pytutils/lazy/simple_import {"file": "pytutils/lazy/simple_import", "total_lines": 24.0, "covered_lines": 12, "missing_lines": 0, "coverage_percentage": 50.0}
+pytutils/log {"file": "pytutils/log", "total_lines": 86.0, "covered_lines": 86.0, "missing_lines": 0, "coverage_percentage": 100.0}
+pytutils/path {"file": "pytutils/path", "total_lines": 4.0, "covered_lines": 4, "missing_lines": 0, "coverage_percentage": 100.0}
+pytutils/props {"file": "pytutils/props", "total_lines": 29.0, "covered_lines": 28, "missing_lines": 0, "coverage_percentage": 96.55172413793103}
+pytutils/python {"file": "pytutils/python", "total_lines": 28.0, "covered_lines": 13, "missing_lines": 0, "coverage_percentage": 46.42857142857143}
+pytutils/trees {"file": "pytutils/trees", "total_lines": 48.0, "covered_lines": 16, "missing_lines": 0, "coverage_percentage": 33.33333333333333}
+pytutils/urls {"file": "pytutils/urls", "total_lines": 13.0, "covered_lines": 0, "missing_lines": 0, "coverage_percentage": 0.0}
+semantic_release/ci_checks {"file": "semantic_release/ci_checks", "total_lines": 58.0, "covered_lines": 58.0, "missing_lines": 0, "coverage_percentage": 100.0}
+semantic_release/dist {"file": "semantic_release/dist", "total_lines": 22.0, "covered_lines": 20, "missing_lines": 0, "coverage_percentage": 90.9090909090909}
+semantic_release/helpers {"file": "semantic_release/helpers", "total_lines": 44.0, "covered_lines": 44.0, "missing_lines": 0, "coverage_percentage": 100.0}
+semantic_release/hvcs {"file": "semantic_release/hvcs", "total_lines": 246.0, "covered_lines": 246, "missing_lines": 0, "coverage_percentage": 100.0}
+semantic_release/pypi {"file": "semantic_release/pypi", "total_lines": 37.0, "covered_lines": 37.0, "missing_lines": 0, "coverage_percentage": 100.0}
+semantic_release/settings {"file": "semantic_release/settings", "total_lines": 72.0, "covered_lines": 72.0, "missing_lines": 0, "coverage_percentage": 100.0}
+string_utils/generation {"file": "string_utils/generation", "total_lines": 50.0, "covered_lines": 50.0, "missing_lines": 0, "coverage_percentage": 100.0}
+string_utils/manipulation {"file": "string_utils/manipulation", "total_lines": 205.0, "covered_lines": 205.0, "missing_lines": 0, "coverage_percentage": 100.0}
+string_utils/validation {"file": "string_utils/validation", "total_lines": 157.0, "covered_lines": 157.0, "missing_lines": 0, "coverage_percentage": 100.0}
+sty/primitive {"file": "sty/primitive", "total_lines": 92.0, "covered_lines": 92.0, "missing_lines": 0, "coverage_percentage": 100.0}
+thonny/roughparse {"file": "thonny/roughparse", "total_lines": 493.0, "covered_lines": 263, "missing_lines": 0, "coverage_percentage": 53.34685598377283}
+tornado/auth {"file": "tornado/auth", "total_lines": 540.0, "covered_lines": 272, "missing_lines": 0, "coverage_percentage": 50.37037037037037}
+tornado/concurrent {"file": "tornado/concurrent", "total_lines": 96.0, "covered_lines": 78, "missing_lines": 0, "coverage_percentage": 81.25}
+tornado/escape {"file": "tornado/escape", "total_lines": 172.0, "covered_lines": 123, "missing_lines": 0, "coverage_percentage": 71.51162790697676}
+tornado/httpclient {"file": "tornado/httpclient", "total_lines": 327.0, "covered_lines": 276, "missing_lines": 0, "coverage_percentage": 84.40366972477065}
+tornado/locale {"file": "tornado/locale", "total_lines": 315.0, "covered_lines": 181, "missing_lines": 0, "coverage_percentage": 57.460317460317455}
+tornado/locks {"file": "tornado/locks", "total_lines": 197.0, "covered_lines": 166, "missing_lines": 0, "coverage_percentage": 84.26395939086294}
+tornado/log {"file": "tornado/log", "total_lines": 168.0, "covered_lines": 137, "missing_lines": 0, "coverage_percentage": 81.54761904761905}
+tornado/netutil {"file": "tornado/netutil", "total_lines": 263.0, "covered_lines": 249, "missing_lines": 0, "coverage_percentage": 94.67680608365019}
+tornado/options {"file": "tornado/options", "total_lines": 335.0, "covered_lines": 205, "missing_lines": 0, "coverage_percentage": 61.19402985074627}
+tornado/queues {"file": "tornado/queues", "total_lines": 160.0, "covered_lines": 152, "missing_lines": 0, "coverage_percentage": 95.0}
+tornado/simple_httpclient {"file": "tornado/simple_httpclient", "total_lines": 473.0, "covered_lines": 250, "missing_lines": 0, "coverage_percentage": 52.85412262156448}
+tornado/tcpclient {"file": "tornado/tcpclient", "total_lines": 190.0, "covered_lines": 132, "missing_lines": 0, "coverage_percentage": 69.47368421052632}
+tornado/util {"file": "tornado/util", "total_lines": 190.0, "covered_lines": 166, "missing_lines": 0, "coverage_percentage": 87.36842105263159}
+typesystem/schemas {"file": "typesystem/schemas", "total_lines": 186.0, "covered_lines": 184, "missing_lines": 0, "coverage_percentage": 98.9247311827957}
+typesystem/tokenize/positional_validation {"file": "typesystem/tokenize/positional_validation", "total_lines": 29.0, "covered_lines": 10, "missing_lines": 0, "coverage_percentage": 34.48275862068966}
+typesystem/tokenize/tokenize_json {"file": "typesystem/tokenize/tokenize_json", "total_lines": 151.0, "covered_lines": 135, "missing_lines": 0, "coverage_percentage": 89.40397350993378}
+typesystem/tokenize/tokenize_yaml {"file": "typesystem/tokenize/tokenize_yaml", "total_lines": 85.0, "covered_lines": 83, "missing_lines": 0, "coverage_percentage": 97.6470588235294}
+typesystem/tokenize/tokens {"file": "typesystem/tokenize/tokens", "total_lines": 72.0, "covered_lines": 72.0, "missing_lines": 0, "coverage_percentage": 100.0}
+youtube_dl/downloader/common {"file": "youtube_dl/downloader/common", "total_lines": 262.0, "covered_lines": 79, "missing_lines": 0, "coverage_percentage": 30.15267175572519}
+youtube_dl/downloader/dash {"file": "youtube_dl/downloader/dash", "total_lines": 52.0, "covered_lines": 11, "missing_lines": 0, "coverage_percentage": 21.153846153846153}
+youtube_dl/downloader/f4m {"file": "youtube_dl/downloader/f4m", "total_lines": 292.0, "covered_lines": 146, "missing_lines": 0, "coverage_percentage": 50.0}
+youtube_dl/downloader/fragment {"file": "youtube_dl/downloader/fragment", "total_lines": 189.0, "covered_lines": 35, "missing_lines": 0, "coverage_percentage": 18.51851851851852}
+youtube_dl/downloader/hls {"file": "youtube_dl/downloader/hls", "total_lines": 159.0, "covered_lines": 57, "missing_lines": 0, "coverage_percentage": 35.84905660377358}
+youtube_dl/downloader/http {"file": "youtube_dl/downloader/http", "total_lines": 252.0, "covered_lines": 104, "missing_lines": 0, "coverage_percentage": 41.269841269841265}
+youtube_dl/downloader/ism {"file": "youtube_dl/downloader/ism", "total_lines": 203.0, "covered_lines": 148, "missing_lines": 0, "coverage_percentage": 72.9064039408867}
+youtube_dl/extractor/archiveorg {"file": "youtube_dl/extractor/archiveorg", "total_lines": 75.0, "covered_lines": 37, "missing_lines": 0, "coverage_percentage": 49.333333333333336}
+youtube_dl/extractor/eitb {"file": "youtube_dl/extractor/eitb", "total_lines": 66.0, "covered_lines": 22, "missing_lines": 0, "coverage_percentage": 33.33333333333333}
+youtube_dl/extractor/fourtube {"file": "youtube_dl/extractor/fourtube", "total_lines": 251.0, "covered_lines": 148, "missing_lines": 0, "coverage_percentage": 58.964143426294825}
+youtube_dl/extractor/glide {"file": "youtube_dl/extractor/glide", "total_lines": 32.0, "covered_lines": 32.0, "missing_lines": 0, "coverage_percentage": 100.0}
+youtube_dl/extractor/heise {"file": "youtube_dl/extractor/heise", "total_lines": 133.0, "covered_lines": 71, "missing_lines": 0, "coverage_percentage": 53.383458646616546}
+youtube_dl/extractor/hitrecord {"file": "youtube_dl/extractor/hitrecord", "total_lines": 52.0, "covered_lines": 27, "missing_lines": 0, "coverage_percentage": 51.92307692307693}
+youtube_dl/extractor/itv {"file": "youtube_dl/extractor/itv", "total_lines": 133.0, "covered_lines": 49, "missing_lines": 0, "coverage_percentage": 36.84210526315789}
+youtube_dl/extractor/konserthusetplay {"file": "youtube_dl/extractor/konserthusetplay", "total_lines": 92.0, "covered_lines": 24, "missing_lines": 0, "coverage_percentage": 26.08695652173913}
+youtube_dl/extractor/linuxacademy {"file": "youtube_dl/extractor/linuxacademy", "total_lines": 185.0, "covered_lines": 46, "missing_lines": 0, "coverage_percentage": 24.864864864864867}
+youtube_dl/extractor/nrk {"file": "youtube_dl/extractor/nrk", "total_lines": 681.0, "covered_lines": 396, "missing_lines": 0, "coverage_percentage": 58.14977973568281}
+youtube_dl/extractor/safari {"file": "youtube_dl/extractor/safari", "total_lines": 183.0, "covered_lines": 81, "missing_lines": 0, "coverage_percentage": 44.26229508196721}
+youtube_dl/extractor/soundgasm {"file": "youtube_dl/extractor/soundgasm", "total_lines": 53.0, "covered_lines": 28, "missing_lines": 0, "coverage_percentage": 52.83018867924528}
+youtube_dl/extractor/tf1 {"file": "youtube_dl/extractor/tf1", "total_lines": 66.0, "covered_lines": 31, "missing_lines": 0, "coverage_percentage": 46.96969696969697}
+youtube_dl/extractor/thestar {"file": "youtube_dl/extractor/thestar", "total_lines": 27.0, "covered_lines": 20, "missing_lines": 0, "coverage_percentage": 74.07407407407408}
+youtube_dl/extractor/trutv {"file": "youtube_dl/extractor/trutv", "total_lines": 53.0, "covered_lines": 16, "missing_lines": 0, "coverage_percentage": 30.18867924528302}
+youtube_dl/extractor/tudou {"file": "youtube_dl/extractor/tudou", "total_lines": 36.0, "covered_lines": 23, "missing_lines": 0, "coverage_percentage": 63.888888888888886}
+youtube_dl/extractor/tvplay {"file": "youtube_dl/extractor/tvplay", "total_lines": 367.0, "covered_lines": 251, "missing_lines": 0, "coverage_percentage": 68.39237057220708}
+youtube_dl/extractor/udn {"file": "youtube_dl/extractor/udn", "total_lines": 73.0, "covered_lines": 49, "missing_lines": 0, "coverage_percentage": 67.12328767123287}
+youtube_dl/extractor/walla {"file": "youtube_dl/extractor/walla", "total_lines": 62.0, "covered_lines": 21, "missing_lines": 0, "coverage_percentage": 33.87096774193548}
+youtube_dl/extractor/zdf {"file": "youtube_dl/extractor/zdf", "total_lines": 257.0, "covered_lines": 148, "missing_lines": 0, "coverage_percentage": 57.58754863813229}
+youtube_dl/jsinterp {"file": "youtube_dl/jsinterp", "total_lines": 206.0, "covered_lines": 25, "missing_lines": 0, "coverage_percentage": 12.135922330097088}
+youtube_dl/options {"file": "youtube_dl/options", "total_lines": 807.0, "covered_lines": 389, "missing_lines": 0, "coverage_percentage": 48.20322180916977}
+youtube_dl/postprocessor/common {"file": "youtube_dl/postprocessor/common", "total_lines": 21.0, "covered_lines": 14, "missing_lines": 0, "coverage_percentage": 66.66666666666666}
+youtube_dl/postprocessor/metadatafromtitle {"file": "youtube_dl/postprocessor/metadatafromtitle", "total_lines": 34.0, "covered_lines": 8, "missing_lines": 0, "coverage_percentage": 23.52941176470588}
+youtube_dl/postprocessor/xattrpp {"file": "youtube_dl/postprocessor/xattrpp", "total_lines": 43.0, "covered_lines": 8, "missing_lines": 0, "coverage_percentage": 18.6046511627907}
+youtube_dl/socks {"file": "youtube_dl/socks", "total_lines": 177.0, "covered_lines": 82, "missing_lines": 0, "coverage_percentage": 46.32768361581921}
+youtube_dl/swfinterp {"file": "youtube_dl/swfinterp", "total_lines": 714.0, "covered_lines": 478, "missing_lines": 0, "coverage_percentage": 66.94677871148458}
