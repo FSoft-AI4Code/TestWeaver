@@ -100,3 +100,30 @@ python ablate.py --test-index $sample_id
 
 
 
+
+## Baseline: CoverUp (DeepSeek-only)
+
+Run a minimal DeepSeek-only CoverUp baseline.
+
+1) Prereqs: Docker, Python 3.10+
+2) Env:
+```bash
+export coverup="<your-api-key>"
+export ANTHROPIC_BASE_URL="<your-base-url>"
+```
+3) Load image:
+```bash
+docker load -i scripts/baselines/coverup/docker/coverup-runner.tar
+```
+4) Run (from baseline dir):
+```bash
+cd scripts/baselines/coverup
+python3 scripts/eval_coverup.py --config deepseek-v3 --suite cm
+```
+Optional:
+```bash
+python3 scripts/eval_coverup.py --config deepseek-v3 --suite cm --package tqdm
+python3 scripts/eval_coverup.py --config deepseek-v3 --suite cm --only tqdm/_tqdm.py
+```
+Output: `scripts/baselines/coverup/output/cm.deepseek-v3/<package>/final.json`.
+
