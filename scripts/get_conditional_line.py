@@ -503,26 +503,6 @@ def get_conditional_lines(code: str, target_line: int) -> List[int]:
     return slicer.find_conditional_lines(code, target_line)
 
 
-def compute_dynamic_slice(code: str, target_line: int, executed_lines: Set[int] = None) -> List[int]:
-    """
-    Compute dynamic backward slice using Agrawal and Horgan's algorithm.
-    
-    This is the main function that implements the two-phase dynamic slicing algorithm:
-    Phase 1: Build PDGs and SDG, mark executed statements and dependencies
-    Phase 2: Traverse backward along marked nodes and edges only
-    
-    Args:
-        code: Python source code as string
-        target_line: Line number to analyze (1-based)
-        executed_lines: Set of line numbers that were executed (if None, assumes all lines)
-        
-    Returns:
-        List of line numbers in the dynamic backward slice
-    """
-    slicer = DynamicSlicer()
-    return slicer.compute_dynamic_slice(code, target_line, executed_lines)
-
-
 def debug_dependencies(code: str) -> Dict[int, Set[int]]:
     """Debug function to see all dependencies using dynamic slicing."""
     slicer = DynamicSlicer()
