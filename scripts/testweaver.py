@@ -15,7 +15,7 @@ import openai
 from dotenv import load_dotenv
 from eval_overall import run_evolution123
 from data_utils import write_jsonl, line_code1,reform_code_lines_fixed, fix_relative_imports, parse_import_tool, code_in_line, remove_external_imports,line_code, remove_comments_and_docstrings, find_closest_test, get_code_from_import_line, extract_python_code_block, extract_external_import_lines,extract_line, extract_test_func, find_enclosing_def_class, re_format_line
-from utils.codetransform import static_slicing
+from utils.codetransform import slicing
 from utils.codetransform.next import execute_and_trace
 
 
@@ -545,7 +545,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         print(f'line code ----------{extract_line(python_code, missing_test[0])}----------------------')
         lineno = missing_test[0]
         lineno1 = extract_line(python_code, lineno)
-        filtered_code, _, filter_num_lines, _ = static_slicing.static_slicing(python_code, lineno)
+        filtered_code, _, filter_num_lines, _ = slicing.slicing(python_code, lineno)
         # class_name, function_name = find_enclosing_def_class(python_code, lineno)
         try:
             class_name, function_name = find_enclosing_def_class(python_code, lineno)
@@ -688,9 +688,9 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         print(f'-------------------TEST {lineno}---------- FEEDBACK -------------')
         
         try:
-            filtered_code, _, filter_num_lines, _ = static_slicing.static_slicing(python_code, lineno)
+            filtered_code, _, filter_num_lines, _ = slicing.slicing(python_code, lineno)
         except Exception as e:
-            print(f"[WARNING] static_slicing failed: {e}")
+            print(f"[WARNING] slicing failed: {e}")
             filtered_code = ''
         try:
             class_name, function_name = find_enclosing_def_class(python_code, lineno)
