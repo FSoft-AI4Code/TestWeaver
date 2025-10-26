@@ -101,7 +101,7 @@ python ablate.py --test-index $sample_id
 
 
 
-## Baseline: CoverUp
+## Baseline:
 
 Run a minimal DeepSeek-only CoverUp baseline.
 
