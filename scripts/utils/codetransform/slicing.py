@@ -1,13 +1,5 @@
-import json
 import ast
 from utils.codetransform.utils1 import ExecutionOrderAnalyzer
-
-""" --- ExecutionOrderAnalyzer Usage ---
-analyzer = ExecutionOrderAnalyzer(source_code)
-result = analyzer.analyze()
-
-result: a dictionary represents line dependencies of code
-"""
 
 def find_all_parent_blocks(source_code, reachable_lines):
     """Find all parent block statements needed to keep reachable lines valid"""
@@ -147,21 +139,57 @@ def find_required_structural_lines(source_code, lines_to_keep):
     return additional_lines
 
 
-def slicing(source_code, target_line):
+def slicing(source_code, target_line, result_execute=None):
+    # Phase 1: Build PDGs/SDG for encountered code; mark nodes/edges
     analyzer = ExecutionOrderAnalyzer(source_code)
-    line_dependencies = analyzer.analyze()
+    pdg_map = analyzer.analyze()  # per-line dependencies (acts as PDGs/SDG here)
 
-    def find_nodes_with_path_to_target(graph, target):
+    # Construct SDG as a unified graph over lines
+    sdg = pdg_map
+
+    executed_nodes = set()  # Execution mask per algorithm
+    if isinstance(result_execute, list):
+        for entry in result_execute:
+            if isinstance(entry, dict):
+                lines = entry.get("executed_lines")
+                if isinstance(lines, list):
+                    executed_nodes.update(int(x) for x in lines if isinstance(x, int))
+
+    # In case the target line is not included in the executed lines, mask nodes that can reach the target line.
+    if target_line not in result_execute:
+        reversed_edges = {}
+        for src, dests in sdg.items():
+            for dest in dests:
+                if dest not in reversed_edges:
+                    reversed_edges[dest] = set()
+                reversed_edges[dest].add(src)
+        seen = set()
+        to_visit = [target_line]
+        while to_visit:
+            node = to_visit.pop()
+            if node in seen:
+                continue
+            seen.add(node)
+            if node in reversed_edges:
+                for pred in reversed_edges[node]:
+                    if pred not in seen:
+                        to_visit.append(pred)
+        executed_nodes.update(seen)
+
+    # Phase 2: Backward traversal over marked SDG nodes
+    def backward_slicing(graph, target):
         """Find all nodes that have a path to the target node using reverse DFS"""
-        # Create reverse graph
-        reverse_graph = {}
+        # Create backward graph
+        backward_graph = {}
         for node, neighbors in graph.items():
             for neighbor in neighbors:
-                if neighbor not in reverse_graph:
-                    reverse_graph[neighbor] = set()
-                reverse_graph[neighbor].add(node)
+                # Only traverse along nodes captured by the execution mask
+                if node in executed_nodes and neighbor in executed_nodes:
+                    if neighbor not in backward_graph:
+                        backward_graph[neighbor] = set()
+                    backward_graph[neighbor].add(node)
         
-        # DFS from target in reverse graph
+        # DFS from target in backward graph
         visited = set()
         stack = [target]
         
@@ -171,15 +199,15 @@ def slicing(source_code, target_line):
                 continue
             visited.add(current)
             
-            if current in reverse_graph:
-                for predecessor in reverse_graph[current]:
+            if current in backward_graph:
+                for predecessor in backward_graph[current]:
                     if predecessor not in visited:
                         stack.append(predecessor)
         
         return visited
 
     # Get initial reachable lines
-    reachable_lines = find_nodes_with_path_to_target(line_dependencies, target_line)
+    reachable_lines = backward_slicing(sdg, target_line)
 
     # Find all parent blocks needed
     lines_to_keep = find_all_parent_blocks(source_code, reachable_lines)
@@ -188,15 +216,12 @@ def slicing(source_code, target_line):
     additional_structural = find_required_structural_lines(source_code, lines_to_keep)
     lines_to_keep.update(additional_structural)
     
-    # Sort for processing
     lines_to_keep = sorted(lines_to_keep)
 
-    # Split source code into lines
     lines = source_code.split('\n')
     orig_num_lines = len(lines)
     result_lines = []
 
-    # Implementation to get result_lines
     kept_set = set(lines_to_keep)
     
     # Process each line
@@ -237,11 +262,6 @@ def slicing(source_code, target_line):
                 if not has_proper_body:
                     result_lines.append(' ' * expected_body_indent + 'pass')
 
-    # Clean up any remaining placeholders needed
     filter_num_lines = len(result_lines)
     filtered_code = '\n'.join(result_lines)
-    # print("Filtered code:")
-    # print(filtered_code)
     return filtered_code, orig_num_lines, filter_num_lines, reachable_lines
-
-

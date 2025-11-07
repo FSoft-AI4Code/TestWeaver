@@ -501,7 +501,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         # print(f'line code real {line_code(python_code)}------------')
         lineno = missing_test[0]
         lineno1 = extract_line(python_code, lineno)
-        filtered_code, _, filter_num_lines, _ = slicing.slicing(python_code, lineno)
+        filtered_code, _, filter_num_lines, _ = slicing.slicing(python_code, lineno, result_execute)
         # class_name, function_name = find_enclosing_def_class(python_code, lineno)
         try:
             class_name, function_name = find_enclosing_def_class(python_code, lineno)
@@ -688,7 +688,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         print(f'-------------------TEST {lineno}---------- FEEDBACK -------------')
         
         try:
-            filtered_code, _, filter_num_lines, _ = slicing.slicing(python_code, lineno)
+            filtered_code, _, filter_num_lines, _ = slicing.slicing(python_code, lineno, result_execute)
         except Exception as e:
             print(f"[WARNING] slicing failed: {e}")
             filtered_code = ''
