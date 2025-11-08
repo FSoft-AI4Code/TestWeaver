@@ -182,7 +182,7 @@ def slicing(source_code, target_line, result_execute=[]):
             if isinstance(lines, list):
                 executed_nodes.update(int(x) for x in lines if isinstance(x, int))
 
-    # In case the target line is not included in the executed lines, mask nodes that can reach the target line.
+    # In case the target line is not included in the executed lines, mask nodes in path to reach the target line if lacked.
     if target_line not in result_execute:
         reversed_edges = {}
         for src, dests in sdg.items():
@@ -197,11 +197,12 @@ def slicing(source_code, target_line, result_execute=[]):
             if node in seen:
                 continue
             seen.add(node)
+            if node not in executed_nodes:
+                executed_nodes.add(node)
             if node in reversed_edges:
                 for pred in reversed_edges[node]:
                     if pred not in seen:
                         to_visit.append(pred)
-        executed_nodes.update(seen)
 
     # Phase 2: Backward traversal over marked SDG nodes
     # Get initial reachable lines
