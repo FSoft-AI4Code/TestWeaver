@@ -138,8 +138,36 @@ def find_required_structural_lines(source_code, lines_to_keep):
     
     return additional_lines
 
+def backward_slicing(graph, target, executed_nodes):
+    """Find all nodes that have a path to the target node using reverse DFS"""
+    # Create backward graph
+    backward_graph = {}
+    for node, neighbors in graph.items():
+        for neighbor in neighbors:
+            # Only traverse along nodes captured by the execution mask
+            if node in executed_nodes and neighbor in executed_nodes:
+                if neighbor not in backward_graph:
+                    backward_graph[neighbor] = set()
+                backward_graph[neighbor].add(node)
+    
+    # DFS from target in backward graph
+    visited = set()
+    stack = [target]
+    
+    while stack:
+        current = stack.pop()
+        if current in visited:
+            continue
+        visited.add(current)
+        
+        if current in backward_graph:
+            for predecessor in backward_graph[current]:
+                if predecessor not in visited:
+                    stack.append(predecessor)
+    
+    return visited
 
-def slicing(source_code, target_line, result_execute=None):
+def slicing(source_code, target_line, result_execute=[]):
     # Phase 1: Build PDGs/SDG for encountered code; mark nodes/edges
     analyzer = ExecutionOrderAnalyzer(source_code)
     pdg_map = analyzer.analyze()  # per-line dependencies (acts as PDGs/SDG here)
@@ -148,12 +176,11 @@ def slicing(source_code, target_line, result_execute=None):
     sdg = pdg_map
 
     executed_nodes = set()  # Execution mask per algorithm
-    if isinstance(result_execute, list):
-        for entry in result_execute:
-            if isinstance(entry, dict):
-                lines = entry.get("executed_lines")
-                if isinstance(lines, list):
-                    executed_nodes.update(int(x) for x in lines if isinstance(x, int))
+    for entry in result_execute:
+        if isinstance(entry, dict):
+            lines = entry.get("executed_lines")
+            if isinstance(lines, list):
+                executed_nodes.update(int(x) for x in lines if isinstance(x, int))
 
     # In case the target line is not included in the executed lines, mask nodes that can reach the target line.
     if target_line not in result_execute:
@@ -177,37 +204,8 @@ def slicing(source_code, target_line, result_execute=None):
         executed_nodes.update(seen)
 
     # Phase 2: Backward traversal over marked SDG nodes
-    def backward_slicing(graph, target):
-        """Find all nodes that have a path to the target node using reverse DFS"""
-        # Create backward graph
-        backward_graph = {}
-        for node, neighbors in graph.items():
-            for neighbor in neighbors:
-                # Only traverse along nodes captured by the execution mask
-                if node in executed_nodes and neighbor in executed_nodes:
-                    if neighbor not in backward_graph:
-                        backward_graph[neighbor] = set()
-                    backward_graph[neighbor].add(node)
-        
-        # DFS from target in backward graph
-        visited = set()
-        stack = [target]
-        
-        while stack:
-            current = stack.pop()
-            if current in visited:
-                continue
-            visited.add(current)
-            
-            if current in backward_graph:
-                for predecessor in backward_graph[current]:
-                    if predecessor not in visited:
-                        stack.append(predecessor)
-        
-        return visited
-
     # Get initial reachable lines
-    reachable_lines = backward_slicing(sdg, target_line)
+    reachable_lines = backward_slicing(sdg, target_line, executed_nodes)
 
     # Find all parent blocks needed
     lines_to_keep = find_all_parent_blocks(source_code, reachable_lines)
