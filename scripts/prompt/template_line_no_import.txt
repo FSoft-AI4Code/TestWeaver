@@ -5,12 +5,11 @@ You are provided with the program under test:
 {program}
 ----
 
-The code above does not achieve line: {lineno}   (last line of program)
-
+The code above fails to reach the line {lineno}, which is marked by the tag <TARGET LINE> ... </TARGET LINE>.
 
 <instructions>
 
-1. Analyze **why** the provided test case does **not** reach line `{lineno}`.
+1. Analyze **why** the provided test case does **not** reach line `{lineno}`  (marked by the tag <TARGET LINE> ... </TARGET LINE>).
 2. Based on your analysis, describe a **step-by-step strategy** to reach that line.
 3. Then, generate a **new test case** that triggers the execution of line `{lineno}`.
 
