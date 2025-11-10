@@ -1,0 +1,1 @@
+--model_name deepseek-v3-0324 --model-base-url https://llm-prof-tien.thaiminhpv.id.vn/ --model-relative-url /v1/chat/completions --include-partially-parsable True --allow-expandable-cluster True --algorithm CODAMOSA --temperature 0 --uninterpreted_statements ONLY 

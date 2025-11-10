@@ -1,0 +1,1 @@
+--model_name gpt-4-1106-preview --model-base-url https://api.openai.com --model-relative-url /v1/chat/completions --include-partially-parsable True --allow-expandable-cluster True --algorithm CODAMOSA --temperature 0 --uninterpreted_statements ONLY

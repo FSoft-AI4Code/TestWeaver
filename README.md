@@ -101,29 +101,69 @@ python ablate.py --test-index $sample_id
 
 
 
-## Baseline:
+## Baselines:
 
-Run a minimal DeepSeek-only CoverUp baseline.
+### CoverUp Baseline
 
-1) Prereqs: Docker, Python 3.10+
-2) Env:
+Run CoverUp baseline with DeepSeek model.
+
+**Prerequisites:** Docker, Python 3.10+
+
+**Steps:**
+1. Ensure `.env` file is configured (same as TestWeaver):
 ```bash
-export coverup="<your-api-key>"
-export ANTHROPIC_BASE_URL="<your-base-url>"
+echo "OPENAI_API_KEY=sk-your-actual-api-key-here" > .env
+echo "OPENAI_BASE_URL=https://llm-prof-tien.thaiminhpv.id.vn/" >> .env
 ```
-3) Load image:
+
+2. Load docker image:
 ```bash
 docker load -i scripts/baselines/coverup/docker/coverup-runner.tar
 ```
-4) Run (from baseline dir):
+
+3. Run CoverUp baseline:
 ```bash
 cd scripts/baselines/coverup
 python3 scripts/eval_coverup.py --config deepseek-v3 --suite cm
 ```
-Optional:
+
+**Optional:** Run on specific package or file:
 ```bash
 python3 scripts/eval_coverup.py --config deepseek-v3 --suite cm --package tqdm
 python3 scripts/eval_coverup.py --config deepseek-v3 --suite cm --only tqdm/_tqdm.py
 ```
-Output: `scripts/baselines/coverup/output/cm.deepseek-v3/<package>/final.json`.
+
+**Output:** `scripts/baselines/coverup/output/cm.deepseek-v3/<package>/final.json`
+
+### CodaMosa Baseline
+
+Run CodaMosa baseline with DeepSeek model.
+
+**Prerequisites:** Docker, Python 3.10+
+
+**Steps:**
+1. Ensure `.env` file is configured (same as TestWeaver):
+```bash
+echo "OPENAI_API_KEY=sk-your-actual-api-key-here" > .env
+echo "OPENAI_BASE_URL=https://llm-prof-tien.thaiminhpv.id.vn/" >> .env
+```
+
+2. Load docker images:
+```bash
+cd scripts/baselines/codamosa/replication
+docker load < docker-images/benchmarks-docker.tar.gz
+docker load < docker-images/codamosa-docker.tar.gz
+```
+
+3. Start benchmark container (if not already started):
+```bash
+./scripts/start_benchmark_container.sh
+```
+
+4. Run CodaMosa baseline:
+```bash
+python3 run_codamosa_deepseek.py
+```
+
+**Output:** `scripts/baselines/codamosa/replication/deepseek-coda/<module>-<run>/statistics.csv`
 
