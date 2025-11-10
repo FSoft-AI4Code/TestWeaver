@@ -552,6 +552,13 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         lineno = missing_test[0]
         lineno1 = extract_line(python_code, lineno)
         filtered_code, _, filter_num_lines, _ = slicing.slicing(python_code, lineno, result_execute)
+        fil= filtered_code.split('\n')
+        fixed_filter = ''
+        for i in range(len(fil)):
+            if fil[i]!=lineno1:
+                fixed_filter += fil[i] + '\n'
+            else:
+                fixed_filter += '<TARGET LINE> '+ '\n' + fil[i] + '\n'+ '</TARGET LINE> ' + '\n'
         # class_name, function_name = find_enclosing_def_class(python_code, lineno)
         try:
             class_name, function_name = find_enclosing_def_class(python_code, lineno)
@@ -583,7 +590,7 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
         prompt_line = open('./prompt/template_line_no_import.txt').read().format(
             func_name=function_name, 
             class_name=class_name, 
-            program=code_in_line(filtered_code), 
+            program=code_in_line(fixed_filter), 
             lineno=lineno1
         )
 
@@ -677,7 +684,6 @@ def run_test_generation_for_file(client, file_path, package, output_dir, prompt_
   ######### find closet test ##########   
         # ...existing code...
         ######### find closest test ##########   
-        # Expect `result_execute` to be a list of dicts like {'test': <test_str>, ...}
         tests_list = [r['test'] for r in result_execute if isinstance(r, dict) and 'test' in r]
 
         if strategy == 1:
