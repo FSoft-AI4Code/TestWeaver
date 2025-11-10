@@ -1,3 +1,10 @@
 config/common.sh
 __pycache__/
 pip-cache/
+*.tar
+*.tar.gz
+*.tar.bz2
+docker-images/
+docker/*.tar
+docker/*.tar.gz
+docker/*.tar.bz2
