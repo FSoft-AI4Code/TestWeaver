@@ -8,3 +8,4 @@ docker-images/
 docker/*.tar
 docker/*.tar.gz
 docker/*.tar.bz2
+cache/
