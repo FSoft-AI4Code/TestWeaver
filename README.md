@@ -4,6 +4,9 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2508.01255-b31b1b.svg)](https://arxiv.org/abs/2508.01255)
 
 </div>
+
+---
+
 ## Overview
 
 **TestWeaver** is an advanced regression test generation tool that integrates [Large Language Models (LLMs)](https://en.wikipedia.org/wiki/Large_language_model) with lightweight program analysis. Its goal is to generate high-quality test cases that enhance [code coverage](https://en.wikipedia.org/wiki/Code_coverage) while addressing common challenges such as redundant test generation and the *coverage plateau*.
@@ -19,8 +22,6 @@ Unlike traditional test generators, **TestWeaver** incrementally builds a test s
 - **Backward slicing**: Focuses the LLM on only the relevant code for each target line, reducing hallucinations.
 - **Closest test retrieval**: Identifies test cases that nearly reach the uncovered line to serve as contextual guidance.
 - **Support for multiple LLM providers**: Works with OpenAI, Anthropic, or AWS Bedrock.
-
----
 
 
 ---
